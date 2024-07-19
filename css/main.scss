@@ -6,10 +6,6 @@
 @import "./base/support";
 
 
-// большие смысловые секции
-@import "./sections/header";
-
-
 // небольшие блоки
 @import "./blocks/wrapper";
 
@@ -21,6 +17,11 @@
 
 @import "./blocks/main-navigation";
 @import "./blocks/menu-button";
+
+
+// большие смысловые секции
+@import "./sections/header";
+@import "./sections/mobile-nav";
 
 
 
@@ -43,6 +44,9 @@
 
   .mobile-hide {
     display: none;
+  }
+  .mobile-show {
+    display: block;
   }
 
 }

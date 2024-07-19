@@ -1,0 +1,145 @@
+.mobile-nav {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  transition: all 0.3s;
+
+  background-color: var(--white);
+  padding-top: calc(31px + 88px);
+  padding-bottom: 32px;
+  overflow: auto;
+
+  right: 100vw;
+
+
+  // &__item {
+  //   position: relative;
+  // }
+  &__body {
+    margin-bottom: 29px;
+  }
+  &__footer {
+    display: none;
+  }
+  &__item:last-of-type {
+    position: relative;
+  }
+  &__item:last-of-type::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: var(--line);
+    z-index: 2;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #424242;
+    transition: all 0.3s;
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 25px 48px;
+    position: relative;
+    background-color: transparent;
+
+    span {
+      position: relative;
+      z-index: 3;
+    }
+    &::before {
+      content: "";
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transition: all 0.3s;
+      background-color: transparent;
+      position: absolute;
+      z-index: 3;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+      background: var(--line);
+      z-index: 2;
+    }
+    &:hover {
+      color: var(--white);
+      &::before {
+        left: -48px;
+        right: -48px;
+        bottom: -1px;
+        background: var(--red);
+      }
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+  &__custom-vector {
+    // transform-origin: center;
+    transition: transform 0.3s;
+  }
+  &__link:hover &__custom-vector {
+    opacity: 0;
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .phone {
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #424242;
+  }
+  .call-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: var(--red);
+  }
+
+  @media (max-width: 767px) {
+    &__link {
+      font-size: 20px;
+      padding: 16px 0;
+      &:hover {
+        &::before {
+          left: -20px;
+          right: -20px;
+        }
+      }
+    }
+    &__icon {
+      svg {
+        width: auto;
+        height: 28px;
+      }
+    }
+  }
+}
