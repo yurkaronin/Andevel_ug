@@ -1,0 +1,41 @@
+.menu-open {
+  .mobile-navigation {
+    left: 0;
+    visibility: initial;
+    opacity: initial;
+    pointer-events: initial;
+  }
+
+  .menu-button span {
+    // height: 0;
+    background-color: transparent;
+  }
+
+  .menu-button span:after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .menu-button span:before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  // .header__navigation {
+  //   left: 0;
+  // }
+
+  .header {
+    box-shadow: none;
+  }
+
+  .header:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #d9d9d9;
+  }
+}

@@ -1,0 +1,25 @@
+:root {
+  --font-family: "Geologica", sans-serif;
+  --second-family: "Geologica", sans-serif;
+
+  --white: #fff;
+  --red: #c4161c;
+  --dark-red: #72110d;
+  --black: #000;
+  --text: #323232;
+  --grey: #707070;
+  --line: #ccc;
+  --bg: #f1f1f1;
+
+  --gap: 32px;
+  --columns: repeat(12, 1fr);
+
+  @media (max-width: 1023px) {
+    --columns: repeat(6, 1fr);
+  }
+
+  @media (max-width: 767px) {
+    --gap: 15px;
+    --columns: repeat(2, 1fr);
+  }
+}

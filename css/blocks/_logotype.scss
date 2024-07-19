@@ -1,0 +1,11 @@
+.logotype {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  max-width: 272px;
+  transition: all 0.3s;
+
+  @media (max-width: 767px) {
+    max-width: 201px;
+  }
+}

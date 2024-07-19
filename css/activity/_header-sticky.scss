@@ -1,0 +1,12 @@
+.header-sticky {
+  .header {
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2);
+    background: var(--white);
+  }
+  .header:after {
+    display: none;
+  }
+  .header .logotype {
+    max-width: 200px;
+  }
+}

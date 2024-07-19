@@ -1,0 +1,94 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+  scrollbar-gutter: stable;
+}
+
+html *,
+html *::before,
+html *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 375px;
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--white);
+  font-style: normal;
+  line-height: 1.5;
+  max-width: 100%;
+  width: 100%;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--grey);
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text);
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+input,
+textarea,
+a,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-style: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+// Запрещаем изменение размеров текстового поля
+textarea {
+  resize: none;
+}
+
+// Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+svg * {
+  transition-property: fill, stroke;
+}
+
+// отключаем ненужные элементы навигации на яндекс картах
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
+[data-simplebar] {
+  max-width: 100%; /* Задает максимальную ширину для скроллируемой области */
+  overflow-x: auto; /* Разрешает горизонтальный скролл */
+}
+
+.simplebar-scrollbar::before {
+  background-color: var(--text);
+}

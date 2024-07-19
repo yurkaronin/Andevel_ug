@@ -1,0 +1,36 @@
+.main-navigation {
+  max-width: max-content;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    margin-right: 24px;
+    max-width: max-content;
+  }
+  &__item:last-of-type {
+    margin-right: 0;
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #424242;
+    text-decoration: none;
+    position: relative;
+    padding-top: calc(10px + 2px);
+    padding-bottom: calc(10px + 2px);
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      background: var(--dark-red);
+    }
+  }
+}

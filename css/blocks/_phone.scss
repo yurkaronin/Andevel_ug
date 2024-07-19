@@ -1,0 +1,31 @@
+.phone {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: right;
+  color: #424242;
+  display: block;
+
+  &__icon {
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+
+    &__icon {
+      display: flex;
+      width: 25px;
+      height: 25px;
+      svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+    }
+    &__text {
+      display: none;
+    }
+  }
+}

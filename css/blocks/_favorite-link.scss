@@ -1,0 +1,67 @@
+.favorite-link {
+  color: #505151;
+  position: relative;
+  transition: all 0.3s;
+  display: flex;
+  width: 37px;
+  height: 37px;
+  &__icon {
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+  }
+  &__status {
+    background-color: var(--white);
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #505151;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s;
+    line-height: 1;
+    font-size: 9px;
+    font-weight: 400;
+  }
+
+  &:hover {
+    color: #c4161c;
+  }
+  &:hover &__status {
+    border: 2px solid #c4161c;
+  }
+  // Активное состояние
+  &.active {
+    color: #c4161c;
+  }
+
+  &.active &__status {
+    background-color: var(--dark-red);
+    color: var(--white);
+
+    border: 2px solid var(--dark-red);
+
+    svg {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    width: 32px;
+    height: 32px;
+
+    &__status {
+      bottom: 2px;
+      right: -1px;
+    }
+  }
+}

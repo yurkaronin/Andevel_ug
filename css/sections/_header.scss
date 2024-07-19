@@ -1,0 +1,69 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: var(--white);
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: all 0.3s;
+
+  &__grid {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+  &__nav {
+    max-width: max-content;
+    margin-left: auto;
+  }
+
+  &__button {
+    display: none;
+  }
+  &__right-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    max-width: max-content;
+    margin-left: auto;
+  }
+
+  // модификатор
+  &--mod {
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: #d9d9d9;
+    }
+  }
+
+  @media (max-width: 1379px) {
+    &__grid {
+      grid-template-columns: 1fr auto auto;
+      gap: 20px;
+    }
+    &__nav {
+      display: none;
+    }
+    &__right {
+      max-width: max-content;
+      margin-left: auto;
+    }
+    &__button {
+      display: block;
+      max-width: max-content;
+    }
+    &__right-grid {
+      gap: 12px;
+    }
+  }
+}

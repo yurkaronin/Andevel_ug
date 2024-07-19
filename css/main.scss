@@ -1,0 +1,58 @@
+// base
+@import "./base/root";
+@import "./base/fonts";
+@import "./base/normalize";
+@import "./base/global";
+@import "./base/support";
+
+
+// большие смысловые секции
+@import "./sections/header";
+
+
+// небольшие блоки
+@import "./blocks/wrapper";
+
+
+@import "./blocks/logotype";
+@import "./blocks/favorite-link";
+@import "./blocks/phone";
+@import "./blocks/call-link";
+
+@import "./blocks/main-navigation";
+@import "./blocks/menu-button";
+
+
+
+
+// Активные состояния элементов
+@import "./activity/header-sticky";
+@import "./activity/menu-open";
+
+
+
+@media (max-width: 1379px) {
+
+}
+
+@media (max-width: 1023px) {
+
+}
+
+@media (max-width: 767px) {
+
+  .mobile-hide {
+    display: none;
+  }
+
+}
+
+@media (max-width: 374px) {
+
+}
+
+
+main {
+  height: 120000000px;
+}
+
