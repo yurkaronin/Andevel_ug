@@ -33,10 +33,10 @@ input[type="radio"].visually-hidden {
 @media (max-width: 767px) {
 
   .mobile-hide {
-    display: none;
+    display: none !important;
   }
   .mobile-show {
-    display: block;
+    display: block !important;
   }
 
 }

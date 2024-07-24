@@ -18,11 +18,13 @@
 @import "./blocks/main-navigation";
 @import "./blocks/menu-button";
 @import "./blocks/cust-list";
+@import "./blocks/main";
 
 
 // большие смысловые секции
 @import "./sections/header";
 @import "./sections/mobile-nav";
+@import "./sections/hero";
 
 
 @import "./sections/footer";
@@ -44,7 +46,8 @@
 
 
 
-main {
-  min-height: 70vh;
-}
+// .main {
+//   // min-height: 70vh;
+//   margin-top: var(--header-height);
+// }
 
