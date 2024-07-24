@@ -17,11 +17,15 @@
 
 @import "./blocks/main-navigation";
 @import "./blocks/menu-button";
+@import "./blocks/cust-list";
 
 
 // большие смысловые секции
 @import "./sections/header";
 @import "./sections/mobile-nav";
+
+
+@import "./sections/footer";
 
 
 
@@ -32,31 +36,15 @@
 
 
 
-@media (max-width: 1379px) {
+@media (max-width: 1379px) {}
+@media (max-width: 1279px) {}
+@media (max-width: 1023px) {}
+@media (max-width: 767px) {}
+@media (max-width: 374px) {}
 
-}
-
-@media (max-width: 1023px) {
-
-}
-
-@media (max-width: 767px) {
-
-  .mobile-hide {
-    display: none;
-  }
-  .mobile-show {
-    display: block;
-  }
-
-}
-
-@media (max-width: 374px) {
-
-}
 
 
 main {
-  height: 120000000px;
+  min-height: 70vh;
 }
 

@@ -1,0 +1,36 @@
+.cust-list {
+  list-style: none;
+  padding: 0;
+  line-height: 2;
+  color: var(--text);
+  // margin: 0;
+
+  li {
+    position: relative;
+    padding-left: calc(8px + 8px);
+    transition: all 0.3s;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 2px;
+      background-color: #9f231f;
+      position: absolute;
+      top: 9px;
+      left: 0;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: var(--red);
+
+      &::after {
+        width: 12px;
+      }
+    }
+  }
+  @media (max-width:1023px) {
+    line-height: 1.8;
+  }
+}
