@@ -29,3 +29,14 @@ input[type="radio"].visually-hidden {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+@media (max-width: 767px) {
+
+  .mobile-hide {
+    display: none;
+  }
+  .mobile-show {
+    display: block;
+  }
+
+}
