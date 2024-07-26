@@ -1,0 +1,27 @@
+.title {
+  margin-top: 0;
+  font-style: normal;
+  font-family: var(--font-family);
+  position: relative;
+
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  color: var(--text);
+
+  @media (max-width: 767px) {
+    font-size: 30px;
+  }
+}
+
+// .title--big {
+//   font-size: 64px;
+// }
+
+// .title--small {
+//   font-size: 24px;
+// }
+
+// .title--min {
+//   font-size: 18px;
+// }

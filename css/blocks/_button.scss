@@ -1,0 +1,33 @@
+.button {
+  text-decoration: none;
+  cursor: pointer;
+  max-width: max-content;
+  font-family: var(--font-family);
+  text-align: center;
+  border: none;
+  transition: all 0.3s;
+  box-shadow: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--red);
+  height: 56px;
+  border-radius: 4px;
+  padding: 0px 16px;
+
+  line-height: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--white);
+
+  &--transparent {
+    background-color: transparent;
+    border: 2px solid var(--white);
+  }
+  &--red {
+    background-color: var(--dark-red);
+    border: none;
+  }
+}

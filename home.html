@@ -181,33 +181,72 @@
   <!-- ОСНОВНОЙ КОНТЕНТ  -->
   <main class="main js-main">
 
-    <section class="hero">
-      <!-- СЛАЙДЕР С ФОТО  -->
-      <div class="hero__slider-photo">
-        <!-- Slider main container -->
-        <div class="swiper js-slider-photo">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="hero__image">
-                <img src="./img/hero-slider-photo/1.jpg" alt="#" loading="lazy">
+    <section class="hero js-hero-sliders">
+      <div class="wrapper">
+        <!-- СЛАЙДЕР С ФОТО  -->
+        <div class="hero__slider-photo">
+          <!-- Slider main container -->
+          <div class="swiper js-hero-slider-photo">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="hero__image">
+                  <img src="./img/hero-slider-photo/1.jpg" alt="#" loading="lazy">
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="hero__image">
-                <img src="./img/hero-slider-photo/2.jpg" alt="#" loading="lazy">
+              <div class="swiper-slide">
+                <div class="hero__image">
+                  <img src="./img/hero-slider-photo/2.jpg" alt="#" loading="lazy">
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- СЛАЙДЕР С ТЕКСТОМ  -->
+        <div class="hero__slider-details">
+          <!-- Slider main container -->
+          <div class="swiper js-hero-slider-text">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="hero__slide-details">
+                  <p class="hero__sub">Предложение от РоссельхозБанк</p>
+                  <h3 class="title">Ипотека 5% для работников<br>
+                    IT-организаций</h3>
+                  <a href="#" class="button button--transparent"><span>Подробнее</span></a>
+
+                </div>
+              </div>
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="hero__slide-details">
+                  <p class="hero__sub">Предложение от РоссельхозБанк</p>
+                  <h3 class="title">Ипотека 5% для работников<br>
+                    IT-организаций</h3>
+                  <a href="#" class="button button--transparent"><span>Подробнее</span></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- НАВИГАЦИЯ СЛАЙДЕРОВ  -->
+        <div class="hero__sliders-nav">
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+
+        <!-- ФИЛЬТР  -->
+        <div class="hero__filter"></div>
+
       </div>
-
-      <!-- СЛАЙДЕР С ТЕКСТОМ  -->
-      <div class="hero__slider-details"></div>
-
-      <!-- ФИЛЬТР  -->
-      <div class="hero__filter"></div>
     </section>
 
   </main>
