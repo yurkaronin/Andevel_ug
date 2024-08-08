@@ -17,15 +17,19 @@
 @import "./blocks/button";
 @import "./blocks/title";
 @import "./blocks/swiper";
+@import "./blocks/tabs-list";
 
 @import "./blocks/main-navigation";
 @import "./blocks/menu-button";
 @import "./blocks/cust-list";
 @import "./blocks/main";
+@import "./blocks/announce-cards-list";
+@import "./blocks/announce-card";
 
 
 // большие смысловые секции
 @import "./sections/header";
+@import "./sections/section";
 @import "./sections/mobile-nav";
 @import "./sections/hero";
 

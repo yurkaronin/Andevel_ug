@@ -1,0 +1,27 @@
+.announce-cards-list {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+  }
+  &__item {
+    // width: 328px;
+  }
+
+  @media (max-width: 1379px) {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 1023px) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

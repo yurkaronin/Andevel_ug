@@ -1,0 +1,147 @@
+.announce-card {
+  border-radius: 5px;
+  background-color: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s;
+  // max-width: 328px;
+
+  &:hover {
+    scale: 1.1;
+  }
+  &__header {
+    position: relative;
+    max-width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+  }
+
+  &__slider {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+
+  &__navigation {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    gap: 3px;
+    padding: 0 16px;
+  }
+
+  &__navigation-item {
+    width: 36px;
+    height: 100%;
+    position: relative;
+  }
+
+  &__navigation-line {
+    display: block;
+    background-color: var(--white);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    pointer-events: none;
+    bottom: 16px;
+    left: 0;
+    transition: all 0.3s;
+    opacity: 0;
+  }
+
+  &__navigation-item:hover {
+    width: 56px;
+  }
+
+  &__navigation-item:hover &__navigation-line {
+    background-color: #ad2220;
+  }
+
+  &__body {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-inline: 16px;
+  }
+  &__link {
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: 0.03em;
+    color: var(--red);
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  &__address {
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    color: var(--text);
+    text-align: center;
+  }
+  &__footer {
+    position: relative;
+    padding-inline: 16px;
+    padding-bottom: 28px;
+    padding-top: 20px;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: var(--line);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    color: var(--text);
+    display: inline;
+    margin-right: 12px;
+  }
+  &__parameters {
+    margin: 0;
+    display: inline;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--grey);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(
+      180deg,
+      rgba(242, 242, 242, 0.1) 0%,
+      rgba(140, 140, 140, 0.01) 100%
+    );
+    .announce-card__navigation-line {
+      opacity: 1;
+    }
+  }
+}

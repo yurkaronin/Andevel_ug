@@ -25,10 +25,14 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: var(--grey);
-
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--text);
 }
 
@@ -90,5 +94,23 @@ svg * {
 }
 
 .simplebar-scrollbar::before {
-  background-color: var(--text);
+  // background-color: var(--text);
+}
+
+.simplebar-scrollbar {
+  // background: var(--red);
+  height: 3px;
+  bottom: -4px;
+}
+
+.simplebar-track.simplebar-horizontal {
+  height: 3px;
+}
+
+.simplebar-track.simplebar-horizontal {
+  height: 2px;
+}
+
+.simplebar-track {
+  bottom: -1px;
 }
