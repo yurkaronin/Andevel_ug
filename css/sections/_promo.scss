@@ -1,0 +1,108 @@
+.promo {
+  position: relative;
+  color: #fff;
+  background-color: #000000;
+  background-image: url(../img/promo/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(272deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), rgba(0, 0, 0, 0.3);
+
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    color: inherit;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 24px;
+    color: inherit;
+    max-width: 700px;
+  }
+}
+
+.form {
+  &__grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: auto auto;
+    max-width: max-content;
+    align-items: flex-end;
+  }
+  &__list {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: max-content;
+
+  }
+
+  label {
+    display: block;
+    margin: 0;
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  input {
+    max-width: 100%;
+    width: 100%;
+    height: 56px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 0px 16px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #161616;
+    border: none;
+  }
+  ::placeholder {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  &__item:not(:last-of-type) {
+    input {
+      border-radius: 4px 0 0 4px;
+    }
+  }
+  &__item:last-of-type {
+    input {
+      border-radius:  0 4px 4px 0;
+    }
+  }
+  &__item:not(:last-of-type) &__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__item:not(:last-of-type) &__input::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 26px;
+    width: 1px;
+    background: #d9d9d9;
+  }
+  &__button {
+    padding: 10px 26px;
+  }
+}
