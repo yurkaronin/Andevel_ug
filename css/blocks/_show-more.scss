@@ -1,0 +1,31 @@
+.show-more {
+  background-color: transparent;
+  display: grid;
+  gap: 12px;
+  max-width: max-content;
+  align-items: center;
+  grid-template-columns: auto 20px;
+  position: relative;
+  border: none;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  color: var(--white);
+
+  &:after {
+    content: "";
+    display: block;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='10' viewBox='0 0 17 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.1421 1.46448L8.07102 8.53555' stroke='%23C4161C' stroke-width='2' stroke-linecap='round'/%3e%3cpath d='M8.07104 8.53552L0.999977 1.46445' stroke='%23C4161C' stroke-width='2' stroke-linecap='round'/%3e%3c/svg%3e ");
+    width: 15px;
+    height: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 767px) {
+    color: var(--red);
+    font-size: 13px;
+  }
+}

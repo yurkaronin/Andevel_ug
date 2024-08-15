@@ -6,6 +6,8 @@
   position: relative;
   transition: all 0.3s;
   // max-width: 328px;
+  max-width: 100%;
+  width: 100%;
 
   &:hover {
     scale: 1.1;
@@ -144,4 +146,12 @@
       opacity: 1;
     }
   }
+
+  @media (max-width: 767px) {
+    &:hover {
+      scale: 1.04;
+    }
+  }
+
+
 }

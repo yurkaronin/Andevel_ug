@@ -1,0 +1,35 @@
+.custom-radio-btn {
+  &__label {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+
+    cursor: pointer;
+    transition: background-color 0.3s; /* Плавная анимация фона */
+    &:hover,
+    &:focus {
+      // background-color: var(--bg);
+
+    }
+  }
+  input[type="radio"]:checked + .custom-radio-btn__label {
+    background-color: var(--white);
+    color: #161616;
+  }
+
+  @media (max-width: 767px) {
+    &__label {
+      color: var(--dark-red);
+    }
+    input[type="radio"]:checked + .custom-radio-btn__label {
+      background-color: var(--dark-red);
+      color: var(--white);
+    }
+  }
+}

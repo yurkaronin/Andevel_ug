@@ -10,18 +10,28 @@
     grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
   }
   &__item {
-    // width: 328px;
+    width: 100%;
+    max-width: 100%;
   }
 
   @media (max-width: 1379px) {
     &__list {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
     }
   }
 
   @media (max-width: 1023px) {
     &__list {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__list {
+      display: block;
+    }
+    &__item {
+      margin-bottom: 16px;
     }
   }
 }

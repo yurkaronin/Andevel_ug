@@ -1,0 +1,91 @@
+.custom-select {
+  position: relative;
+  font-family: inherit;
+  width: 100%;
+  max-width: 100%;
+
+  &__selected {
+    background-color: var(--white);
+    padding: 14px 16px;
+    padding-right: calc(48px + 12px);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--white);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #161616;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 4px;
+    span {
+      margin: 0 !important;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='10' viewBox='0 0 17 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.1421 1.46448L8.07102 8.53555' stroke='%23C4161C' stroke-width='2' stroke-linecap='round'/%3e%3cpath d='M8.07104 8.53552L0.999977 1.46445' stroke='%23C4161C' stroke-width='2' stroke-linecap='round'/%3e%3c/svg%3e ");
+      width: 15px;
+      height: 15px;
+      background-position: center;
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+      position: absolute;
+      right: 20px;
+      transition: all 0.3s;
+    }
+  }
+  &__options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    border-top: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #161616;
+    z-index: 20;
+    display: none;
+  }
+  &__option {
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+    border-top: 1px solid var(--bg);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--white);
+      // color: var(--White);
+    }
+  }
+  // активности
+  &__open {
+
+  }
+  &.open &__selected {
+    // background-color: var(--white);
+    border-radius: 4px 4px 0 0;
+  }
+  &.open &__options {
+    display: block;
+    border-radius: 0 0 4px 4px;
+  }
+  &.open &__selected:after {
+    transform: rotate(-180deg);
+  }
+
+  @media (max-width: 767px) {
+    border: 1px solid var(--line);
+    border-radius: 4px;
+  }
+}

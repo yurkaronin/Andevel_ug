@@ -1,43 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Слайдеры в первом экране на главной странице
+  let swiperPhoto, swiperText;
 
   if (document.querySelector(".js-hero-slider-photo")) {
-    const swiper = new Swiper(".js-hero-slider-photo", {
-      // Optional parameters
+    swiperPhoto = new Swiper(".js-hero-slider-photo", {
       loop: true,
-      simulateTouch: false,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".js-hero-sliders .swiper-button-next",
-        prevEl: ".js-hero-sliders .swiper-button-prev",
-      },
+      speed: 500
+      // Убираем автопрокрутку и навигацию, так как переключение будет идти синхронно с текстовым слайдером
     });
   }
 
   if (document.querySelector(".js-hero-slider-text")) {
-    const swiper = new Swiper(".js-hero-slider-text", {
-      // Optional parameters
+    swiperText = new Swiper(".js-hero-slider-text", {
       loop: true,
-      simulateTouch: false,
-      // effect: "fade",
-      // direction: 'vertical',
       autoplay: {
         delay: 2500,
-        disableOnInteraction: false,
       },
       pagination: {
         el: ".js-hero-sliders .swiper-pagination",
-        clickable: true, // Сделать пагинацию кликабельной
-        // dynamicBullets: true, // Динамические точки
+        clickable: true
       },
-
-      // Navigation arrows
       navigation: {
         nextEl: ".js-hero-sliders .swiper-button-next",
-        prevEl: ".js-hero-sliders .swiper-button-prev",
+        prevEl: ".js-hero-sliders .swiper-button-prev"
       },
+    });
+
+    if (swiperPhoto && swiperText) {
+      swiperText.on('slideChange', function () {
+        // Переключаем слайдер с фото на тот же индекс, что и текстовый слайдер
+        swiperPhoto.slideTo(swiperText.activeIndex);
+      });
+    }
+
+    swiperText.on('transitionEnd', function () {
+      swiperPhoto.slideTo(swiperText.activeIndex);
     });
   }
 
