@@ -33,4 +33,15 @@
       margin-right: 0;
     }
   }
+
+  @media (max-width: 767px) {
+    li {
+      margin-right: 15px;
+    }
+    li:after {
+      margin-left: 15px;
+      width: 8px;
+      height: 8px;
+    }
+  }
 }

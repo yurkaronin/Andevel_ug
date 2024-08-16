@@ -181,8 +181,10 @@
 
   <!-- ОСНОВНОЙ КОНТЕНТ  -->
   <main class="main js-main">
-    <!-- Первый экран с фильтрами  -->
-    <section class="hero hero--inner" style="background-image: url(./img/catalog/bg-1.jpg);">
+
+    <!-- Первый экран с фильтрами -->
+    <section class="hero hero--inner mobile-hide" style="background-image: url(./img/catalog/bg-1.jpg);">
+
       <div class="wrapper">
 
         <!-- крошки  -->
@@ -507,10 +509,340 @@
 
       </div>
     </section>
+    <!-- мобильный Первый экран с фильтрами -->
+    <section class="hero hero-inner-mobile mobile-show">
+
+      <div class="hero-inner-mobile__top" style="background-image: url(./img/catalog/bg-1-mob.jpg);">
+        <div class="wrapper">
+          <!-- крошки  -->
+          <ul class="breadcrumbs list-reset">
+            <li>
+              <a href="#">Главная</a>
+            </li>
+            <li>
+              <a href="#">Квартиры в Краснодаре</a>
+            </li>
+          </ul>
+          <div class="hero__description">
+            <h1 class="hero__title title">Квартиры в Краснодаре</h1>
+            <p class="hero__subtitle subtitle">68 000 предложений</p>
+          </div>
+          <div class="hero__filter-tabs">
+            <div class="filter-tabs__item">
+              <a class="filter-tabs__link isActive" href="#">
+                <span class="filter-tabs__icon">
+                  <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.74518 15.3137V25.8395H3.66128L4.93815 23.9824H26.6498L27.9274 25.8395H29.8427V15.3137H1.74518Z"
+                      stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                    <path d="M28.5658 10.3608V1.69214H15.7939" stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                    <path d="M3.02203 10.3608V1.69214H15.7939" stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                    <path d="M8.13111 7.26489H5.57657L3.66125 15.3138" stroke="white" stroke-width="2"
+                      stroke-miterlimit="2" />
+                    <path d="M27.9274 15.3138L26.0113 7.26489H23.4568" stroke="white" stroke-width="2"
+                      stroke-miterlimit="2" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M15.7939 7.88385C15.7939 8.5672 15.2226 9.1219 14.5171 9.1219H9.40798C8.70242 9.1219 8.1311 8.5672 8.1311 7.88385V6.64579C8.1311 5.96093 8.70242 5.40698 9.40798 5.40698H14.5171C15.2226 5.40698 15.7939 5.96093 15.7939 6.64579V7.88385Z"
+                      stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M23.4568 7.88385C23.4568 8.5672 22.8855 9.1219 22.1799 9.1219H17.0708C16.3653 9.1219 15.7939 8.5672 15.7939 7.88385V6.64579C15.7939 5.96093 16.3653 5.40698 17.0708 5.40698H22.1799C22.8855 5.40698 23.4568 5.96093 23.4568 6.64579V7.88385Z"
+                      stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                  </svg>
+                </span>
+                <span class="filter-tabs__label">Квартиры</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="hero-inner-mobile__body">
+        <div class="wrapper">
+          <!-- ФИЛЬТР  -->
+          <div class="hero__filter">
+            <!-- форма фильтра  -->
+            <div class="hero__filter-form">
+              <div class="filter-form">
+                <form action="">
+                  <ul class="filter-form__list list-reset">
+                    <li class="filter-form__item">
+                      <div class="filter-form__options">
+                        <div class="custom-radio-btn">
+                          <input type="radio" id="purchase" name="option" class="visually-hidden" checked>
+                          <label for="purchase" class="custom-radio-btn__label">Покупка</label>
+                        </div>
+                        <div class="custom-radio-btn">
+                          <input type="radio" id="rent" name="option" class="visually-hidden">
+                          <label for="rent" class="custom-radio-btn__label">Аренда</label>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="filter-form__item">
+                      <span class="filter-form__label">Кол-во комнат</span>
+                      <!-- селект -->
+                      <div class="custom-select" data-default="Любое">
+                        <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                        <div class="custom-select__options">
+                          <div class="custom-select__option" data-value="Любое">Любое</div>
+                          <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                          <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                          <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                          <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                        </div>
+                        <input class="visually-hidden" type="hidden" value="" required>
+                      </div>
+                    </li>
+
+                    <li class="filter-form__item filter-form__inputs">
+                      <span class="filter-form__label">Площадь</span>
+                      <div class="number-inputs">
+                        <input type="number" id="from" placeholder="От">
+                        <input type="number" id="to" placeholder="До">
+                      </div>
+
+                    </li>
+
+                    <li class="filter-form__item">
+                      <span class="filter-form__label">Стоимость</span>
+                      <div class="number-inputs">
+                        <input type="number" id="from" placeholder="От">
+                        <input type="number" id="to" placeholder="До">
+                      </div>
+
+                    </li>
+
+                    <li class="filter-form__item filter-form__buttons">
+                      <button class="button button--red" type="button"><span>Показать накарте</span></button>
+                      <button class="button" type="submit"><span>Показать!</span></button>
+                    </li>
+
+                    <li class="filter-form__item filter-form__show-more">
+                      <button class="show-more" type="button"><span>Расширенный поиск</span></button>
+                    </li>
+
+                  </ul>
+                </form>
+              </div>
+
+            </div>
+            <!-- табы фильтра  -->
+            <div class="hero__filter-tabs">
+              <ul class="filter-tabs list-reset">
+
+                <li class="filter-tabs__item">
+                  <a class="filter-tabs__link" href="#">
+                    <span class="filter-tabs__icon">
+                      <svg width="32" height="27" viewBox="0 0 32 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_362_1307)">
+                          <path d="M10.3158 6.53906V2.74219H6.52637V10.3359" stroke="white" stroke-width="2"
+                            stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M26.7369 16.6641V26.1562H4.63159V16.6641" stroke="white" stroke-width="2"
+                            stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16 0.84375L2.10522 14.7656L4.63154 17.2969L16 5.90625L27.3684 17.2969L29.8947 14.7656L16 0.84375Z"
+                            stroke="white" stroke-width="2" stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M14.1052 16.6641H9.05261V26.1562H14.1052V16.6641Z" stroke="white" stroke-width="2"
+                            stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M22.9474 16.6641H16.6316V21.7266H22.9474V16.6641Z" stroke="white" stroke-width="2"
+                            stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M0.842163 26.1562H31.158" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_362_1307">
+                            <rect width="32" height="27" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                    </span>
+                    <span class="filter-tabs__label">Дома</span>
+                  </a>
+                </li>
+
+                <li class="filter-tabs__item">
+                  <a class="filter-tabs__link" href="#">
+                    <span class="filter-tabs__icon">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_362_1249)">
+                          <path d="M2.18298 13.7374C7.55352 12.1257 21.7553 13.1255 29.8427 17.4721" stroke="white"
+                            stroke-width="2" stroke-miterlimit="2" />
+                          <path d="M13.2612 13.2004C8.31058 14.258 4.526 17.348 1.74512 21.0553" stroke="white"
+                            stroke-width="2" stroke-miterlimit="2" />
+                          <path d="M17.1153 13.6492C12.7375 15.1711 7.83136 18.9221 4.46667 27.2312" stroke="white"
+                            stroke-width="2" stroke-miterlimit="2" />
+                          <path d="M20.7438 14.3157C16.8148 15.6886 12.2505 20.6696 10.6763 29.7584" stroke="white"
+                            stroke-width="2" stroke-miterlimit="2" />
+                          <path d="M24.1444 15.1898C20.4605 16.5471 17.8654 21.1598 17.4088 28.519" stroke="white"
+                            stroke-width="2" stroke-miterlimit="2" />
+                          <path d="M27.5778 16.4027C23.4685 17.8497 23.2375 21.8856 23.9134 27.2328" stroke="white"
+                            stroke-width="2" stroke-miterlimit="2" />
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M24.9959 8.54239C24.9959 10.2345 23.6121 11.6316 21.906 11.6316C20.1998 11.6316 18.816 10.2345 18.816 8.54239C18.816 6.85029 21.906 1.74512 21.906 1.74512C21.906 1.74512 24.9959 6.85029 24.9959 8.54239Z"
+                            stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                          <path d="M21.906 11.6316V14.5834" stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                          <path
+                            d="M25.9075 6.11585C26.4133 5.04814 26.8496 4.21692 26.8496 4.21692C26.8496 4.21692 29.3214 8.9295 29.3214 10.3235C29.3214 11.7174 28.2146 12.8678 26.8496 12.8678C26.1862 12.8678 25.5836 12.5962 25.1395 12.1568"
+                            stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                          <path d="M26.8496 12.8679V16.1108" stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.6369 4.83507C12.6369 6.54122 11.2531 7.92424 9.54698 7.92424C7.84084 7.92424 6.45703 6.54122 6.45703 4.83507C6.45703 3.12814 7.84084 1.74512 9.54698 1.74512C11.2531 1.74512 12.6369 3.12814 12.6369 4.83507Z"
+                            stroke="white" stroke-width="2" stroke-miterlimit="2" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_362_1249">
+                            <rect width="32" height="32" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="filter-tabs__label">Земельные участки</span>
+                  </a>
+                </li>
+
+                <li class="filter-tabs__item">
+                  <a class="filter-tabs__link" href="#">
+                    <span class="filter-tabs__icon">
+                      <svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_362_1261)">
+                          <path d="M20.1679 12.9132H11.1245V30.7934H20.1679V12.9132Z" stroke="white" stroke-width="2"
+                            stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M18.8755 9.72095H12.416V12.9139H18.8755V9.72095Z" stroke="white" stroke-width="2"
+                            stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M16.9382 6.52795H14.3542V9.72093H16.9382V6.52795Z" stroke="white" stroke-width="2"
+                            stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M13.7084 18.0222H17.5839" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M13.7084 15.4677H17.5839" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M13.7084 20.5768H17.5839" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M13.7084 23.1305H17.5839" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M13.7084 25.6851H17.5839" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M13.7084 28.2396H17.5839" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M7.89478 23.1305H9.18635" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M7.89478 20.5768H9.18635" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M7.89478 18.0222H9.18635" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M7.89478 25.6851H9.18635" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M7.89478 28.2396H9.18635" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M25.9808 20.5768V17.3838H20.1671" stroke="white" stroke-width="2"
+                            stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M15.6458 6.52803V0.780518" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M20.1671 14.8292H24.0434V17.3838" stroke="white" stroke-width="2"
+                            stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M12.416 8.44336V4.61195L11.7702 3.97351L5.95654 10.3595V30.7942H11.1244"
+                            stroke="white" stroke-width="2" stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M5.95653 20.5768H0.789429V30.7941H5.95653" stroke="white" stroke-width="2"
+                            stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M2.08105 20.5768V16.7453L5.95658 13.5524" stroke="white" stroke-width="2"
+                            stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M27.2724 23.1305H23.3969" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M27.2724 25.6851H23.3969" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M27.2724 28.2396H23.3969" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M29.2105 20.5768H23.3969V30.7941H29.2105V20.5768Z" stroke="white" stroke-width="2"
+                            stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M20.1671 30.7942H23.3969" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M3.37341 22.4921V28.878" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M27.2724 17.3838H25.9808" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_362_1261">
+                            <rect width="30" height="32" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="filter-tabs__label">Коммерческая недвижимость</span>
+                  </a>
+                </li>
+
+                <li class="filter-tabs__item">
+                  <a class="filter-tabs__link" href="#">
+                    <span class="filter-tabs__icon">
+                      <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_362_1289)">
+                          <path d="M27.024 14.3865V27.9452H23.5789V14.3865H8.421V27.9452H4.97595V14.3865" stroke="white"
+                            stroke-width="2" stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M0.842163 15.7429L16.0001 0.828613L31.158 15.7429" stroke="white" stroke-width="2"
+                            stroke-miterlimit="2" stroke-linejoin="round" />
+                          <path d="M9.79871 17.7761H22.2012" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M9.79871 21.1659H22.2012" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M9.79871 24.5555H22.2012" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                          <path d="M9.79871 27.9452H22.2012" stroke="white" stroke-width="2" stroke-miterlimit="2"
+                            stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_362_1289">
+                            <rect width="32" height="29" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="filter-tabs__label">Гаражи</span>
+                  </a>
+                </li>
+
+                <li class="filter-tabs__item">
+                  <a class="filter-tabs__link" href="#">
+                    <span class="filter-tabs__icon">
+                      <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.74512 20.7962C2.78629 20.7969 3.8259 19.5662 4.86707 19.5662C5.90824 19.5662 6.94785 20.7969 7.98902 20.7962C9.03019 20.7969 10.0698 19.5662 11.111 19.5662C12.1521 19.5662 13.1918 20.7969 14.2329 20.7962C15.2741 20.7969 16.3137 19.5662 17.3549 19.5662C18.396 19.5662 19.4357 20.7969 20.4768 20.7962C21.518 20.7969 22.5576 19.5662 23.5988 19.5662C24.6399 19.5662 25.6796 20.7969 26.7207 20.7962C27.7619 20.7969 28.8015 19.5662 29.8427 19.5662"
+                          stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                        <path d="M20.4792 18.6385C21.4017 17.9462 22.0487 17.0708 22.35 16.4893H4.86707L6.11585 18.3354"
+                          stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                        <path d="M7.98901 23.8739H14.8573" stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                        <path d="M12.9843 28.1815H19.8525" stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                        <path d="M18.6038 25.1046H25.4721" stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.36463 4.18151C7.36463 5.54074 6.24619 6.64305 4.86707 6.64305C3.48795 6.64305 2.36951 5.54074 2.36951 4.18151C2.36951 2.82228 3.48795 1.71997 4.86707 1.71997C6.24619 1.71997 7.36463 2.82228 7.36463 4.18151Z"
+                          stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                        <path
+                          d="M25.4721 3.56616C23.7339 3.56616 22.3501 4.61001 22.3501 6.0277C22.3501 4.61001 20.9663 3.56616 19.2281 3.56616"
+                          stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                        <path
+                          d="M29.2184 9.71997C27.4802 9.71997 26.0964 10.7638 26.0964 12.1815C26.0964 10.7638 24.7126 9.71997 22.9745 9.71997"
+                          stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                        <path d="M19.2282 16.4892L11.7355 2.33533V16.4892" stroke="white" stroke-width="2"
+                          stroke-miterlimit="2" />
+                        <path d="M11.7354 6.64307L6.62317 16.4892" stroke="white" stroke-width="2"
+                          stroke-miterlimit="2" />
+                      </svg>
+                    </span>
+                    <span class="filter-tabs__label">Зарубежная недвижимость</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- карта с объектами  -->
     <section class="section objects-map"
-      style="width: 100%; height: 496px; background-image: url(./img/objects-map/1.jpg);">
+      style="background-image: url(./img/objects-map/1.jpg);">
     </section>
 
     <!-- Ознакомьтесь с предложениями по выгодным ценам  -->
@@ -1301,6 +1633,9 @@
 
     <!-- Хотите продать свою недвижимость, но не знаете с чего начать? -->
     <section class="section promo">
+      <div class="promo__photo-mobile">
+        <img src="./img/promo/1-mob.jpg" alt="#" loading="lazy">
+      </div>
       <div class="wrapper promo__content">
         <h2 class="title promo__title">Хотите продать свою недвижимость, <br>
           но не знаете с чего начать?</h2>
@@ -1330,7 +1665,7 @@
                 </ul>
               </div>
               <div class="form__col">
-                <a href="#" class="form__button button"><span>Отправить</span></a>
+                <a href="#" class="form__button button mobile-full"><span>Отправить</span></a>
               </div>
             </div>
 
@@ -1340,30 +1675,6 @@
 
       </div>
     </section>
-
-    <!-- Мы предоставляем широкий выбор услуг -->
-    <section class="section">
-      <div class="wrapper">
-        <h2 class="title">Мы предоставляем широкий выбор услуг</h2>
-        <p>АН «Девелопмент-Юг» оказывает услуги по продаже и аренде жилой и коммерческой недвижимости на первичном и
-          вторичном рынках города Краснодар, а так же полный спектр юридических услуг в сфере недвижимости.</p>
-      </div>
-    </section>
-
-    <!-- Мы предоставляем широкий выбор услуг -->
-    <section class="section">
-      <div class="wrapper">
-        <h2 class="title">Агентство недвижимости «Девелопмент-Юг»
-          – одна из крупнейших риэлторских организаций Краснодара.</h2>
-        <p>Компания работает со всеми сделками, связанными с недвижимостью в Краснодаре и Краснодарском крае. Все офисы
-          риэлторской компании «Девелопмент-Юг» придерживаются в работе единых стандартов качества. Наша цель –
-          выполнить задачу максимально на удобном и выгодном для клиента уровне.</p>
-
-        <h3 class="title title--sm">Мы гарантируем чистоту и безопасность сделки</h3>
-        <a href="#" class="button"><span>Подробнее о нас</span></a>
-      </div>
-    </section>
-
 
   </main>
 

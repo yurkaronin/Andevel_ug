@@ -1,0 +1,10 @@
+.objects-map {
+  padding: 0;
+  height: 496px;
+  width: 100%;
+  background-repeat: no-repeat;
+
+  @media (max-width: 767px) {
+    height: 375px;
+  }
+}
