@@ -30,6 +30,12 @@ input[type="radio"].visually-hidden {
   overflow-x: hidden;
 }
 
+@media (max-width: 1379px) {
+  .tablet-hide {
+    display: none !important;
+  }
+}
+
 @media (max-width: 767px) {
 
   .mobile-hide {
@@ -45,4 +51,3 @@ input[type="radio"].visually-hidden {
   }
 
 }
-

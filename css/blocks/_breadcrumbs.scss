@@ -1,0 +1,36 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -22px;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--white);
+  margin-bottom: 15px;
+
+  li {
+    margin-right: 22px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: max-content;
+
+    &:after {
+      content: "";
+      margin-left: 24px;
+      display: block;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L5 5L1 9' stroke='%23C4161C' stroke-width='2'/%3e%3c/svg%3e ");
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 10px;
+      background-size: contain;
+    }
+  }
+  li:last-of-type {
+    opacity: 0.7;
+
+    &:after {
+      display: none;
+      margin-right: 0;
+    }
+  }
+}
