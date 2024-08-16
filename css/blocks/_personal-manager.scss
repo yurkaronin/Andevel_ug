@@ -1,0 +1,49 @@
+.personal-manager {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+  &__head {
+    padding: 20px 0 16px;
+    margin: 0 24px;
+    margin-right: 60px;
+    border-bottom: 1px solid var(--line);
+  }
+  &__price {
+    display: block;
+    margin: 0;
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    color: var(--text);
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--grey);
+  }
+
+  &__photo {
+    display: flex;
+    max-width: 88px;
+    height: 88px;
+    margin: 0 auto;
+    margin-bottom: 14px;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // ПЕРЕОПРЕДЕЛЕНИЯ
+  .favorite-btn {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+  }
+}

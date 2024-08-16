@@ -17,17 +17,28 @@
   border-radius: 4px;
   padding: 0px 16px;
 
-  line-height: 100%;
+  line-height: 1;
   font-weight: 600;
   font-size: 16px;
   color: var(--white);
 
   &--transparent {
     background-color: transparent;
-    border: 2px solid var(--white);
+    border: 2px solid var(--red);
+    color: var(--red);
   }
   &--red {
     background-color: var(--dark-red);
     border: none;
+  }
+  &--small {
+    height: 32px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

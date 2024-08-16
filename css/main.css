@@ -566,6 +566,43 @@ input[type=radio].visually-hidden {
   }
 }
 
+.favorite-btn {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  background-color: var(--white);
+  position: relative;
+}
+.favorite-btn__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #c4161c;
+  position: absolute;
+}
+.favorite-btn__icon path {
+  stroke: currentColor;
+}
+
 .phone {
   font-weight: 600;
   font-size: 18px;
@@ -634,18 +671,35 @@ input[type=radio].visually-hidden {
   height: 56px;
   border-radius: 4px;
   padding: 0px 16px;
-  line-height: 100%;
+  line-height: 1;
   font-weight: 600;
   font-size: 16px;
   color: var(--white);
 }
 .button--transparent {
   background-color: transparent;
-  border: 2px solid var(--white);
+  border: 2px solid var(--red);
+  color: var(--red);
 }
 .button--red {
   background-color: var(--dark-red);
   border: none;
+}
+.button--small {
+  height: 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .title {
@@ -1948,6 +2002,55 @@ input[type=radio].visually-hidden {
   }
 }
 
+.personal-manager {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+}
+.personal-manager__head {
+  padding: 20px 0 16px;
+  margin: 0 24px;
+  margin-right: 60px;
+  border-bottom: 1px solid var(--line);
+}
+.personal-manager__price {
+  display: block;
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  color: var(--text);
+}
+.personal-manager__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--grey);
+}
+.personal-manager__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 88px;
+  height: 88px;
+  margin: 0 auto;
+  margin-bottom: 14px;
+}
+.personal-manager__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.personal-manager .favorite-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -2769,6 +2872,67 @@ input[type=radio].visually-hidden {
   .objects-map {
     height: 375px;
   }
+}
+
+.place-card {
+  padding-top: 33px;
+}
+.place-card__grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(12, 1fr);
+}
+.place-card__left {
+  grid-column: 1/9;
+}
+.place-card__right {
+  grid-column: 10/13;
+}
+.place-card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.place-card__text {
+  margin: 0;
+  margin-right: 15px;
+}
+.place-card__slider {
+  height: 480px;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.place-card__slider img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.place-card__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 88px;
+  height: 88px;
+  margin: 0 auto;
+  margin-bottom: 14px;
+}
+.place-card__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.place-card .breadcrumbs {
+  color: inherit;
 }
 
 .footer {
