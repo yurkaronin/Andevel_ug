@@ -1,0 +1,32 @@
+.calculate {
+  margin-bottom: 40px;
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--grey);
+
+    span {
+      display: block;
+      font-weight: 700;
+      font-size: 24px;
+      color: var(--black);
+    }
+  }
+
+  &__footer-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 2fr 1fr 2fr 3fr;
+    width: 100%;
+    background: var(--bg);
+    border-radius: 5px;
+    padding: 24px;
+
+    .button {
+      max-width: 100%;
+    }
+
+
+  }
+}

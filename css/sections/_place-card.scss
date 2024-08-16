@@ -1,10 +1,11 @@
 .place-card {
   padding-top: 33px;
+  padding-bottom: 60px;
 
   &__grid {
     display: grid;
     gap: 32px;
-    grid-template-columns: repeat(12, 1fr );
+    grid-template-columns: repeat(12, 1fr);
   }
   &__left {
     grid-column: 1/9;
@@ -13,16 +14,30 @@
   &__right {
     grid-column: 10/13;
   }
-
+  &__manager {
+    position: sticky;
+    top: 100px;
+  }
 
   &__title {
-
+  }
+  &__details {
+    margin-bottom: 24px;
+    h3 {
+      font-weight: 400;
+      font-size: 24px;
+      color: var(--text);
+    }
+  }
+  &__place {
+    margin-bottom: 24px;
   }
 
   &__info {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 25px;
   }
   &__text {
     margin: 0;
@@ -41,24 +56,12 @@
       object-fit: cover;
     }
   }
-  &__photo {
-    display: flex;
-    max-width: 88px;
-    height: 88px;
-    margin: 0 auto;
-    margin-bottom: 14px;
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
 
   // ПЕРЕОПРЕДЕЛЕНИЯ
-
 
   .breadcrumbs {
     color: inherit;
   }
 }
+
+

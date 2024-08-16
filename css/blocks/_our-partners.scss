@@ -1,0 +1,16 @@
+.our-partners {
+  &__grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 2fr 6fr;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    letter-spacing: 0.03em;
+    color: var(--black);
+  }
+}

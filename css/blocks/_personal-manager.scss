@@ -2,9 +2,9 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   position: relative;
+  padding: 33px 24px 24px;
   &__head {
     padding: 20px 0 16px;
-    margin: 0 24px;
     margin-right: 60px;
     border-bottom: 1px solid var(--line);
   }
@@ -39,6 +39,40 @@
       object-fit: cover;
     }
   }
+  &__name {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  &__contacts-list {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 200%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--grey);
+    margin-bottom: 20px;
+
+    a {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--red);
+    }
+    a[href^="tel"] {
+      font-size: 16px;
+      color: var(--text);
+    }
+  }
+  &__button {
+    max-width: 100%;
+  }
+
+
 
   // ПЕРЕОПРЕДЕЛЕНИЯ
   .favorite-btn {

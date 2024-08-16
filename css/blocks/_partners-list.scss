@@ -1,0 +1,19 @@
+.partners-list {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 100%;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: var(--white);
+
+    img {
+      display: block;
+    }
+  }
+}
