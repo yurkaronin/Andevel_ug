@@ -685,6 +685,11 @@ input[type=radio].visually-hidden {
   background-color: var(--dark-red);
   border: none;
 }
+.button--white {
+  background-color: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
 .button--small {
   height: 32px;
   font-weight: 500;
@@ -2148,6 +2153,10 @@ input[type=radio].visually-hidden {
   color: var(--black);
 }
 
+.feedback-aside {
+  padding: 25px 24px 24px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -3069,6 +3078,13 @@ input[type=radio].visually-hidden {
 
 .services .service-list {
   margin: 0;
+}
+
+.error-404 {
+  min-height: 100vh;
+}
+.error-404 .hero__filter {
+  margin-top: 150px !important;
 }
 
 .footer {

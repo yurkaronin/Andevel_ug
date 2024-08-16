@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Список страниц проекта</title>
+  <title>Работа у нас</title>
+
+  <link rel="stylesheet" href="./libs/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./libs/simplebar.css">
 
   <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -177,58 +180,103 @@
   </section>
 
   <!-- ОСНОВНОЙ КОНТЕНТ  -->
-  <main class="main">
+  <main class="main js-main">
 
-    <section class="section">
+    <!-- Первый экран типовой страницы -->
+    <section class="section hero-inner" style="background-image: url(./img/work-with-us/1.jpg);">
       <div class="wrapper">
-        <h2 class="title">Список готовых страниц</h2>
-
-        <ol>
-          <li><a href="home.html">Главная</a></li>
+        <!-- крошки  -->
+        <ul class="breadcrumbs list-reset">
           <li>
-            <span>Категории объектов</span>
-            <ul>
-              <li><a href="object-category-apartment.html">Квартиры</a></li>
-              <li><a href="object-category-commercial.html">Коммерческая недвижимость</a></li>
-              <li><a href="object-category-house.html">Дома</a></li>
-              <li><a href="object-category-land-plots.html">Земельные участки </a></li>
-              <li><a href="object-category-garages.html">Гаражи</a></li>
-              <li><a href="object-category-foreign-real-estate.html">Зарубежная недвижимость</a></li>
-            </ul>
-
+            <a href="#">Главная</a>
           </li>
-          <li><a href="object-page.html">Страница объекта</a></li>
-          <li><a href="favorites.html">Избранное</a></li>
-          <li><a href="office-list.html">Офисы</a></li>
-          <li><a href="office.html">Офис</a></li>
-          <li><a href="service-list.html">Список услуг</a></li>
-          <li><a href="service-page.html">Услуга</a></li>
-          <li><a href="work-with-us.html">Работа у нас</a></li>
-          <li><a href="error-404.html">404</a></li>
-        </ol>
+          <li>
+            <a href="#">Работа у нас</a>
+          </li>
+        </ul>
+        <h1 class="title">Работа у нас</h1>
+      </div>
+    </section>
 
-        <button class="favorite-btn" type="button">
-          <span class="favorite-btn__icon">
-            <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M21.112 1.42595C18.217 1.10895 15.094 2.72095 14 5.13595C12.905 2.72095 9.78304 1.10895 6.88804 1.42595C3.07304 1.84295 0.617038 5.72895 1.39304 9.47595C2.44704 14.5689 8.22404 16.8559 14 22.6139C19.777 16.8559 25.553 14.5689 26.607 9.47595C27.382 5.72895 24.927 1.84295 21.112 1.42595Z"
-                stroke="currentColor" stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path d="M4.57104 8.18589C4.57104 6.30789 6.09404 4.78589 7.97104 4.78589" stroke="currentColor"
-                stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round" />
-              <path class="favorite-btn__custom-round"
-                d="M14 16.5359C16.5052 16.5359 18.536 14.505 18.536 11.9999C18.536 9.4947 16.5052 7.46387 14 7.46387C11.4948 7.46387 9.46399 9.4947 9.46399 11.9999C9.46399 14.505 11.4948 16.5359 14 16.5359Z"
-                stroke="currentColor" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round"
-                stroke-linejoin="round-line" />
-              <path d="M12.224 11.9998H15.776" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="1.5"
-                stroke-linecap="round" stroke-linejoin="round" />
+    <article class="place-card">
+      <div class="wrapper">
+        <div class="place-card__grid">
+          <div class="place-card__col place-card__left">
 
-              <path class="favorite-btn__custom" d="M14 13.7759V10.2239" stroke="currentColor" stroke-width="1.5"
-                stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
+            <p>Работа у нас - это не просто профессия, это образ жизни, который сливается с азартом и непрерывными вызовами. Работа в агентстве недвижимости «Девелопмент-Юг» - это уникальная возможность заниматься делом, которое всегда в тренде и имеет огромное значение для людей. Мы создаем команду креативных и преданных профессионалов, способных превратить мечты клиентов в реальность. Каждый день у нас - это новые задачи, увлекательные сделки, и удовлетворение от помощи клиентам в поиске идеального жилья.</p>
 
-        </button>
+            <img src="./img/work-with-us/2.jpg" alt="">
+            <h3>График</h3>
+            <p>Мы ценим гибкость и творчество, поэтому предоставляем возможность свободно распоряжаться своим временем и строить собственный рабочий график. Мы убеждены, что вдохновение и профессионализм - это залог успеха. Как строится график работы в нашей компании? Расскажет только наш опытный HR</p>
+
+            <h3>Обучение</h3>
+
+            <p>Система обучения в агентстве недвижимости "Девелопмент-Юг" - это возможность развиваться и расти вместе с нами. У нас собственный учебный центр, эффективная обучающая программа полного цикла работы агента и корпоративный университет, имеющийся только в нашем агентстве недвижимости. Мы 17 лет устойчиво сохраняем лидерские позиции и знаем, как развивать опытных агентов и предоставляем всю необходимую поддержку для вашего профессионального роста.</p>
+
+            <h3>Карьерный рост</h3>
+            <p>Присоединяйтесь к нам, и вы откроете двери в мир бесконечных возможностей и карьерного роста. У нас каждый сотрудник ценится, и мы верим, что именно вы можете стать частью нашей успешной команды.</p>
+
+
+
+          </div>
+
+
+          <div class="place-card__col place-card__right">
+
+            <article class="place-card__feedback feedback-aside">
+
+              <h3>Собеседование</h3>
+              <p>Для записи на собеседование подвоните в отдел кадров:
+                <b>+7 (967) 662-19-80</b> или заполните простую форму и мы Вам перезвоним</p>
+
+                <img src="./img/feedback/form.png" alt="">
+
+            </article>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Хотите продать свою недвижимость, но не знаете с чего начать? -->
+    <section class="section promo">
+      <div class="promo__photo-mobile">
+        <img src="./img/promo/1-mob.jpg" alt="#" loading="lazy">
+      </div>
+      <div class="wrapper promo__content">
+        <h2 class="title promo__title">Нужна консультация специалиста?</h2>
+
+        <p class="promo__text">Позвоните по телефону +7 (861) 279-22-22, приходите в один из офисов агентства в удобное
+          для Вас время или
+          заполните простую форму на сайте и обсудите с риэлтором-экспертом все интересующие Вас вопросы!</p>
+
+        <div class="form">
+          <form action="">
+            <div class="form__grid">
+              <div class="form__col">
+                <ul class="form__list list-reset">
+                  <li class="form__item">
+                    <label for="user-name-1">Ваше имя</label>
+                    <div class="form__input">
+                      <input type="text" placeholder="Как вас зовут?" id="user-name-1">
+                    </div>
+                  </li>
+
+                  <li class="form__item">
+                    <label for="user-phone-1">Телефон</label>
+                    <div class="form__input">
+                      <input type="tel" placeholder="Можно номер?" id="user-phone-1">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="form__col">
+                <a href="#" class="form__button button mobile-full"><span>Отправить</span></a>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
 
       </div>
     </section>
@@ -304,11 +352,13 @@
 
 
   <script src="./libs/swiper-bundle.min.js"></script>
+  <script src="./libs/simplebar.min.js"></script>
 
 
   <script src="./js/parts/header-sticky.js"></script>
   <script src="./js/parts/menu-open.js"></script>
   <script src="./js/parts/just-main-margin.js"></script>
+  <script src="./js/parts/custom-select.js"></script>
 
   <script src="./js/swiper-sliders.js"></script>
 
