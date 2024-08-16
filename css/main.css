@@ -3067,6 +3067,10 @@ input[type=radio].visually-hidden {
   color: inherit;
 }
 
+.services .service-list {
+  margin: 0;
+}
+
 .footer {
   padding-top: 30px;
   padding-bottom: 30px;
