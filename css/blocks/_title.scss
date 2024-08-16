@@ -9,8 +9,20 @@
   line-height: 100%;
   color: var(--text);
 
+  &--sm {
+    font-size: 32px;
+  }
+
   @media (max-width: 767px) {
     font-size: 30px;
+
+    br {
+      display: none;
+    }
+
+    &--sm {
+      font-size: 25px;
+    }
   }
 }
 

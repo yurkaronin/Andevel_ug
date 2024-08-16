@@ -1,0 +1,54 @@
+.service-list {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 50px;
+
+  &__item {
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  &__photo {
+    display: flex;
+    height: 160px;
+    border-radius: 5px;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__details {
+    padding-top: 12px;
+    padding-bottom: 20px;
+  }
+  &__link {
+    display: block;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: var(--red);
+  }
+
+  @media (max-width: 1379px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    &__photo {
+      height: 215px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    margin-bottom: 35px;
+
+    &__photo {
+      height: 160px;
+    }
+  }
+}

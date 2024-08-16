@@ -1,4 +1,8 @@
 .section {
   padding-top: 54px;
   padding-bottom: 48px;
+
+  @media (max-width: 767px) {
+    padding-top: 35px;
+  }
 }
