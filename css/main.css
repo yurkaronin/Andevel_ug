@@ -2130,12 +2130,29 @@ input[type=radio].visually-hidden {
 .calculate__footer-grid .button {
   max-width: 100%;
 }
+@media (max-width: 1023px) {
+  .calculate__footer-grid {
+    gap: 24px 32px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .calculate__footer-grid {
+    gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 .partners-list {
   display: grid;
   gap: 32px;
   grid-template-columns: repeat(6, 1fr);
   max-width: 100%;
+  width: 100%;
+}
+.partners-list li {
+  display: block;
+  width: 100%;
 }
 .partners-list a {
   display: -webkit-box;
@@ -2151,9 +2168,30 @@ input[type=radio].visually-hidden {
   border: 1px solid var(--line);
   border-radius: 5px;
   background: var(--white);
+  width: 100%;
 }
 .partners-list a img {
   display: block;
+}
+.partners-list span {
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 185%;
+  letter-spacing: 0.03em;
+  color: var(--text);
+}
+@media (max-width: 1023px) {
+  .partners-list {
+    gap: 24px 32px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .partners-list {
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .our-partners__grid {
@@ -2168,6 +2206,18 @@ input[type=radio].visually-hidden {
   line-height: 133%;
   letter-spacing: 0.03em;
   color: var(--black);
+}
+@media (max-width: 1023px) {
+  .our-partners__grid {
+    gap: 24px 32px;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media (max-width: 767px) {
+  .our-partners__grid {
+    gap: 16px;
+    grid-template-columns: 1fr;
+  }
 }
 
 .feedback-aside {
@@ -2229,6 +2279,189 @@ input[type=radio].visually-hidden {
 }
 .characteristics__list li:nth-last-child(-n+2) {
   border-bottom: none;
+}
+@media (max-width: 767px) {
+  .characteristics__top-grid {
+    gap: 18px 16px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .characteristics.characteristics__list {
+    gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.mortgage-calculator {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%; /* Убедитесь, что расчет ширины правильный */
+}
+.mortgage-calculator * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.mortgage-calculator__label {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.mortgage-calculator__row {
+  display: grid;
+  margin-bottom: 40px;
+  gap: 26px 32px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.mortgage-calculator .custom-range-field-container {
+  position: relative;
+}
+.mortgage-calculator .custom-range-field-input-box {
+  border: 1px solid var(--line);
+  border-radius: 4px 4px 0 0;
+  padding: 10px;
+  max-width: 100%;
+  width: 100%;
+  height: 56px;
+}
+.mortgage-calculator .noUi-target {
+  width: calc(100% - 16px); /* Уменьшена ширина для учета размера ручки */
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Отступ для учета размера ручки */
+  height: 2px;
+  background: transparent;
+}
+.mortgage-calculator .noUi-connect {
+  background: var(--red);
+}
+.mortgage-calculator .noUi-horizontal .noUi-handle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--red);
+  top: -9px;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.mortgage-calculator .noUi-horizontal .noUi-handle:hover {
+  background-color: var(--red);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1); /* Обновлено с scale на transform */
+}
+.mortgage-calculator .noUi-horizontal .noUi-handle::before {
+  display: none;
+}
+.mortgage-calculator .noUi-horizontal .noUi-handle::after {
+  display: none;
+}
+.mortgage-calculator .noUi-connects {
+  border-radius: 0;
+}
+.mortgage-calculator .noUi-target {
+  border: none;
+}
+.mortgage-calculator input {
+  border: none;
+  outline: none;
+}
+@media (max-width: 767px) {
+  .mortgage-calculator__row {
+    margin-bottom: 20px;
+    gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.mobile-personal-manager {
+  padding: 30px 24px;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.mobile-personal-manager__grid {
+  display: grid;
+  gap: 24px 32px;
+  grid-template-columns: auto 1fr 185px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mobile-personal-manager__left {
+  padding-right: 57px;
+  position: relative;
+  margin-right: 70px;
+}
+.mobile-personal-manager__center {
+  display: grid;
+  gap: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: auto 1fr;
+}
+.mobile-personal-manager .personal-manager__name {
+  text-align: left;
+}
+.mobile-personal-manager .personal-manager__contacts-list {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+.mobile-personal-manager .favorite-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.mobile-personal-manager .button {
+  max-width: 184px;
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  .mobile-personal-manager {
+    padding: 20px 24px;
+  }
+  .mobile-personal-manager__grid {
+    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+  .mobile-personal-manager__left {
+    margin-right: 0;
+  }
+}
+@media (max-width: 1023px) {
+  .mobile-personal-manager__grid {
+    gap: 0;
+  }
+  .mobile-personal-manager__left {
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 20px;
+  }
+  .mobile-personal-manager__center {
+    display: grid;
+    gap: 16px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-template-columns: 1fr;
+  }
+  .mobile-personal-manager .personal-manager__name {
+    text-align: center;
+  }
+  .mobile-personal-manager .personal-manager__contacts-list {
+    -moz-text-align-last: center;
+         text-align-last: center;
+  }
+  .mobile-personal-manager .button {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .header {
@@ -3091,8 +3324,6 @@ input[type=radio].visually-hidden {
 .place-card__slider {
   height: 480px;
   width: 100%;
-  border-radius: 5px;
-  overflow: hidden;
 }
 .place-card__slider .swiper {
   height: 100%;
@@ -3102,6 +3333,8 @@ input[type=radio].visually-hidden {
 }
 .place-card__slider a {
   display: block;
+  width: 100%;
+  height: 100%;
 }
 .place-card__slider img {
   display: block;
@@ -3115,6 +3348,7 @@ input[type=radio].visually-hidden {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   margin-bottom: 50px;
+  overflow: hidden;
 }
 .place-card__link {
   display: grid;
@@ -3181,8 +3415,33 @@ input[type=radio].visually-hidden {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.place-card__mobile-personal-manager {
+  display: none;
+}
 .place-card .breadcrumbs {
   color: inherit;
+}
+@media (max-width: 1379px) {
+  .place-card__grid {
+    display: block;
+  }
+  .place-card__left {
+    grid-column: initial;
+  }
+  .place-card__right {
+    grid-column: initial;
+  }
+  .place-card__desktop-personal-manager {
+    display: none;
+  }
+  .place-card__mobile-personal-manager {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .place-card__slider {
+    height: 250px;
+  }
 }
 
 .hero-inner {

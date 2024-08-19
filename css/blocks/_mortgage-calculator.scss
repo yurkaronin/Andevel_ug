@@ -1,0 +1,92 @@
+.mortgage-calculator {
+  box-sizing: border-box;
+  width: 100%; /* Убедитесь, что расчет ширины правильный */
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &__label {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  &__row {
+    display: grid;
+    margin-bottom: 40px;
+    gap: 26px 32px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .custom-range-field-container {
+    position: relative;
+  }
+
+  .custom-range-field-input-box {
+    border: 1px solid var(--line);
+    border-radius: 4px 4px 0 0;
+    padding: 10px;
+    max-width: 100%;
+    width: 100%;
+    height: 56px;
+  }
+
+  .noUi-target {
+    width: calc(100% - 16px); /* Уменьшена ширина для учета размера ручки */
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Отступ для учета размера ручки */
+    height: 2px;
+    background: transparent;
+  }
+
+  .noUi-connect {
+    background: var(--red);
+  }
+
+  .noUi-horizontal .noUi-handle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--red);
+    top: -9px;
+    cursor: pointer;
+    box-shadow: none;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: var(--red);
+      transform: scale(1.1); /* Обновлено с scale на transform */
+    }
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
+
+  .noUi-connects {
+    border-radius: 0;
+  }
+
+  .noUi-target {
+    border: none;
+  }
+
+  input {
+    border: none;
+    outline: none;
+  }
+
+  @media (max-width: 767px) {
+    &__row {
+      margin-bottom: 20px;
+      gap: 16px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

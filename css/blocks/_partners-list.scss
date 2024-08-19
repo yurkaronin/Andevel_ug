@@ -3,6 +3,11 @@
   gap: 32px;
   grid-template-columns: repeat(6, 1fr);
   max-width: 100%;
+  width: 100%;
+  li {
+    display: block;
+    width: 100%;
+  }
   a {
     display: flex;
     align-items: center;
@@ -11,9 +16,28 @@
     border: 1px solid var(--line);
     border-radius: 5px;
     background: var(--white);
+    width: 100%;
 
     img {
       display: block;
     }
+  }
+
+  span {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 185%;
+    letter-spacing: 0.03em;
+    color: var(--text);
+  }
+
+  @media (max-width: 1023px) {
+    gap: 24px 32px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 767px) {
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

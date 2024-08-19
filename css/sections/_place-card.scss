@@ -46,8 +46,6 @@
   &__slider {
     height: 480px;
     width: 100%;
-    border-radius: 5px;
-    overflow: hidden;
 
     .swiper {
       height: 100%;
@@ -59,6 +57,8 @@
 
     a {
       display: block;
+      width: 100%;
+      height: 100%;
     }
 
     img {
@@ -73,6 +73,7 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     margin-bottom: 50px;
+    overflow: hidden;
   }
   &__slider-footer {
   }
@@ -126,9 +127,37 @@
     }
   }
 
+  &__mobile-personal-manager {
+    display: none;
+  }
+
   // ПЕРЕОПРЕДЕЛЕНИЯ
 
   .breadcrumbs {
     color: inherit;
+  }
+
+  @media (max-width: 1379px) {
+    &__grid {
+      display: block;
+    }
+    &__left {
+      grid-column: initial;
+    }
+
+    &__right {
+      grid-column: initial;
+    }
+    &__desktop-personal-manager {
+      display: none;
+    }
+    &__mobile-personal-manager {
+      display: block;
+    }
+  }
+  @media (max-width: 767px) {
+    &__slider {
+      height: 250px;
+    }
   }
 }

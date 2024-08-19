@@ -24,6 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
           document.querySelector(".place-card__slider-footer-right .swiper-button-prev")
         ],
       },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        767: {
+          slidesPerView: 1,
+        },
+        1024: {
+          slidesPerView: 1.4,
+        },
+      },
 
     });
   };

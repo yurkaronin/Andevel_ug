@@ -1,0 +1,78 @@
+.mobile-personal-manager {
+  padding: 30px 24px;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  &__grid {
+    display: grid;
+    gap: 24px 32px;
+    grid-template-columns: auto 1fr 185px;
+    align-items: center;
+  }
+  &__left {
+    padding-right: calc(25px + 32px);
+    position: relative;
+    margin-right: 70px;
+  }
+  &__center {
+    display: grid;
+    gap: 16px;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+  }
+  .personal-manager__name {
+    text-align: left;
+  }
+  .personal-manager__contacts-list {
+    text-align-last: left;
+  }
+  .favorite-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .button {
+    max-width: 184px;
+    width: 100%;
+  }
+
+  @media (max-width: 1023px) {
+    padding: 20px 24px;
+    // padding-right: 112px;
+    &__grid {
+      gap: 30px;
+      grid-template-columns: 1fr;
+    }
+    &__left {
+      margin-right: 0;
+    }
+  }
+  @media (max-width: 1023px) {
+    &__grid {
+      gap: 0;
+    }
+    &__left {
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 20px;
+    }
+    &__center {
+      display: grid;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 1fr;
+    }
+    .personal-manager__name {
+      text-align: center;
+    }
+    .personal-manager__contacts-list {
+      text-align-last: center;
+    }
+    .button {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -52,4 +52,15 @@
       border-bottom: none;
     }
   }
+
+  @media (max-width: 767px) {
+    &__top-grid {
+      gap: 18px 16px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &.characteristics__list {
+      gap: 16px;
+      grid-template-columns: repeat(1, 1fr);
+  }
+  }
 }
