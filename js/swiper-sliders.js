@@ -1,46 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  if (document.querySelector(".js-hero-slider-photo")) {
-    const swiper = new Swiper(".js-hero-slider-photo", {
-      // Optional parameters
-      loop: true,
-      simulateTouch: false,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".js-hero-sliders .swiper-button-next",
-        prevEl: ".js-hero-sliders .swiper-button-prev",
-      },
-    });
-  }
-
-  if (document.querySelector(".js-hero-slider-text")) {
-    const swiper = new Swiper(".js-hero-slider-text", {
-      // Optional parameters
-      loop: true,
-      simulateTouch: false,
-      // effect: "fade",
-      // direction: 'vertical',
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".js-hero-sliders .swiper-pagination",
-        clickable: true, // Сделать пагинацию кликабельной
-        // dynamicBullets: true, // Динамические точки
-      },
-
-      // Navigation arrows
-      navigation: {
-        nextEl: ".js-hero-sliders .swiper-button-next",
-        prevEl: ".js-hero-sliders .swiper-button-prev",
-      },
-    });
-  }
-
   // скрипт инициализации мини-слайдеров в анонсах
   if (document.querySelector(".announce-card__slider")) {
     const sliderCards = document.querySelectorAll(".announce-card");
