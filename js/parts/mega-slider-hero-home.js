@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loop: true,
       simulateTouch: false,
       autoplay: {
-        delay: 2500,
+        delay: 250000,
         disableOnInteraction: false,
       },
       navigation: {
@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiperText = new Swiper(".js-hero-slider-text", {
       loop: true,
       simulateTouch: true,  // Разрешаем управление с помощью мыши
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
       pagination: {
         el: ".hero__sliders-nav .swiper-pagination",
         clickable: true,
