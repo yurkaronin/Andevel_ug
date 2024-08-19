@@ -132,6 +132,12 @@
     font-size: 14px;
     color: var(--grey);
   }
+  &__favorite-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 11;
+  }
 
   &:hover,
   &:active,
