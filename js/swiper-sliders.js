@@ -1,5 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // Слайдер на детальной странице ОН
+  // .js-place-card-slider
+  if (document.querySelector(".js-place-card-slider")) {
+
+    var swiper = new Swiper(".js-place-card-slider", {
+      slidesPerView: 1.4,
+      spaceBetween: 0,
+      // centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: ".js-place-card-slider-pagination",
+        // clickable: true,
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: [
+          document.querySelector(".js-place-card-slider .swiper-button-next"),
+          document.querySelector(".place-card__slider-footer-right .swiper-button-next")
+        ],
+        prevEl: [
+          document.querySelector(".js-place-card-slider .swiper-button-prev"),
+          document.querySelector(".place-card__slider-footer-right .swiper-button-prev")
+        ],
+      },
+
+    });
+  };
+
   // скрипт инициализации мини-слайдеров в анонсах
   if (document.querySelector(".announce-card__slider")) {
     const sliderCards = document.querySelectorAll(".announce-card");

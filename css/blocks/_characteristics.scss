@@ -1,0 +1,55 @@
+.characteristics {
+  &__top {
+    margin-bottom: 40px;
+  }
+  &__top-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &__top-col {
+    display: grid;
+    gap: 23px;
+    grid-template-columns: auto 1fr;
+    align-items: flex-end;
+
+    p {
+      margin: 0;
+      font-weight: 400;
+      font-size: 13px;
+      color: var(--grey);
+    }
+    span {
+      font-weight: 500;
+      font-size: 24px;
+      color: var(--black);
+      display: block;
+    }
+  }
+  &__icon {
+    display: flex;
+    align-items: flex-end;
+    width: 45px;
+  }
+  &__list {
+    display: grid;
+    gap: 0 32px;
+    grid-template-columns: repeat(2, 1fr);
+
+    li {
+      border-bottom: 1px solid var(--line);
+      padding: 20px 0;
+      font-weight: 300;
+      font-size: 16px;
+      color: var(--text);
+
+      span {
+        font-weight: 500;
+      }
+    }
+    /* Убираем нижнее подчёркивание у двух последних элементов */
+    li:nth-last-child(-n + 2) {
+      border-bottom: none;
+    }
+  }
+}

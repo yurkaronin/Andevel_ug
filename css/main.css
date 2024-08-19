@@ -758,6 +758,17 @@ input[type=radio].visually-hidden {
   }
 }
 
+.swiper-button--small {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  color: var(--red);
+}
+.swiper-button--small:after {
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .swiper-pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2163,6 +2174,63 @@ input[type=radio].visually-hidden {
   padding: 25px 24px 24px;
 }
 
+.characteristics__top {
+  margin-bottom: 40px;
+}
+.characteristics__top-grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.characteristics__top-col {
+  display: grid;
+  gap: 23px;
+  grid-template-columns: auto 1fr;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.characteristics__top-col p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--grey);
+}
+.characteristics__top-col span {
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--black);
+  display: block;
+}
+.characteristics__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 45px;
+}
+.characteristics__list {
+  display: grid;
+  gap: 0 32px;
+  grid-template-columns: repeat(2, 1fr);
+  /* Убираем нижнее подчёркивание у двух последних элементов */
+}
+.characteristics__list li {
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--text);
+}
+.characteristics__list li span {
+  font-weight: 500;
+}
+.characteristics__list li:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -3026,12 +3094,92 @@ input[type=radio].visually-hidden {
   border-radius: 5px;
   overflow: hidden;
 }
+.place-card__slider .swiper {
+  height: 100%;
+}
+.place-card__slider .swiper-slide {
+  height: 100%;
+}
+.place-card__slider a {
+  display: block;
+}
 .place-card__slider img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.place-card__slider-group {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+.place-card__link {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: auto 1fr;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--red);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.place-card__link-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.place-card__slider-footer-grid {
+  padding: 10px 25px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: 0;
+}
+.place-card__slider-footer-right {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: auto 1fr auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.place-card__slider-footer-right .swiper-button {
+  position: initial;
+  -webkit-transition: none;
+  transition: none;
+  margin: 0;
+  display: block;
+}
+.place-card__slider-footer-right .swiper-pagination {
+  position: initial;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  color: var(--black);
+  min-width: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .place-card .breadcrumbs {
   color: inherit;

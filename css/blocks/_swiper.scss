@@ -17,6 +17,18 @@
   }
 }
 
+.swiper-button--small {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  color: var(--red);
+
+  &:after {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
 .swiper-pagination {
   display: flex;
   align-items: center;
