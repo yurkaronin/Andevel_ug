@@ -1,0 +1,165 @@
+// Служебные стили
+.modal {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s, visibility 0.3s;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  background-color: var(--modal-bg);
+
+  &__body {
+    position: relative;
+    width: 1075px !important;
+    margin: 0 auto;
+
+    padding: 35px 50px 50px;
+    background: var(--white);
+    border-radius: 5px;
+    border: 1px solid var(--line);
+  }
+
+  &__top {
+    margin-bottom: 50px;
+  }
+  &__middle {
+    margin-bottom: 32px;
+  }
+  &__bottom {
+    display: grid;
+    gap: 70px;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+  }
+
+  .form__element {
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 0;
+
+    input {
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--grey);
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+    }
+  }
+
+  .form__button {
+    max-width: 210px;
+    width: 100%;
+  }
+
+  .form__agree {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text);
+    a {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: var(--red);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    display: block;
+    width: max-content;
+    padding: 10px;
+    color: var(--modal-icon);
+    border: none;
+    transition: color 0.3s;
+    cursor: pointer;
+    background-color: transparent;
+
+    svg {
+      display: block;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--modal-hover);
+    }
+  }
+
+  &__title {
+    // font-size: 32px;
+  }
+  &__text {
+    margin-top: 12px;
+    display: block;
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--grey);
+  }
+
+  &.active {
+    pointer-events: initial;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  // переопредлеления
+
+  .form__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 32px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  @media (max-width: 1379px) {
+    &__body {
+      width: 100% !important;
+      padding: 34px 30px 30px;
+    }
+    &__bottom {
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .form__grid {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 16px;
+    }
+
+    .title {
+      margin-bottom: 16px;
+    }
+    &__top {
+      margin-bottom: 26px;
+    }
+    &__middle {
+      margin-bottom: 16px;
+    }
+    &__bottom {
+      gap: 24px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .form__button {
+      max-width: 100%;
+      width: 100%;
+    }
+    .form__element input {
+      font-size: 13px;
+      padding: 12px;
+    }
+    .form__agree {
+      font-size: 13px;
+      color: var(--text);
+  }
+  }
+}
