@@ -1,0 +1,22 @@
+.recommendations {
+  &__slider-wrapper {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+
+  &__swiper {
+    margin-left: -32px;
+    padding-left: 32px;
+
+    margin-right: -32px;
+    padding-right: 32px;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
+}

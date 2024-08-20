@@ -39,6 +39,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
+  if (document.querySelector(".js-recommendations-slider")) {
+
+    var swiper = new Swiper(".js-recommendations-slider", {
+      slidesPerView: 4,
+      spaceBetween: 32,
+      loop: true,
+      navigation: {
+        nextEl: ".js-recommendations-slider .swiper-button-next",
+        prevEl: ".js-recommendations-slider .swiper-button-prev",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+
+    });
+  };
+
   // скрипт инициализации мини-слайдеров в анонсах
   if (document.querySelector(".announce-card__slider")) {
     const sliderCards = document.querySelectorAll(".announce-card");

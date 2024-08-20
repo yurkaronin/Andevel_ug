@@ -3497,6 +3497,23 @@ input[type=radio].visually-hidden {
   margin-top: 150px !important;
 }
 
+.recommendations__slider-wrapper {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.recommendations__swiper {
+  margin-left: -32px;
+  padding-left: 32px;
+  margin-right: -32px;
+  padding-right: 32px;
+}
+.recommendations .swiper-button-next {
+  right: 0;
+}
+.recommendations .swiper-button-prev {
+  left: 0;
+}
+
 .footer {
   padding-top: 30px;
   padding-bottom: 30px;
