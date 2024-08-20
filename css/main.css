@@ -3422,6 +3422,10 @@ input[type=radio].visually-hidden {
 .place-card__mobile-personal-manager {
   display: none;
 }
+.place-card .personal-manager {
+  position: sticky;
+  top: 120px;
+}
 .place-card .breadcrumbs {
   color: inherit;
 }

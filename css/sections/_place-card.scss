@@ -104,6 +104,7 @@
     margin-left: auto;
     margin-right: 0;
   }
+
   &__slider-footer-right {
     display: grid;
     gap: 24px;
@@ -129,6 +130,11 @@
 
   &__mobile-personal-manager {
     display: none;
+  }
+
+  .personal-manager {
+    position: sticky;
+    top: 120px;
   }
 
   // ПЕРЕОПРЕДЕЛЕНИЯ
