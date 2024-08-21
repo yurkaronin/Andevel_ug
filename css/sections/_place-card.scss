@@ -14,10 +14,6 @@
   &__right {
     grid-column: 10/13;
   }
-  &__manager {
-    position: sticky;
-    top: 100px;
-  }
 
   &__title {
   }
@@ -75,8 +71,7 @@
     margin-bottom: 50px;
     overflow: hidden;
   }
-  &__slider-footer {
-  }
+
   &__link {
     display: grid;
     gap: 16px;
@@ -132,10 +127,6 @@
     display: none;
   }
 
-  .personal-manager {
-    position: sticky;
-    top: 120px;
-  }
 
   // ПЕРЕОПРЕДЕЛЕНИЯ
 
