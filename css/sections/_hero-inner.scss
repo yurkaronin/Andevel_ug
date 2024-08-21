@@ -34,7 +34,11 @@
   .title {
     color: inherit;
   }
-  subtitle {
+  .subtitle {
     color: inherit;
+  }
+
+  @media (max-width: 767px) {
+    min-height: 375px;
   }
 }

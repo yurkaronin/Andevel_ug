@@ -3632,8 +3632,13 @@ input[type=radio].visually-hidden {
 .hero-inner .title {
   color: inherit;
 }
-.hero-inner subtitle {
+.hero-inner .subtitle {
   color: inherit;
+}
+@media (max-width: 767px) {
+  .hero-inner {
+    min-height: 375px;
+  }
 }
 
 .services .service-list {
