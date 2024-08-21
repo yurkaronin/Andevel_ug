@@ -24,6 +24,9 @@
   }
   &__photo {
     height: 240px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
     img {
       display: block;
       width: 100%;
@@ -72,6 +75,10 @@
       font-weight: 400;
       font-size: 16px;
       color: var(--text);
+      .office-announce-card__label {
+        display: inline-block;
+        margin-left: 16px;
+      }
     }
     li:last-of-type {
       margin-bottom: 0;
@@ -89,6 +96,23 @@
       color: var(--red);
     }
   }
+
+  &--full {
+    border: none;
+    padding: 0;
+    scale: initial !important;
+    box-shadow: none !important;
+  }
+  &--full &__photo {
+    height: 480px;
+  }
+  &--full &__details {
+    padding-top: 36px;
+    padding-bottom: 0;
+  }
+  &--full &__list span {
+    font-size: 16px;
+}
 
   @media (max-width: 1379px) {
     &__grid {
@@ -121,6 +145,9 @@
   }
 
   @media (max-width: 767px) {
+    &--full &__photo {
+      height: 175px;
+    }
     &__details {
       padding-top: 11px;
       padding-bottom: 13px;

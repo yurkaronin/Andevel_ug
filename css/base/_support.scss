@@ -44,6 +44,15 @@ input[type="radio"].visually-hidden {
 
 @media (max-width: 767px) {
 
+  .mobile-grid {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .mobile-order-1 {
+    order: -1;
+  }
+
   .mobile-hide {
     display: none !important;
   }
