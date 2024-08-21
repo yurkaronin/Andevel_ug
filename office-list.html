@@ -4,16 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Список страниц проекта</title>
+  <title>Офисы в Краснодаре</title>
+
+  <link rel="stylesheet" href="./libs/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./libs/simplebar.css">
 
   <link rel="stylesheet" href="./css/main.css">
-
-  <style>
-    .tech-section a {
-      text-decoration: underline;
-      color: var(--red);
-    }
-  </style>
 </head>
 
 <body>
@@ -184,51 +180,83 @@
   </section>
 
   <!-- ОСНОВНОЙ КОНТЕНТ  -->
-  <main class="main">
+  <main class="main js-main">
 
-    <section class="section tech-section">
+    <!-- Первый экран типовой страницы -->
+    <section class="section hero-inner" style="background-image: url(./img/offices/1.jpg);">
       <div class="wrapper">
-        <h2 class="title">Список готовых страниц</h2>
-
-        <ol>
-          <li><a href="home.html">Главная</a></li>
+        <!-- крошки  -->
+        <ul class="breadcrumbs list-reset">
           <li>
-            <span>Категории объектов</span>
-            <ul>
-              <li><a href="object-category-apartment.html">Квартиры</a></li>
-              <li><a href="object-category-commercial.html">Коммерческая недвижимость</a></li>
-              <li><a href="object-category-house.html">Дома</a></li>
-              <li><a href="object-category-land-plots.html">Земельные участки </a></li>
-              <li><a href="object-category-garages.html">Гаражи</a></li>
-              <li><a href="object-category-foreign-real-estate.html">Зарубежная недвижимость</a></li>
-            </ul>
-
+            <a href="#">Главная</a>
           </li>
-          <li><a href="object-page.html">Страница объекта</a></li>
-          <li><a href="favorites.html">Избранное</a></li>
-          <li><a href="office-list.html">Офисы</a></li>
-          <!-- <li><a href="office.html">Офис</a></li> -->
-          <li><a href="service-list.html">Список услуг</a></li>
-          <li><a href="service-page.html">Услуга</a></li>
-          <li><a href="work-with-us.html">Работа у нас</a></li>
-          <li><a href="error-404.html">404</a></li>
-        </ol>
+          <li>
+            <a href="#">Офисы в Краснодаре</a>
+          </li>
+        </ul>
+        <h1 class="title">Офисы в Краснодаре</h1>
+        <p class="subtitle">5 офисов</p>
+      </div>
+    </section>
 
-        <h2>Что сейчас в работе</h2>
-        <ol>
-          <li>Форма в боковой части страницы отдельной услуги <a href="work-with-us.html">"Работа у нас"</a></li>
-          <li>Вёрстка страницы "список офисов"</li>
-          <li>Вёрстка отдельной страницы "офис"</li>
-          <li>Интерактивные карты на страницах каталога ОН</li>
-          <li>Реализация диалоговых окон (модальные окна с формами)</li>
+    <article class="place-card">
+      <div class="wrapper">
 
-        </ol>
+        <div class="place-card__grid">
 
-        <h2>Что еще заметил</h2>
-        <ol>
-          <li>Добавить активность для карточки анонса, добавленной в избранное - красная заливка на сердце</li>
-          <li>Добавить функционал изменения значения в поле для опций расчёта ипотеки - сейчас поле редактируется только бегунком, а ввести ручками нельзя</li>
-        </ol>
+          <div class="place-card__col place-card__left">
+
+
+          </div>
+
+          <div class="place-card__col place-card__right">
+
+          </div>
+    </article>
+
+
+
+    <!-- Хотите продать свою недвижимость, но не знаете с чего начать? -->
+    <section class="section promo">
+      <div class="promo__photo-mobile">
+        <img src="./img/promo/1-mob.jpg" alt="#" loading="lazy">
+      </div>
+      <div class="wrapper promo__content">
+        <h2 class="title promo__title">Хотите продать свою недвижимость, <br>
+          но не знаете с чего начать?</h2>
+
+        <p class="promo__text">Позвоните по телефону +7 (861) 279-22-22, приходите в один из офисов агентства в удобное
+          для Вас время или
+          заполните простую форму на сайте и обсудите с риэлтором-экспертом все интересующие Вас вопросы!</p>
+
+        <div class="form">
+          <form action="">
+            <div class="form__grid">
+              <div class="form__col">
+                <ul class="form__list list-reset">
+                  <li class="form__item">
+                    <label for="user-name-1">Ваше имя</label>
+                    <div class="form__input">
+                      <input type="text" placeholder="Как вас зовут?" id="user-name-1">
+                    </div>
+                  </li>
+
+                  <li class="form__item">
+                    <label for="user-phone-1">Телефон</label>
+                    <div class="form__input">
+                      <input type="tel" placeholder="Можно номер?" id="user-phone-1">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="form__col">
+                <a href="#" class="form__button button mobile-full"><span>Отправить</span></a>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
 
       </div>
     </section>
@@ -373,14 +401,15 @@
   </section>
 
 
-
   <script src="./libs/swiper-bundle.min.js"></script>
+  <script src="./libs/simplebar.min.js"></script>
   <script src="./libs/SmoothScroll.min.js"></script>
 
 
   <script src="./js/parts/header-sticky.js"></script>
   <script src="./js/parts/menu-open.js"></script>
   <script src="./js/parts/just-main-margin.js"></script>
+  <script src="./js/parts/custom-select.js"></script>
   <script src="./js/parts/modals.js"></script>
 
   <script src="./js/swiper-sliders.js"></script>

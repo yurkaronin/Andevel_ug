@@ -606,7 +606,6 @@ input[type=radio].visually-hidden {
 .favorite-btn__icon path {
   stroke: currentColor;
 }
-
 .phone {
   font-weight: 600;
   font-size: 18px;
@@ -1523,12 +1522,12 @@ input[type=radio].visually-hidden {
 .announce-card__footer::after {
   content: "";
   display: block;
-  width: 100%;
+  width: calc(100% - 32px);
   height: 1px;
   background-color: var(--line);
   position: absolute;
   top: 0;
-  left: 0;
+  left: 16px;
 }
 .announce-card__price {
   font-weight: 700;
