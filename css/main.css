@@ -340,6 +340,10 @@ h6 {
   color: var(--text);
 }
 
+b {
+  color: var(--text);
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -739,6 +743,9 @@ input[type=radio].visually-hidden {
 .title--sm {
   font-size: 32px;
 }
+.title--min {
+  font-size: 24px;
+}
 @media (max-width: 767px) {
   .title {
     font-size: 30px;
@@ -748,6 +755,9 @@ input[type=radio].visually-hidden {
   }
   .title--sm {
     font-size: 25px;
+  }
+  .title--min {
+    font-size: 20px;
   }
 }
 
@@ -2950,6 +2960,80 @@ input[type=radio].visually-hidden {
   }
 }
 
+.custom-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.custom-list li {
+  position: relative;
+  padding-left: 32px;
+}
+.custom-list li:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+.custom-list li::before {
+  content: "";
+  width: 16px;
+  height: 2px;
+  display: block;
+  background: var(--red);
+  position: absolute;
+  left: 0;
+  top: 13px;
+}
+
+.custom-steps__list {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.custom-steps__top {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.custom-steps__top-grid {
+  display: grid;
+  gap: 27px;
+  grid-template-columns: auto 1fr;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.custom-steps__icon {
+  width: 46px;
+}
+.custom-steps__title {
+  display: block;
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--black);
+}
+.custom-steps__title span {
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 185%;
+  letter-spacing: 0.03em;
+  color: var(--grey);
+}
+.custom-steps__body {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--text);
+}
+@media (max-width: 767px) {
+  .custom-steps__list {
+    gap: 24px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .custom-steps__title {
+    font-size: 18px;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -3635,7 +3719,7 @@ input[type=radio].visually-hidden {
   .promo {
     color: var(--text);
     background: var(--bg);
-    background-image: none;
+    background-image: none !important;
     background-repeat: initial;
     background-size: initial;
     padding-top: 0;

@@ -1,0 +1,23 @@
+.custom-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: calc(16px + 16px);
+    &:not(:last-of-type) {
+      margin-bottom: 12px;
+    }
+    &::before {
+      content: '';
+      width: 16px;
+      height: 2px;
+      display: block;
+      background: var(--red);
+      position: absolute;
+      left: 0;
+      top: 13px;
+    }
+  }
+}

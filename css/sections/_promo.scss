@@ -48,7 +48,7 @@
   @media (max-width: 767px) {
     color: var(--text);
     background: var(--bg);
-    background-image: none;
+    background-image: none !important;
     background-repeat: initial;
     background-size: initial;
     padding-top: 0;

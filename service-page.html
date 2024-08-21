@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Покупка недвижимости</title>
+
+  <link rel="stylesheet" href="./libs/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./libs/simplebar.css">
+
+  <!-- Подключение стилей и скрипта noUiSlider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css">
+
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+  <!-- ШАПКА  -->
+  <header class="header">
+    <div class="wrapper">
+
+      <div class="header__grid">
+
+        <div class="header__column header__logo">
+          <a class="logotype" href="./index.html">
+            <img src="./svg/logotype.svg" alt="Агентство недвижимости Девелопмент-Юг">
+          </a>
+        </div>
+
+        <div class="header__column header__nav">
+          <nav class="main-navigation">
+            <ul class="main-navigation__list list-reset">
+              <li class="main-navigation__item">
+                <a href="#" class="main-navigation__link">Недвижимость</a>
+              </li>
+              <li class="main-navigation__item">
+                <a href="#" class="main-navigation__link">Услуги</a>
+              </li>
+              <li class="main-navigation__item">
+                <a href="#" class="main-navigation__link">О компании</a>
+              </li>
+              <li class="main-navigation__item">
+                <a href="#" class="main-navigation__link">Карьера</a>
+              </li>
+              <li class="main-navigation__item">
+                <a href="#" class="main-navigation__link">Партнёрская программа</a>
+              </li>
+              <li class="main-navigation__item">
+                <a href="#" class="main-navigation__link">Офисы</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header__column header__right">
+
+          <div class="header__right-grid">
+            <div class="header__right-grid-column">
+              <a class="favorite-link" href="#">
+                <span class="favorite-link__icon">
+                  <svg width="37" viewBox="0 0 37 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M28.053 1.83092C24.254 1.41492 20.155 3.53092 18.72 6.69992C17.283 3.53092 13.184 1.41492 9.38604 1.83092C4.37804 2.37892 1.15504 7.47792 2.17404 12.3959C3.55704 19.0799 11.138 22.0809 18.72 29.6379C26.301 22.0809 33.882 19.0799 35.265 12.3959C36.283 7.47792 33.06 2.37892 28.053 1.83092Z"
+                      stroke="currentColor" stroke-width="2" stroke-miterlimit="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M6.34497 10.703C6.34497 8.23897 8.34297 6.24097 10.807 6.24097" stroke="currentColor"
+                      stroke-width="2" stroke-miterlimit="2" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="favorite-link__status">
+                  <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.16895 3.68506H5.83094" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.5 6.016V1.354" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="header__right-grid-column">
+              <a class="phone" href="tel:+78612792222">
+                <span class="phone__icon">
+                  <svg width="26" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M24 17.8752C22.1552 16.379 18.993 15.2836 16.543 15.3084C15.8094 15.8079 14.3598 17.2211 13.84 17.9029C12.4556 17.4697 10.9466 16.0917 9.61026 14.6105C8.27456 13.1287 7.08305 11.5125 6.8851 10.1893C7.71865 9.85528 9.51982 8.83145 10.1984 8.27195C10.6987 6.08469 10.1307 3.04376 8.8779 1.10338C7.4252 0.881888 3.92152 0.947068 1.38926 1.99628C0.350807 4.81283 1.13186 10.3854 6.92368 17.0648C12.9906 23.5383 18.8501 24.3037 22.0806 23.9179C23.699 21.8552 23.9583 19.218 24 17.8752Z"
+                      stroke="#505151" stroke-width="2" stroke-miterlimit="10" />
+                  </svg>
+
+                </span>
+                <span class="phone__text">+7 (861) 279-22-22</span>
+              </a>
+              <a href="#" class="call-link mobile-hide" data-target="modal-call-back">Позвонить мне!</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="header__column header__button">
+          <button class="menu-button" title="Открыть меню сайта" type="button">
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- МОБИЛЬНОЕ МЕНЮ  -->
+  <section class="mobile-nav">
+    <div class="wrapper">
+      <div class="mobile-nav__body">
+        <nav>
+          <ul class="mobile-nav__list list-reset">
+            <li class="mobile-nav__item">
+              <a href="#" class="mobile-nav__link">
+                <span>Недвижимость</span>
+                <span class="mobile-nav__icon">
+                  <svg width="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="15" width="32" height="2" fill="currentColor" />
+                    <rect class="mobile-nav__custom-vector" x="17" width="32" height="2" transform="rotate(90 17 0)"
+                      fill="currentColor" />
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="#" class="mobile-nav__link">
+                <span>Услуги</span>
+                <span class="mobile-nav__icon">
+                  <svg width="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="15" width="32" height="2" fill="currentColor" />
+                    <rect class="mobile-nav__custom-vector" x="17" width="32" height="2" transform="rotate(90 17 0)"
+                      fill="currentColor" />
+                  </svg>
+                </span></a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="#" class="mobile-nav__link">
+                <span>О компании</span>
+                <span class="mobile-nav__icon">
+                  <svg width="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="15" width="32" height="2" fill="currentColor" />
+                    <rect class="mobile-nav__custom-vector" x="17" width="32" height="2" transform="rotate(90 17 0)"
+                      fill="currentColor" />
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="#" class="mobile-nav__link"><span>Карьера</span>
+                <span class="mobile-nav__icon">
+                  <svg width="19" viewBox="0 0 19 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L17 17L1 33" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </span></a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="#" class="mobile-nav__link"><span>Партнёрская программа</span>
+                <span class="mobile-nav__icon">
+                  <svg width="19" viewBox="0 0 19 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L17 17L1 33" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </span></a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="#" class="mobile-nav__link"><span>Офисы</span>
+                <span class="mobile-nav__icon">
+                  <svg width="19" viewBox="0 0 19 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L17 17L1 33" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mobile-nav__footer mobile-show">
+        <a class="phone" href="tel:+78612792222">+7 (861) 279-22-22</a>
+        <a href="#" class="call-link" data-target="modal-call-back">Позвонить мне!</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ОСНОВНОЙ КОНТЕНТ  -->
+  <main class="main js-main">
+
+    <article class="place-card">
+      <div class="wrapper">
+        <!-- крошки  -->
+        <ul class="breadcrumbs list-reset">
+          <li>
+            <a href="#">Главная</a>
+          </li>
+          <li>
+            <a href="#">Услуги</a>
+          </li>
+          <li>
+            <a href="#">Покупка недвижимости</a>
+          </li>
+        </ul>
+
+        <h1 class="place-card__title title">Покупка недвижимости</h1>
+
+        <div class="place-card__grid">
+
+          <div class="place-card__col place-card__left">
+
+            <div class="image-full">
+              <img src="./img/services/1.jpg" alt="#" loading="lazy">
+            </div>
+            <br>
+
+            <p>Вы решили приобрести объект недвижимости? Искренне Вас поздравляем! В наше время недвижимость – это не
+              только жизненная необходимость, а также показатель развития человека как социальной личности, определение
+              статуса, выгодные инвестиционные вложения. Однако простым обывателям сложно ориентироваться в большом
+              потоке новой информации. Для покупки необходимо оценить свои возможности, расставить приоритеты, оценить
+              рынок и предложения, наконец. Готовитесь запастись терпением и временем? Не стоит - можно воспользоваться
+              помощью профессионалов, которые найдут ответы на все интересующие Вас вопросы и доведут сделку любой
+              сложности до ее логического завершения!</p>
+            <br>
+            <b>Целью покупки объекта недвижимости может быть:</b>
+            <br>
+            <br>
+
+
+            <ul class="custom-list">
+              <li>получение денег;</li>
+              <li>получение денег с целью расширения жил. площади;</li>
+              <li>срочная продажа для срочного получения денег.</li>
+            </ul>
+            <br>
+            <br>
+            <br>
+            <h3 class="title title--min">Шаги оказания услуги</h3>
+
+            <div class="custom-steps">
+              <ol class="custom-steps__list list-reset">
+
+                <li class="custom-steps__item">
+                  <div class="custom-steps__top">
+                    <div class="custom-steps__top-grid">
+                      <span class="custom-steps__icon">
+                        <svg width="44" height="48" viewBox="0 0 44 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M35 19V13.288C35 7.38699 29.078 1 21.5 1C13.922 1 8 7.38699 8 13.288V16"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" />
+                          <path d="M30.9992 20V22.035C30.9992 24.927 29.8202 28.047 26.9922 29.931" stroke="#C4161C"
+                            stroke-width="2" stroke-miterlimit="10" />
+                          <path d="M16 7C16 12.609 27.34 20 33 20" stroke="#C4161C" stroke-width="2"
+                            stroke-miterlimit="10" />
+                          <path d="M16 12C13.596 13.002 11 15.645 11 19V22C11.022 25.52 13.615 29.036 17.686 30.849"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" />
+                          <path
+                            d="M25 34C25 35.104 24.104 36 23 36H22C20.896 36 20 35.104 20 34C20 32.896 20.896 32 22 32H23C24.104 32 25 32.896 25 34Z"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" />
+                          <path d="M24 34H25.032C30.537 34 34.982 30.175 34.982 24.943" stroke="#C4161C"
+                            stroke-width="2" stroke-miterlimit="10" />
+                          <path d="M37 16H35V25H37C38.104 25 39 24.104 39 23V18C39 16.896 38.104 16 37 16Z"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" />
+                          <path d="M6 16H8V25H6C4.896 25 4 24.104 4 23V18C4 16.896 4.896 16 6 16Z" stroke="#C4161C"
+                            stroke-width="2" stroke-miterlimit="10" />
+                          <path d="M15 29V37" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" />
+                          <path d="M12.0004 39.0024L19 46.002L22.0002 43.0017L15.0006 36.0021L12.0004 39.0024Z"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" />
+                          <path d="M28.9976 35.9996L21.998 42.9991L24.9983 45.9994L31.9978 38.9998L28.9976 35.9996Z"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" />
+                          <path d="M12 39L6.316 40.263C4.258 40.721 2.592 42.224 1.925 44.223L1 47" stroke="#C4161C"
+                            stroke-width="2" stroke-miterlimit="10" />
+                          <path d="M32 39L37.684 40.263C39.742 40.721 41.408 42.224 42.075 44.223L43 47"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" />
+                        </svg>
+
+                      </span>
+                      <p class="custom-steps__title"><span>Шаг 1:</span>
+                        Бесплатная консультация</p>
+                    </div>
+                  </div>
+                  <div class="custom-steps__body">
+                    <p>Обсудите с риэлтором-экспертом все интересующие Вас вопросы совершенно бесплатно! Встреча и
+                      обсуждение всех вопросов, требований, пожеланий, возможностей и бюджета сделки. Мы расскажем о
+                      существенных деталях сделки, обо всех этапах и реалиях.</p>
+                  </div>
+                </li>
+
+                <li class="custom-steps__item">
+                  <div class="custom-steps__top">
+                    <div class="custom-steps__top-grid">
+                      <span class="custom-steps__icon">
+                        <svg width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M34 38V47H1V1H34V17" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M8 10H26" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M8 14H26" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M8 18H19" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M18.8379 42.707C19.6619 39.137 21.4719 35.871 24.0629 33.28L39.9919 17.352C40.9199 16.424 42.4249 16.424 43.3539 17.352L44.1939 18.192C45.1219 19.12 45.1219 20.625 44.1939 21.553L28.2649 37.481C25.6749 40.073 22.4079 41.883 18.8379 42.707Z"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M37.4707 19.874L42.5128 24.916C43.4408 25.844 43.4408 27.349 42.5128 28.277L37.4707 33.319"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M28.1406 29.202L32.3416 33.404" stroke="#C4161C" stroke-width="2"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                      </span>
+                      <p class="custom-steps__title"><span>Шаг 2:</span>
+                        Заключение договора</p>
+                    </div>
+                  </div>
+                  <div class="custom-steps__body">
+                    <p>Заключение договора поиска квартиры гарантирует Вам быстрое и безопасное приобретение объекта
+                      недвижимости. Подбор подходящего варианта: В зависимости от ваших предпочтений, агент подберет и
+                      покажет Вам интересующий Вас объект недвижимости, укажет на сильные и слабые стороны.</p>
+                  </div>
+                </li>
+
+                <li class="custom-steps__item">
+                  <div class="custom-steps__top">
+                    <div class="custom-steps__top-grid">
+                      <span class="custom-steps__icon">
+                        <svg width="48" height="42" viewBox="0 0 48 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M37 35V41H20V28H12V41H5V19" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linejoin="round" />
+                          <path d="M1 23L23 1L33 11" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linejoin="round" />
+                          <path d="M14 10V2H9V15" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M33.5 33C38.7467 33 43 28.7467 43 23.5C43 18.2533 38.7467 14 33.5 14C28.2533 14 24 18.2533 24 23.5C24 28.7467 28.2533 33 33.5 33Z"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round" />
+                          <path d="M39 31L47 39" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linejoin="round" />
+                        </svg>
+
+                      </span>
+                      <p class="custom-steps__title"><span>Шаг 3:</span>
+                        Подбор подходящего варианта</p>
+                    </div>
+                  </div>
+                  <div class="custom-steps__body">
+                    <p>В зависимости от ваших предпочтений, агент подберет и покажет Вам интересующий Вас объект
+                      недвижимости, укажет на сильные и слабые стороны.</p>
+                  </div>
+                </li>
+
+                <li class="custom-steps__item">
+                  <div class="custom-steps__top">
+                    <div class="custom-steps__top-grid">
+                      <span class="custom-steps__icon">
+                        <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 35H5V40" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M26.004 42.593C24.683 42.851 23.341 42.985 22 42.999C16.134 43.057 11.839 41.265 8 38C7.32 37.422 5 34.999 5 34.999"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M41.1133 13.4661C42.3473 16.1741 42.9943 19.0861 43.0003 21.9991C43.0033 23.7701 42.7783 25.5431 42.3273 27.2701"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                          <path
+                            d="M2.88704 30.533C1.65304 27.825 1.00604 24.913 1.00004 22C0.989043 16.614 3.09604 11.224 7.21504 7.10403C11.273 3.04603 16.632 1.05202 22 1.00002C27.866 0.942022 32.161 2.73402 36 5.99902C36.68 6.57702 39 9.00002 39 9.00002"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M34 9H39V4" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M41 45C42.6569 45 44 43.6569 44 42C44 40.3431 42.6569 39 41 39C39.3431 39 38 40.3431 38 42C38 43.6569 39.3431 45 41 45Z"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M32 38C33.6569 38 35 36.6569 35 35C35 33.3431 33.6569 32 32 32C30.3431 32 29 33.3431 29 35C29 36.6569 30.3431 38 32 38Z"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M31 45L42 32" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M17 27C20.866 27 24 25.6569 24 24C24 22.3431 20.866 21 17 21C13.134 21 10 22.3431 10 24C10 25.6569 13.134 27 17 27Z"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M24 24V29C24 30.657 20.866 32 17 32C13.134 32 10 30.657 10 29V24" stroke="#C4161C"
+                            stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M33 19V24C33 25.511 30.393 26.762 27 26.97" stroke="#C4161C" stroke-width="2"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M26 17C29.866 17 33 15.6569 33 14C33 12.3431 29.866 11 26 11C22.134 11 19 12.3431 19 14C19 15.6569 22.134 17 26 17Z"
+                            stroke="#C4161C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M19 18V14" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M33 14V19C33 20.566 30.198 21.853 26.625 21.988" stroke="#C4161C" stroke-width="2"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                      </span>
+                      <p class="custom-steps__title"><span>Шаг 4:</span>
+                        Привлечение кредитных средств</p>
+                    </div>
+                  </div>
+                  <div class="custom-steps__body">
+                    <p>Если Вы планируете привлекать кредитные средства - агент поможет подобрать наиболее оптимальный
+                      вариант взаимодействия с банком.</p>
+                  </div>
+                </li>
+
+                <li class="custom-steps__item">
+                  <div class="custom-steps__top">
+                    <div class="custom-steps__top-grid">
+                      <span class="custom-steps__icon">
+                        <svg width="43" height="46" viewBox="0 0 43 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M38 26L27 37L23 33L19 37L27 45L42 30L38 26Z" stroke="#C4161C" stroke-width="2"
+                            stroke-miterlimit="10" stroke-linejoin="round" />
+                          <path d="M34 24V1H5L1 5V45H21" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M7 4V7H4" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M26 14H9" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M26 18H9" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M21 22H9" stroke="#C4161C" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                      </span>
+                      <p class="custom-steps__title"><span>Шаг 5:</span>
+                        Юридическая проверка и подготовка документов, регистрация в государственных органах</p>
+                    </div>
+                  </div>
+                  <div class="custom-steps__body">
+                    <p>Оформление покупки квартиры - это путь от подписания документа до оформления права собственности.
+                      Путь, который вместе с Нами не отнимет у Вас ни свободного времени, ни нервов.</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p>Мы работаем с крупнейшими застройщиками г.Краснодара, по - праву на первое место ставим объекты корпорации «Девелопмент-Юг», но также можем предложить Вам приобретение объектов недвижимости в новостройках других застройщиков и на рынке «вторичного» жилья!</p>
+
+          </div>
+
+          <div class="place-card__col place-card__right">
+            <div class="aside-form sticky">
+              <form action="">
+
+                <div class="aside-form__body">
+                  <h3 class="aside-form__title title">Нужна консультация?</h3>
+                  <div class="aside-form__grid">
+                    <div class="aside-form__col">
+                      <div class="form-element">
+                        <input type="text" name="user-name" placeholder="Представьтесь, пожалуйста" id="user-name-2"
+                          required>
+                      </div>
+                    </div>
+                    <div class="aside-form__col">
+                      <div class="form-element">
+                        <input type="tel" name="user-phone" placeholder="Телефон" id="user-phone-2" required>
+                      </div>
+                    </div>
+                    <div class="aside-form__col aside-form__col--agree">
+                      <div class="aside-form__agree">
+                        <input type="checkbox" name="user-agree" id="user-agree-2" required checked>
+                        <label for="user-agree-2">Нажимая “Отправить” я даю согласие на обработку <a
+                            href="#">персональных
+                            данных</a></label>
+                      </div>
+                    </div>
+
+                    <div class="aside-form__col aside-form__col--btn">
+                      <button class="aside-form__button button" type="submit"><span>Отправить</span></button>
+                    </div>
+                  </div>
+                </div>
+
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- Хотите продать свою недвижимость, но не знаете с чего начать? -->
+    <section class="section promo" style="background-image: url(./img/promo/2.jpg);">
+      <div class="promo__photo-mobile">
+        <img src="./img/promo/2-mob.jpg" alt="#" loading="lazy">
+      </div>
+      <div class="wrapper promo__content">
+        <h2 class="title promo__title">Нужна консультация специалиста?</h2>
+
+        <p class="promo__text">Позвоните по телефону +7 (861) 279-22-22, приходите в один из офисов агентства в удобное
+          для Вас время или
+          заполните простую форму на сайте и обсудите с риэлтором-экспертом все интересующие Вас вопросы!</p>
+
+        <div class="form">
+          <form action="">
+            <div class="form__grid">
+              <div class="form__col">
+                <ul class="form__list list-reset">
+                  <li class="form__item">
+                    <label for="user-name-1">Ваше имя</label>
+                    <div class="form__input">
+                      <input type="text" placeholder="Как вас зовут?" id="user-name-1">
+                    </div>
+                  </li>
+
+                  <li class="form__item">
+                    <label for="user-phone-1">Телефон</label>
+                    <div class="form__input">
+                      <input type="tel" placeholder="Можно номер?" id="user-phone-1">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="form__col">
+                <a href="#" class="form__button button mobile-full"><span>Отправить</span></a>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+
+      </div>
+    </section>
+    <!-- Вам может понравиться  -->
+    <section class="section recommendations">
+      <div class="wrapper">
+        <h2 class="title">Вам может понравиться</h2>
+
+        <div class="recommendations__slider">
+          <!-- Swiper -->
+          <div class="recommendations__swiper swiper js-recommendations-slider">
+
+            <div class="swiper-wrapper recommendations__slider-wrapper">
+
+              <div class="swiper-slide">
+                <!-- Карточка анонс  -->
+                <article class="announce-card">
+
+                  <div class="announce-card__header">
+
+                    <div class="announce-card__slider">
+                      <div class="swiper js-announce-card-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/1.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/2.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/3.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/4.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/5.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="announce-card__navigation">
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                  <div class="announce-card__body">
+                    <a class="announce-card__link" href="./card.html">2-комнатная, 54 кв. м.</a>
+                    <p class="announce-card__address">г. Краснодар, ул. Красная, д. 180</p>
+                  </div>
+
+                  <div class="announce-card__footer">
+                    <b class="announce-card__price">16.300.000 ₽</b>
+                    <p class="announce-card__parameters">534.487 Р / кв.м.</p>
+                  </div>
+
+                  <!-- прочие элементы тут  -->
+                  <!-- лейбл  -->
+                  <button class="favorite-btn announce-card__favorite-btn" type="button">
+                    <span class="favorite-btn__icon">
+                      <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.1122 1.42595C18.2172 1.10895 15.0942 2.72095 14.0002 5.13595C12.9052 2.72095 9.78316 1.10895 6.88816 1.42595C3.07316 1.84295 0.61716 5.72895 1.39316 9.47595C2.44716 14.5689 8.22416 16.8559 14.0002 22.6139C19.7772 16.8559 25.5532 14.5689 26.6072 9.47595C27.3822 5.72895 24.9272 1.84295 21.1122 1.42595Z"
+                          stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M4.57129 8.18589C4.57129 6.30789 6.09429 4.78589 7.97129 4.78589" stroke="#C4161C"
+                          stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round" />
+                        <path
+                          d="M14.0004 16.536C16.5055 16.536 18.5364 14.5052 18.5364 12C18.5364 9.49483 16.5055 7.46399 14.0004 7.46399C11.4952 7.46399 9.46436 9.49483 9.46436 12C9.46436 14.5052 11.4952 16.536 14.0004 16.536Z"
+                          stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M12.2241 12H15.7761" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14.0005 13.776V10.224" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                    </span>
+
+                  </button>
+
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <!-- Карточка анонс  -->
+                <article class="announce-card">
+
+                  <div class="announce-card__header">
+
+                    <div class="announce-card__slider">
+                      <div class="swiper js-announce-card-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/1.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/2.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/3.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/4.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/5.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="announce-card__navigation">
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                  <div class="announce-card__body">
+                    <a class="announce-card__link" href="./card.html">2-комнатная, 54 кв. м.</a>
+                    <p class="announce-card__address">г. Краснодар, ул. Красная, д. 180</p>
+                  </div>
+
+                  <div class="announce-card__footer">
+                    <b class="announce-card__price">16.300.000 ₽</b>
+                    <p class="announce-card__parameters">534.487 Р / кв.м.</p>
+                  </div>
+
+                  <!-- прочие элементы тут  -->
+                  <!-- лейбл  -->
+                  <button class="favorite-btn announce-card__favorite-btn" type="button">
+                    <span class="favorite-btn__icon">
+                      <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.1122 1.42595C18.2172 1.10895 15.0942 2.72095 14.0002 5.13595C12.9052 2.72095 9.78316 1.10895 6.88816 1.42595C3.07316 1.84295 0.61716 5.72895 1.39316 9.47595C2.44716 14.5689 8.22416 16.8559 14.0002 22.6139C19.7772 16.8559 25.5532 14.5689 26.6072 9.47595C27.3822 5.72895 24.9272 1.84295 21.1122 1.42595Z"
+                          stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M4.57129 8.18589C4.57129 6.30789 6.09429 4.78589 7.97129 4.78589" stroke="#C4161C"
+                          stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round" />
+                        <path
+                          d="M14.0004 16.536C16.5055 16.536 18.5364 14.5052 18.5364 12C18.5364 9.49483 16.5055 7.46399 14.0004 7.46399C11.4952 7.46399 9.46436 9.49483 9.46436 12C9.46436 14.5052 11.4952 16.536 14.0004 16.536Z"
+                          stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M12.2241 12H15.7761" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14.0005 13.776V10.224" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                    </span>
+
+                  </button>
+
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <!-- Карточка анонс  -->
+                <article class="announce-card">
+
+                  <div class="announce-card__header">
+
+                    <div class="announce-card__slider">
+                      <div class="swiper js-announce-card-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/1.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/2.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/3.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/4.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/5.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="announce-card__navigation">
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                  <div class="announce-card__body">
+                    <a class="announce-card__link" href="./card.html">2-комнатная, 54 кв. м.</a>
+                    <p class="announce-card__address">г. Краснодар, ул. Красная, д. 180</p>
+                  </div>
+
+                  <div class="announce-card__footer">
+                    <b class="announce-card__price">16.300.000 ₽</b>
+                    <p class="announce-card__parameters">534.487 Р / кв.м.</p>
+                  </div>
+
+                  <!-- прочие элементы тут  -->
+                  <!-- лейбл  -->
+                  <button class="favorite-btn announce-card__favorite-btn" type="button">
+                    <span class="favorite-btn__icon">
+                      <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.1122 1.42595C18.2172 1.10895 15.0942 2.72095 14.0002 5.13595C12.9052 2.72095 9.78316 1.10895 6.88816 1.42595C3.07316 1.84295 0.61716 5.72895 1.39316 9.47595C2.44716 14.5689 8.22416 16.8559 14.0002 22.6139C19.7772 16.8559 25.5532 14.5689 26.6072 9.47595C27.3822 5.72895 24.9272 1.84295 21.1122 1.42595Z"
+                          stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M4.57129 8.18589C4.57129 6.30789 6.09429 4.78589 7.97129 4.78589" stroke="#C4161C"
+                          stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round" />
+                        <path
+                          d="M14.0004 16.536C16.5055 16.536 18.5364 14.5052 18.5364 12C18.5364 9.49483 16.5055 7.46399 14.0004 7.46399C11.4952 7.46399 9.46436 9.49483 9.46436 12C9.46436 14.5052 11.4952 16.536 14.0004 16.536Z"
+                          stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M12.2241 12H15.7761" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14.0005 13.776V10.224" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                    </span>
+
+                  </button>
+
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <!-- Карточка анонс  -->
+                <article class="announce-card">
+
+                  <div class="announce-card__header">
+
+                    <div class="announce-card__slider">
+                      <div class="swiper js-announce-card-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/1.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/2.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/3.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/4.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/5.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="announce-card__navigation">
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                  <div class="announce-card__body">
+                    <a class="announce-card__link" href="./card.html">2-комнатная, 54 кв. м.</a>
+                    <p class="announce-card__address">г. Краснодар, ул. Красная, д. 180</p>
+                  </div>
+
+                  <div class="announce-card__footer">
+                    <b class="announce-card__price">16.300.000 ₽</b>
+                    <p class="announce-card__parameters">534.487 Р / кв.м.</p>
+                  </div>
+
+                  <!-- прочие элементы тут  -->
+                  <!-- лейбл  -->
+                  <button class="favorite-btn announce-card__favorite-btn" type="button">
+                    <span class="favorite-btn__icon">
+                      <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.1122 1.42595C18.2172 1.10895 15.0942 2.72095 14.0002 5.13595C12.9052 2.72095 9.78316 1.10895 6.88816 1.42595C3.07316 1.84295 0.61716 5.72895 1.39316 9.47595C2.44716 14.5689 8.22416 16.8559 14.0002 22.6139C19.7772 16.8559 25.5532 14.5689 26.6072 9.47595C27.3822 5.72895 24.9272 1.84295 21.1122 1.42595Z"
+                          stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M4.57129 8.18589C4.57129 6.30789 6.09429 4.78589 7.97129 4.78589" stroke="#C4161C"
+                          stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round" />
+                        <path
+                          d="M14.0004 16.536C16.5055 16.536 18.5364 14.5052 18.5364 12C18.5364 9.49483 16.5055 7.46399 14.0004 7.46399C11.4952 7.46399 9.46436 9.49483 9.46436 12C9.46436 14.5052 11.4952 16.536 14.0004 16.536Z"
+                          stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M12.2241 12H15.7761" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14.0005 13.776V10.224" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                    </span>
+
+                  </button>
+
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <!-- Карточка анонс  -->
+                <article class="announce-card">
+
+                  <div class="announce-card__header">
+
+                    <div class="announce-card__slider">
+                      <div class="swiper js-announce-card-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/1.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/2.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/3.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/4.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/5.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="announce-card__navigation">
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                  <div class="announce-card__body">
+                    <a class="announce-card__link" href="./card.html">2-комнатная, 54 кв. м.</a>
+                    <p class="announce-card__address">г. Краснодар, ул. Красная, д. 180</p>
+                  </div>
+
+                  <div class="announce-card__footer">
+                    <b class="announce-card__price">16.300.000 ₽</b>
+                    <p class="announce-card__parameters">534.487 Р / кв.м.</p>
+                  </div>
+
+                  <!-- прочие элементы тут  -->
+                  <!-- лейбл  -->
+                  <button class="favorite-btn announce-card__favorite-btn" type="button">
+                    <span class="favorite-btn__icon">
+                      <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.1122 1.42595C18.2172 1.10895 15.0942 2.72095 14.0002 5.13595C12.9052 2.72095 9.78316 1.10895 6.88816 1.42595C3.07316 1.84295 0.61716 5.72895 1.39316 9.47595C2.44716 14.5689 8.22416 16.8559 14.0002 22.6139C19.7772 16.8559 25.5532 14.5689 26.6072 9.47595C27.3822 5.72895 24.9272 1.84295 21.1122 1.42595Z"
+                          stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M4.57129 8.18589C4.57129 6.30789 6.09429 4.78589 7.97129 4.78589" stroke="#C4161C"
+                          stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round" />
+                        <path
+                          d="M14.0004 16.536C16.5055 16.536 18.5364 14.5052 18.5364 12C18.5364 9.49483 16.5055 7.46399 14.0004 7.46399C11.4952 7.46399 9.46436 9.49483 9.46436 12C9.46436 14.5052 11.4952 16.536 14.0004 16.536Z"
+                          stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M12.2241 12H15.7761" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14.0005 13.776V10.224" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                    </span>
+
+                  </button>
+
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <!-- Карточка анонс  -->
+                <article class="announce-card">
+
+                  <div class="announce-card__header">
+
+                    <div class="announce-card__slider">
+                      <div class="swiper js-announce-card-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/1.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/2.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/3.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/4.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                          <div class="swiper-slide">
+
+                            <img src="./img/announce-card/5.jpg" alt="авто" width="328" loading="lazy">
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="announce-card__navigation">
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                      <li class="announce-card__navigation-item">
+                        <span class="announce-card__navigation-line"></span>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                  <div class="announce-card__body">
+                    <a class="announce-card__link" href="./card.html">2-комнатная, 54 кв. м.</a>
+                    <p class="announce-card__address">г. Краснодар, ул. Красная, д. 180</p>
+                  </div>
+
+                  <div class="announce-card__footer">
+                    <b class="announce-card__price">16.300.000 ₽</b>
+                    <p class="announce-card__parameters">534.487 Р / кв.м.</p>
+                  </div>
+
+                  <!-- прочие элементы тут  -->
+                  <!-- лейбл  -->
+                  <button class="favorite-btn announce-card__favorite-btn" type="button">
+                    <span class="favorite-btn__icon">
+                      <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.1122 1.42595C18.2172 1.10895 15.0942 2.72095 14.0002 5.13595C12.9052 2.72095 9.78316 1.10895 6.88816 1.42595C3.07316 1.84295 0.61716 5.72895 1.39316 9.47595C2.44716 14.5689 8.22416 16.8559 14.0002 22.6139C19.7772 16.8559 25.5532 14.5689 26.6072 9.47595C27.3822 5.72895 24.9272 1.84295 21.1122 1.42595Z"
+                          stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M4.57129 8.18589C4.57129 6.30789 6.09429 4.78589 7.97129 4.78589" stroke="#C4161C"
+                          stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round" />
+                        <path
+                          d="M14.0004 16.536C16.5055 16.536 18.5364 14.5052 18.5364 12C18.5364 9.49483 16.5055 7.46399 14.0004 7.46399C11.4952 7.46399 9.46436 9.49483 9.46436 12C9.46436 14.5052 11.4952 16.536 14.0004 16.536Z"
+                          stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M12.2241 12H15.7761" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14.0005 13.776V10.224" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                    </span>
+
+                  </button>
+
+                </article>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- ПОДВАЛ  -->
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__grid">
+
+        <div class="footer__grid-col footer__contact">
+          <div class="footer__group">
+            <div class="footer__group-left"><img src="./svg/logotype-short.svg" alt="Logo" class="footer__logo"></div>
+            <div class="footer__group-right">
+              <p class="footer__phone phone">+7 (861) 279-22-22</p>
+              <a href="tel:+78612792222" class="footer__call call-link">Позвонить мне!</a>
+            </div>
+          </div>
+
+          <p class="footer__info">
+            2024 Агентство недвижимости "Девелопмент-Юг"<br>
+            <a href="#">Политика конфиденциальности</a>
+          </p>
+        </div>
+
+        <div class="footer__grid-col footer__nav">
+          <ul class="footer__list list-reset">
+            <li class="footer__item">
+              <h3 class="footer__title">Недвижимость</h3>
+              <ul class="footer__sublist cust-list list-reset">
+                <li class="footer__subitem"><a href="#">Квартиры</a></li>
+                <li class="footer__subitem"><a href="#">Дома</a></li>
+                <li class="footer__subitem"><a href="#">Земельные участки</a></li>
+                <li class="footer__subitem"><a href="#">Коммерческая недвижимость</a></li>
+                <li class="footer__subitem"><a href="#">Гаражи</a></li>
+                <li class="footer__subitem"><a href="#">Зарубежная недвижимость</a></li>
+              </ul>
+            </li>
+            <li class="footer__item">
+              <h3 class="footer__title">Услуги</h3>
+              <ul class="footer__sublist cust-list list-reset">
+                <li class="footer__subitem"><a href="#">Купить</a></li>
+                <li class="footer__subitem"><a href="#">Продать</a></li>
+                <li class="footer__subitem"><a href="#">Сдать в аренду</a></li>
+                <li class="footer__subitem"><a href="#">Снять в аренду</a></li>
+                <li class="footer__subitem"><a href="#">Юридические услуги</a></li>
+                <li class="footer__subitem"><a href="#">Оформить ипотеку</a></li>
+                <li class="footer__subitem"><a href="#">Оценить недвижимость</a></li>
+              </ul>
+            </li>
+            <li class="footer__item">
+              <h3 class="footer__title">Карьера</h3>
+              <ul class="footer__sublist cust-list list-reset">
+                <li class="footer__subitem"><a href="#">Учебный центр</a></li>
+                <li class="footer__subitem"><a href="#">Карьера у нас</a></li>
+                <li class="footer__subitem"><a href="#">Вакансии</a></li>
+              </ul>
+            </li>
+            <li class="footer__item">
+              <h3 class="footer__title">О компании</h3>
+              <ul class="footer__sublist list-reset">
+                <li class="footer__subitem footer__title"><a href="#">Партнерская программа</a></li>
+                <li class="footer__subitem footer__title"><a href="#">Офис</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Модальные окна  -->
+  <!-- Заказать звонок  -->
+  <section class="modal" id="modal-call-back">
+    <div class="wrapper">
+
+      <!-- основной блок контента -->
+      <div class="modal__body">
+
+        <div class="modal__top">
+          <h2 class="modal__title title">Заказать звонок</h2>
+          <p class="modal__text text">Заполните простую форму и наши менеджеры перезвонят Вам в течении 10 минут</p>
+        </div>
+
+        <div class="modal__middle">
+          <div class="modal__form">
+
+            <form class="form" action="#">
+              <div class="form__grid">
+                <div class="form__col">
+                  <label for="user-name-1">Ваше имя</label>
+                  <div class="form__element">
+                    <input type="text" name="user-name" placeholder="Представьтесь, пожалуйста" id="user-name-1"
+                      required>
+                  </div>
+
+                </div>
+
+                <div class="form__col">
+                  <label for="user-phone-1">Телефон</label>
+                  <div class="form__element">
+                    <input type="tel" name="user-phone" placeholder="Введите телефон" id="user-phone-1" required>
+                  </div>
+
+                </div>
+
+
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__bottom-left">
+            <div class="form__agree">
+              <input type="checkbox" name="user-agree" id="user-agree-1" required checked>
+              <label for="user-agree-1">Нажимая “Отправить” я даю согласие на обработку <a href="#">персональных
+                  данных</a></label>
+            </div>
+
+          </div>
+          <div class="modal__bottom-right">
+            <button class="form__button button" type="submit"><span>Отправить</span></button>
+          </div>
+        </div>
+
+
+
+        <!-- Кнопка закрытия окна  -->
+        <button class="modal__close js-close-modal" type="button" title="Закрыть окно">
+          <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1.5L17 17.5" stroke="#C4161C" stroke-width="2" />
+            <path d="M17 1.5L1 17.5" stroke="#C4161C" stroke-width="2" />
+          </svg>
+        </button>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <script src="./libs/swiper-bundle.min.js"></script>
+  <script src="./libs/simplebar.min.js"></script>
+  <script src="./libs/SmoothScroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+
+  <script src="./js/parts/header-sticky.js"></script>
+  <script src="./js/parts/menu-open.js"></script>
+  <script src="./js/parts/just-main-margin.js"></script>
+  <script src="./js/parts/custom-select.js"></script>
+  <script src="./js/parts/noUiSlider.js"></script>
+  <script src="./js/parts/modals.js"></script>
+
+  <script src="./js/swiper-sliders.js"></script>
+
+  <script src="./js/main.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+.custom-steps {
+  &__list {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__top {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+  &__top-grid {
+    display: grid;
+    gap: 27px;
+    grid-template-columns: auto 1fr;
+    align-items: flex-start;
+  }
+  &__icon {
+    width: 46px;
+  }
+  &__title {
+    display: block;
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--black);
+
+    span {
+      display: block;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 185%;
+      letter-spacing: 0.03em;
+      color: var(--grey);
+    }
+  }
+  &__body {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--text);
+  }
+
+  @media (max-width: 767px) {
+    &__list {
+      gap: 24px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+  }
+}
