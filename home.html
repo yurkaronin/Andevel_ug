@@ -555,70 +555,788 @@
 
           <!-- форма фильтра  -->
           <div class="hero__filter-form">
-            <div class="filter-form">
-              <form action="">
-                <ul class="filter-form__list list-reset">
-                  <li class="filter-form__item">
-                    <div class="filter-form__options">
-                      <div class="custom-radio-btn">
-                        <input type="radio" id="purchase" name="option" class="visually-hidden" checked>
-                        <label for="purchase" class="custom-radio-btn__label">Покупка</label>
-                      </div>
-                      <div class="custom-radio-btn">
-                        <input type="radio" id="rent" name="option" class="visually-hidden">
-                        <label for="rent" class="custom-radio-btn__label">Аренда</label>
-                      </div>
-                    </div>
-                  </li>
+            <!-- Группы фильтров -->
+            <div class="groups-filter-form">
 
-                  <li class="filter-form__item">
-                    <span class="filter-form__label">Кол-во комнат</span>
-                    <!-- селект -->
-                    <div class="custom-select" data-default="Любое">
-                      <div class="custom-select__selected"><span>Кол-во комнат</span></div>
-                      <div class="custom-select__options">
-                        <div class="custom-select__option" data-value="Любое">Любое</div>
-                        <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
-                        <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
-                        <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
-                        <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
-                      </div>
-                      <input class="visually-hidden" type="hidden" value="" required>
-                    </div>
-                  </li>
+              <!-- Группа фильтров для квартир -->
+              <div class="groups-filter-form__item" data-index="0" style="display: none;">
+                <div class="filter-form">
+                  <form action="">
+                    <ul class="filter-form__list list-reset">
 
-                  <li class="filter-form__item filter-form__inputs">
-                    <span class="filter-form__label">Площадь</span>
-                    <div class="number-inputs">
-                      <input type="number" id="from" placeholder="От">
-                      <input type="number" id="to" placeholder="До">
-                    </div>
+                      <!-- Покупка  -->
+                      <li class="filter-form__item">
+                        <div class="filter-form__options">
+                          <div class="custom-radio-btn">
+                            <input type="radio" id="purchase" name="option" class="visually-hidden" checked>
+                            <label for="purchase" class="custom-radio-btn__label">Покупка</label>
+                          </div>
+                          <div class="custom-radio-btn">
+                            <input type="radio" id="rent" name="option" class="visually-hidden">
+                            <label for="rent" class="custom-radio-btn__label">Аренда</label>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Кол-во комнат  -->
+                      <li class="filter-form__item">
+                        <span class="filter-form__label">Кол-во комнат</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Площадь  -->
+                      <li class="filter-form__item filter-form__inputs">
+                        <span class="filter-form__label">Площадь</span>
+                        <div class="number-inputs">
+                          <input type="number" id="from" placeholder="От">
+                          <input type="number" id="to" placeholder="До">
+                        </div>
 
-                  </li>
+                      </li>
+                      <!-- Стоимость  -->
+                      <li class="filter-form__item">
+                        <span class="filter-form__label">Стоимость</span>
+                        <div class="number-inputs">
+                          <input type="number" id="from" placeholder="От">
+                          <input type="number" id="to" placeholder="До">
+                        </div>
 
-                  <li class="filter-form__item">
-                    <span class="filter-form__label">Стоимость</span>
-                    <div class="number-inputs">
-                      <input type="number" id="from" placeholder="От">
-                      <input type="number" id="to" placeholder="До">
-                    </div>
+                      </li>
 
-                  </li>
+                      <!-- Скрытые поля  -->
+                       <!-- Район  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Район</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Улица  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Улица</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Материалы постройки  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Материалы постройки</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Санузел  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Санузел</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Тип ремонта  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Тип ремонта</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
 
-                  <li class="filter-form__item filter-form__buttons">
-                    <button class="button button--red" type="button"><span>Показать накарте</span></button>
-                    <button class="button" type="submit"><span>Показать!</span></button>
-                  </li>
+                      <li class="filter-form__item filter-form__buttons">
+                        <button class="button button--red" type="button"><span>Показать накарте</span></button>
+                        <button class="button" type="submit"><span>Показать!</span></button>
+                      </li>
+                      <!-- Кнопка показать еще опции  -->
+                      <li class="filter-form__item filter-form__show-more">
+                        <button class="show-more" type="button"><span>Расширенный поиск</span></button>
+                      </li>
 
-                  <li class="filter-form__item filter-form__show-more">
-                    <button class="show-more" type="button"><span>Расширенный поиск</span></button>
-                  </li>
+                    </ul>
+                  </form>
+                </div>
+              </div>
 
-                </ul>
-              </form>
+              <!-- Группа фильтров  для домов-->
+              <div class="groups-filter-form__item" data-index="1" style="display: none;">
+                <div class="filter-form">
+                  <form action="">
+                    <ul class="filter-form__list list-reset">
+
+                      <!-- Покупка  -->
+                      <li class="filter-form__item">
+                        <div class="filter-form__options">
+                          <div class="custom-radio-btn">
+                            <input type="radio" id="purchase" name="option" class="visually-hidden" checked>
+                            <label for="purchase" class="custom-radio-btn__label">Покупка</label>
+                          </div>
+                          <div class="custom-radio-btn">
+                            <input type="radio" id="rent" name="option" class="visually-hidden">
+                            <label for="rent" class="custom-radio-btn__label">Аренда</label>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Кол-во комнат  -->
+                      <li class="filter-form__item">
+                        <span class="filter-form__label">Кол-во комнат</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Площадь  -->
+                      <li class="filter-form__item filter-form__inputs">
+                        <span class="filter-form__label">Площадь</span>
+                        <div class="number-inputs">
+                          <input type="number" id="from" placeholder="От">
+                          <input type="number" id="to" placeholder="До">
+                        </div>
+
+                      </li>
+                      <!-- Стоимость  -->
+                      <li class="filter-form__item">
+                        <span class="filter-form__label">Стоимость</span>
+                        <div class="number-inputs">
+                          <input type="number" id="from" placeholder="От">
+                          <input type="number" id="to" placeholder="До">
+                        </div>
+
+                      </li>
+
+                      <!-- Скрытые поля  -->
+                       <!-- Район  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Район</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Улица  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Улица</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Материалы постройки  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Материалы постройки</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Санузел  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Санузел</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Тип ремонта  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Тип ремонта</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+
+                      <li class="filter-form__item filter-form__buttons">
+                        <button class="button button--red" type="button"><span>Показать накарте</span></button>
+                        <button class="button" type="submit"><span>Показать!</span></button>
+                      </li>
+                      <!-- Кнопка показать еще опции  -->
+                      <li class="filter-form__item filter-form__show-more">
+                        <button class="show-more" type="button"><span>Расширенный поиск</span></button>
+                      </li>
+
+                    </ul>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Группа фильтров  земельные участки-->
+              <div class="groups-filter-form__item" data-index="2" style="display: none;">
+                <div class="filter-form">
+                  <form action="">
+                    <ul class="filter-form__list list-reset">
+
+                      <!-- Покупка  -->
+                      <li class="filter-form__item">
+                        <div class="filter-form__options">
+                          <div class="custom-radio-btn">
+                            <input type="radio" id="purchase" name="option" class="visually-hidden" checked>
+                            <label for="purchase" class="custom-radio-btn__label">Покупка</label>
+                          </div>
+                          <div class="custom-radio-btn">
+                            <input type="radio" id="rent" name="option" class="visually-hidden">
+                            <label for="rent" class="custom-radio-btn__label">Аренда</label>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Район  -->
+                      <li class="filter-form__item">
+                        <span class="filter-form__label">Район</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Площадь  -->
+                      <li class="filter-form__item filter-form__inputs">
+                        <span class="filter-form__label">Площадь</span>
+                        <div class="number-inputs">
+                          <input type="number" id="from" placeholder="От">
+                          <input type="number" id="to" placeholder="До">
+                        </div>
+
+                      </li>
+                      <!-- Стоимость  -->
+                      <li class="filter-form__item">
+                        <span class="filter-form__label">Стоимость</span>
+                        <div class="number-inputs">
+                          <input type="number" id="from" placeholder="От">
+                          <input type="number" id="to" placeholder="До">
+                        </div>
+
+                      </li>
+
+                      <!-- Скрытые поля  -->
+                       <!-- Улица  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Улица</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Тип земельного участка  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Тип земельного участка</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+
+                      <li class="filter-form__item filter-form__buttons">
+                        <button class="button button--red" type="button"><span>Показать накарте</span></button>
+                        <button class="button" type="submit"><span>Показать!</span></button>
+                      </li>
+
+                      <!-- Кнопка показать еще опции  -->
+                      <li class="filter-form__item filter-form__show-more">
+                        <button class="show-more" type="button"><span>Расширенный поиск</span></button>
+                      </li>
+
+                    </ul>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Группа фильтров  коммерческая недвижимость-->
+              <div class="groups-filter-form__item" data-index="3" style="display: none;">
+                <div class="filter-form">
+                  <form action="">
+                    <ul class="filter-form__list list-reset">
+
+                      <!-- Покупка  -->
+                      <li class="filter-form__item">
+                        <div class="filter-form__options">
+                          <div class="custom-radio-btn">
+                            <input type="radio" id="purchase" name="option" class="visually-hidden" checked>
+                            <label for="purchase" class="custom-radio-btn__label">Покупка</label>
+                          </div>
+                          <div class="custom-radio-btn">
+                            <input type="radio" id="rent" name="option" class="visually-hidden">
+                            <label for="rent" class="custom-radio-btn__label">Аренда</label>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Назначение  -->
+                      <li class="filter-form__item">
+                        <span class="filter-form__label">Назначение</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Назначение</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Площадь  -->
+                      <li class="filter-form__item filter-form__inputs">
+                        <span class="filter-form__label">Площадь</span>
+                        <div class="number-inputs">
+                          <input type="number" id="from" placeholder="От">
+                          <input type="number" id="to" placeholder="До">
+                        </div>
+
+                      </li>
+                      <!-- Стоимость  -->
+                      <li class="filter-form__item">
+                        <span class="filter-form__label">Стоимость</span>
+                        <div class="number-inputs">
+                          <input type="number" id="from" placeholder="От">
+                          <input type="number" id="to" placeholder="До">
+                        </div>
+
+                      </li>
+
+                      <!-- Скрытые поля  -->
+                       <!-- Район  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Район</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Район</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Улица  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Улица</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Улица</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Материалы постройки  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Материалы постройки</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>КМатериалы постройки</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Тип ремонта  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Тип ремонта</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Тип ремонта</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+
+                      <li class="filter-form__item filter-form__buttons">
+                        <button class="button button--red" type="button"><span>Показать накарте</span></button>
+                        <button class="button" type="submit"><span>Показать!</span></button>
+                      </li>
+
+                      <!-- Кнопка показать еще опции  -->
+                      <li class="filter-form__item filter-form__show-more">
+                        <button class="show-more" type="button"><span>Расширенный поиск</span></button>
+                      </li>
+
+                    </ul>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Группа фильтров  гаражи-->
+              <div class="groups-filter-form__item" data-index="4">
+                <div class="filter-form">
+                  <form action="">
+                    <ul class="filter-form__list list-reset">
+
+                      <li class="filter-form__item">
+                        <div class="filter-form__options">
+                          <div class="custom-radio-btn">
+                            <input type="radio" id="purchase" name="option" class="visually-hidden" checked>
+                            <label for="purchase" class="custom-radio-btn__label">Покупка</label>
+                          </div>
+                          <div class="custom-radio-btn">
+                            <input type="radio" id="rent" name="option" class="visually-hidden">
+                            <label for="rent" class="custom-radio-btn__label">Аренда</label>
+                          </div>
+                        </div>
+                      </li>
+
+                      <!-- Район  -->
+                      <li class="filter-form__item">
+                        <span class="filter-form__label">Район</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Район</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+
+                      <!-- Площадь  -->
+                      <li class="filter-form__item filter-form__inputs">
+                        <span class="filter-form__label">Площадь</span>
+                        <div class="number-inputs">
+                          <input type="number" id="from" placeholder="От">
+                          <input type="number" id="to" placeholder="До">
+                        </div>
+
+                      </li>
+
+                      <!-- Стоимость  -->
+                      <li class="filter-form__item">
+                        <span class="filter-form__label">Стоимость</span>
+                        <div class="number-inputs">
+                          <input type="number" id="from" placeholder="От">
+                          <input type="number" id="to" placeholder="До">
+                        </div>
+                      </li>
+
+                      <!-- Скрытые поля  -->
+                      <!-- Улица  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Улица</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+                      <!-- Материалы постройки  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Материалы постройки</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+
+
+                      <li class="filter-form__item filter-form__buttons">
+                        <button class="button button--red" type="button"><span>Показать накарте</span></button>
+                        <button class="button" type="submit"><span>Показать!</span></button>
+                      </li>
+
+
+                      <li class="filter-form__item filter-form__show-more">
+                        <button class="show-more" type="button"><span>Расширенный поиск</span></button>
+                      </li>
+
+                    </ul>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Группа фильтров  зарубежная недвижимость -->
+              <div class="groups-filter-form__item" data-index="5" style="display: none;">
+                <div class="filter-form">
+                  <form action="">
+                    <ul class="filter-form__list list-reset">
+
+                      <li class="filter-form__item">
+                        <div class="filter-form__options">
+                          <div class="custom-radio-btn">
+                            <input type="radio" id="purchase" name="option" class="visually-hidden" checked>
+                            <label for="purchase" class="custom-radio-btn__label">Покупка</label>
+                          </div>
+                          <div class="custom-radio-btn">
+                            <input type="radio" id="rent" name="option" class="visually-hidden">
+                            <label for="rent" class="custom-radio-btn__label">Аренда</label>
+                          </div>
+                        </div>
+                      </li>
+
+                      <!-- Страна  -->
+                      <li class="filter-form__item">
+                        <span class="filter-form__label">Страна</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Страна</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+
+                      <!-- Кол-во комнат  -->
+                      <li class="filter-form__item">
+                        <span class="filter-form__label">Кол-во комнат</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+
+                      <!-- Стоимость  -->
+                      <li class="filter-form__item">
+                        <span class="filter-form__label">Стоимость</span>
+                        <div class="number-inputs">
+                          <input type="number" id="from" placeholder="От">
+                          <input type="number" id="to" placeholder="До">
+                        </div>
+                      </li>
+
+                      <!-- Скрытые поля  -->
+                      <!-- Материалы постройки  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Материалы постройки</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+
+                      <!-- Санузел  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Санузел</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+
+                      <!-- Тип ремонта  -->
+                      <li class="filter-form__item hide">
+                        <span class="filter-form__label">Тип ремонта</span>
+                        <!-- селект -->
+                        <div class="custom-select" data-default="Любое">
+                          <div class="custom-select__selected"><span>Кол-во комнат</span></div>
+                          <div class="custom-select__options">
+                            <div class="custom-select__option" data-value="Любое">Любое</div>
+                            <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
+                            <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
+                            <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
+                            <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                          </div>
+                          <input class="visually-hidden" type="hidden" value="" required>
+                        </div>
+                      </li>
+
+
+
+                      <li class="filter-form__item filter-form__buttons">
+                        <button class="button button--red" type="button"><span>Показать накарте</span></button>
+                        <button class="button" type="submit"><span>Показать!</span></button>
+                      </li>
+
+                      <li class="filter-form__item filter-form__show-more">
+                        <button class="show-more" type="button"><span>Расширенный поиск</span></button>
+                      </li>
+
+                    </ul>
+                  </form>
+                </div>
+              </div>
+
             </div>
 
+
+
           </div>
+
         </div>
 
       </div>
