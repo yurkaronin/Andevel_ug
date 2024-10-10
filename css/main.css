@@ -3170,6 +3170,21 @@ input[type=radio].visually-hidden {
   stroke: currentColor;
 }
 
+.map {
+  position: relative;
+  border-radius: 5px;
+  width: 100%;
+  height: 480px;
+  z-index: 10;
+  background-color: gray;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .map {
+    height: 335px;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;

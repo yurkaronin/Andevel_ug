@@ -469,7 +469,10 @@
 
             <div class="place-card__place">
               <h2>Местоположение</h2>
-              <img src="./img/place-card/map.jpg" alt="#">
+              <div class="place-card__map">
+                <!-- интерактивная карта  -->
+                <div class="map js-map" id="js-map"></div>
+              </div>
             </div>
 
             <div class="place-card__calculate calculate js-calculate">
@@ -1431,6 +1434,8 @@
   </section>
 
 
+
+
   <script src="./libs/swiper-bundle.min.js"></script>
   <script src="./libs/simplebar.min.js"></script>
   <script src="./libs/SmoothScroll.min.js"></script>
@@ -1447,6 +1452,11 @@
 
   <script src="./js/main.js"></script>
 
+  <!-- Карты  -->
+  <!-- ЯКарта  -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=1dba075a-a65a-4b22-84a2-ebb26f26fe43&lang=ru_RU"
+    type="text/javascript"></script>
+  <script src="./js/maps/map.js"></script>
 
 </body>
 
