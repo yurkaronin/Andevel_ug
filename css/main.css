@@ -1399,20 +1399,34 @@ input[type=radio].visually-hidden {
   padding: 0;
   display: grid;
   gap: 32px;
-  grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(328px, 328px));
 }
 .announce-cards-list__item {
   width: 100%;
   max-width: 100%;
+  height: 100%;
+}
+.announce-cards-list__item .announce-card {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.announce-cards-list__item .announce-card__footer {
+  margin-top: auto;
 }
 @media (max-width: 1379px) {
   .announce-cards-list__list {
-    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(288px, 288px));
   }
 }
 @media (max-width: 1023px) {
   .announce-cards-list__list {
-    grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(328px, 328px));
   }
 }
 @media (max-width: 767px) {
