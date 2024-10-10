@@ -205,13 +205,17 @@
         <div class="place-card__grid">
 
           <div class="place-card__col place-card__left">
-            <img src="./img/offices/map.jpg" alt="">
+            <div class="place-card__map">
+              <!-- интерактивная карта  -->
+              <div class="map js-office-map" id="js-office-map"></div>
+            </div>
             <br>
             <div class="offices-announce">
               <ul class="offices-announce__list list-reset">
 
                 <li class="offices-announce__item">
-                  <article class="office-announce-card">
+
+                  <article class="office-announce-card" data-coords="[45.052061, 38.958784]">
                     <div class="office-announce-card__grid">
                       <div class="office-announce-card__photo">
                         <img src="./img/offices/offices-announce-1.jpg" alt="#" loading="lazy">
@@ -235,7 +239,8 @@
                 </li>
 
                 <li class="offices-announce__item">
-                  <article class="office-announce-card">
+
+                  <article class="office-announce-card" data-coords="[45.038725, 38.912350]">
                     <div class="office-announce-card__grid">
                       <div class="office-announce-card__photo">
                         <img src="./img/offices/offices-announce-2.jpg" alt="#" loading="lazy">
@@ -246,7 +251,7 @@
                           <a href="" class="office-announce-card__label">маршрут</a>
                         </div>
                         <ul class="office-announce-card__list list-reset">
-                          <li>350089, г. Краснодар, ул. 70-летия Октября, 17</li>
+                          <li>Россия, 350089, г. Краснодар, ул. 70-летия Октября, 17</li>
                           <li><span>Телефон:</span><a href="tel:+7(861) 279-22-22">+7(861) 279-22-22</a>; <a
                               href="tel:+7 (988) 470-80-01">+7 (988) 470-80-01</a></li>
                           <li><span>Электронная почта:</span><a
@@ -259,7 +264,8 @@
                 </li>
 
                 <li class="offices-announce__item">
-                  <article class="office-announce-card">
+
+                  <article class="office-announce-card" data-coords="[45.052691, 39.027820]">
                     <div class="office-announce-card__grid">
                       <div class="office-announce-card__photo">
                         <img src="./img/offices/offices-announce-3.jpg" alt="#" loading="lazy">
@@ -270,7 +276,7 @@
                           <a href="" class="office-announce-card__label">маршрут</a>
                         </div>
                         <ul class="office-announce-card__list list-reset">
-                          <li>350049, г. Краснодар, ул. Тургенева, 107</li>
+                          <li>Россия, 350028, г. Краснодар, ул. Восточно-Кругликовская, 42/3</li>
                           <li><span>Телефон:</span><a href="tel:+7 (861) 279-22-22">+7 (861) 279-22-22</a>; <a
                               href="tel:+7 (861) 279-42-97">+7 (861) 279-42-97</a></li>
                           <li><span>Электронная почта:</span><a
@@ -283,7 +289,8 @@
                 </li>
 
                 <li class="offices-announce__item">
-                  <article class="office-announce-card">
+
+                  <article class="office-announce-card" data-coords="[45.079657, 38.896594]">
                     <div class="office-announce-card__grid">
                       <div class="office-announce-card__photo">
                         <img src="./img/offices/offices-announce-4.jpg" alt="#" loading="lazy">
@@ -294,7 +301,7 @@
                           <a href="" class="office-announce-card__label">маршрут</a>
                         </div>
                         <ul class="office-announce-card__list list-reset">
-                          <li>350049, г. Краснодар, ул. Тургенева, 107</li>
+                          <li>Россия, 350012, г. Краснодар, ул. Красных Партизан, 1/4, корп. 2</li>
                           <li><span>Телефон:</span><a href="tel:+7 (861) 279-22-22">+7 (861) 279-22-22</a>; <a
                               href="tel:+7 (861) 279-42-97">+7 (861) 279-42-97</a></li>
                           <li><span>Электронная почта:</span><a
@@ -307,7 +314,8 @@
                 </li>
 
                 <li class="offices-announce__item">
-                  <article class="office-announce-card">
+
+                  <article class="office-announce-card" data-coords="[45.011210, 39.069124]">
                     <div class="office-announce-card__grid">
                       <div class="office-announce-card__photo">
                         <img src="./img/offices/offices-announce-1.jpg" alt="#" loading="lazy">
@@ -318,7 +326,7 @@
                           <a href="" class="office-announce-card__label">маршрут</a>
                         </div>
                         <ul class="office-announce-card__list list-reset">
-                          <li>350049, г. Краснодар, ул. Тургенева, 107</li>
+                          <li>Россия, 350061, г. Краснодар, ул. Мачуги, 6/2, корп. 1</li>
                           <li><span>Телефон:</span><a href="tel:+7 (861) 279-22-22">+7 (861) 279-22-22</a>; <a
                               href="tel:+7 (861) 279-42-97">+7 (861) 279-42-97</a></li>
                           <li><span>Электронная почта:</span><a
@@ -594,6 +602,12 @@
   <script src="./js/parts/modals.js"></script>
 
   <script src="./js/swiper-sliders.js"></script>
+
+  <!-- Карты  -->
+  <!-- ЯКарта  -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=1dba075a-a65a-4b22-84a2-ebb26f26fe43&lang=ru_RU"
+    type="text/javascript"></script>
+  <script src="./js/maps/office-map.js"></script>
 
   <script src="./js/main.js"></script>
 </body>
