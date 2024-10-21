@@ -150,11 +150,15 @@
   }
 
   @media (max-width: 767px) {
+    &__link {
+      margin-bottom: 6px;
+    }
     &:hover {
       scale: 1.04;
     }
     &__footer {
       text-align: center;
+      padding-bottom: 20px;
     }
   }
 

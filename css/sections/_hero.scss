@@ -291,6 +291,7 @@
     }
     &__title {
       font-size: 25px;
+      color: var(--text);
     }
     &__slider-details {
       padding-top: 12px;
@@ -323,6 +324,7 @@
     // }
     .hero__filter-title {
       margin-bottom: 0;
+      color: var(--text);
     }
   }
 }
