@@ -4,6 +4,7 @@
   background-color: #000000;
   background-image: url(../img/promo/1.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -145,6 +146,11 @@
     &__grid {
       gap: 20px;
       grid-template-columns: 1fr;
+      width: 100%;
+      max-width: 100%;
+    }
+    &__list {
+      max-width: 100%;
     }
   }
 }

@@ -143,11 +143,7 @@
   &:active,
   &:focus {
     box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(
-      180deg,
-      rgba(242, 242, 242, 0.1) 0%,
-      rgba(140, 140, 140, 0.01) 100%
-    );
+    background: linear-gradient(180deg, rgba(242, 242, 242, 0.1) 0%, rgba(140, 140, 140, 0.01) 100%);
     .announce-card__navigation-line {
       opacity: 1;
     }
@@ -157,7 +153,24 @@
     &:hover {
       scale: 1.04;
     }
+    &__footer {
+      text-align: center;
+    }
   }
 
+  @media (max-width: 374px) {
+    &__footer {
+      padding-inline: 10px;
+      padding-bottom: 12px;
+      padding-top: 16px;
+    }
+    &__link {
+      margin-bottom: 0;
+    }
 
+    &__price {
+      display: block;
+      margin-right: 0;
+    }
+  }
 }

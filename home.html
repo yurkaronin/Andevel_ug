@@ -110,7 +110,7 @@
       <div class="mobile-nav__body">
         <nav>
           <ul class="mobile-nav__list list-reset">
-            <li class="mobile-nav__item">
+            <li class="mobile-nav__item js-mobile-accordion isActive">
               <a href="#" class="mobile-nav__link">
                 <span>Недвижимость</span>
                 <span class="mobile-nav__icon">
@@ -121,6 +121,41 @@
                   </svg>
                 </span>
               </a>
+
+              <ul class="mobile-nav__sub-list list-reset">
+
+                <li class="mobile-nav__sub-item">
+                  <a class="mobile-nav__sub-link" href="#">
+                    <span>Квартиры</span>
+                  </a>
+                </li>
+                <li class="mobile-nav__sub-item">
+                  <a class="mobile-nav__sub-link" href="#">
+                    <span>Дома</span>
+                  </a>
+                </li>
+                <li class="mobile-nav__sub-item">
+                  <a class="mobile-nav__sub-link" href="#">
+                    <span>Земельные участки</span>
+                  </a>
+                </li>
+                <li class="mobile-nav__sub-item">
+                  <a class="mobile-nav__sub-link" href="#">
+                    <span>Коммерческая недвижимость</span>
+                  </a>
+                </li>
+                <li class="mobile-nav__sub-item">
+                  <a class="mobile-nav__sub-link" href="#">
+                    <span>Гаражи</span>
+                  </a>
+                </li>
+                <li class="mobile-nav__sub-item">
+                  <a class="mobile-nav__sub-link" href="#">
+                    <span>Зарубежная недвижимость</span>
+                  </a>
+                </li>
+              </ul>
+
             </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
@@ -483,37 +518,6 @@
 
                 <li class="filter-tabs__item">
                   <a class="filter-tabs__link" href="#" data-index="5">
-                    <span class="filter-tabs__icon">
-                      <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M1.74512 20.7962C2.78629 20.7969 3.8259 19.5662 4.86707 19.5662C5.90824 19.5662 6.94785 20.7969 7.98902 20.7962C9.03019 20.7969 10.0698 19.5662 11.111 19.5662C12.1521 19.5662 13.1918 20.7969 14.2329 20.7962C15.2741 20.7969 16.3137 19.5662 17.3549 19.5662C18.396 19.5662 19.4357 20.7969 20.4768 20.7962C21.518 20.7969 22.5576 19.5662 23.5988 19.5662C24.6399 19.5662 25.6796 20.7969 26.7207 20.7962C27.7619 20.7969 28.8015 19.5662 29.8427 19.5662"
-                          stroke="white" stroke-width="2" stroke-miterlimit="2" />
-                        <path d="M20.4792 18.6385C21.4017 17.9462 22.0487 17.0708 22.35 16.4893H4.86707L6.11585 18.3354"
-                          stroke="white" stroke-width="2" stroke-miterlimit="2" />
-                        <path d="M7.98901 23.8739H14.8573" stroke="white" stroke-width="2" stroke-miterlimit="2" />
-                        <path d="M12.9843 28.1815H19.8525" stroke="white" stroke-width="2" stroke-miterlimit="2" />
-                        <path d="M18.6038 25.1046H25.4721" stroke="white" stroke-width="2" stroke-miterlimit="2" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M7.36463 4.18151C7.36463 5.54074 6.24619 6.64305 4.86707 6.64305C3.48795 6.64305 2.36951 5.54074 2.36951 4.18151C2.36951 2.82228 3.48795 1.71997 4.86707 1.71997C6.24619 1.71997 7.36463 2.82228 7.36463 4.18151Z"
-                          stroke="white" stroke-width="2" stroke-miterlimit="2" />
-                        <path
-                          d="M25.4721 3.56616C23.7339 3.56616 22.3501 4.61001 22.3501 6.0277C22.3501 4.61001 20.9663 3.56616 19.2281 3.56616"
-                          stroke="white" stroke-width="2" stroke-miterlimit="2" />
-                        <path
-                          d="M29.2184 9.71997C27.4802 9.71997 26.0964 10.7638 26.0964 12.1815C26.0964 10.7638 24.7126 9.71997 22.9745 9.71997"
-                          stroke="white" stroke-width="2" stroke-miterlimit="2" />
-                        <path d="M19.2282 16.4892L11.7355 2.33533V16.4892" stroke="white" stroke-width="2"
-                          stroke-miterlimit="2" />
-                        <path d="M11.7354 6.64307L6.62317 16.4892" stroke="white" stroke-width="2"
-                          stroke-miterlimit="2" />
-                      </svg>
-                    </span>
-                    <span class="filter-tabs__label">Зарубежная недвижимость</span>
-                  </a>
-                </li>
-
-                <li class="filter-tabs__item">
-                  <a class="filter-tabs__link" href="#" data-index="6">
                     <span class="filter-tabs__icon">
                       <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -1329,86 +1333,15 @@
                     </button>
                   </div>
                 </div>
-                <!-- Группа фильтров  тест -->
-                <div class="groups-filter-form__item" data-index="6" style="display: none;">
-                  <div class="filter-form">
-                    <form action="">
 
-                      <ul class="filter-form__list list-reset">
-
-                        <li class="filter-form__item">
-                          <div class="filter-form__options">
-                            <div class="custom-radio-btn">
-                              <input type="radio" id="purchase" name="option" class="visually-hidden" checked>
-                              <label for="purchase" class="custom-radio-btn__label">Покупка</label>
-                            </div>
-                            <div class="custom-radio-btn">
-                              <input type="radio" id="rent" name="option" class="visually-hidden">
-                              <label for="rent" class="custom-radio-btn__label">Аренда</label>
-                            </div>
-                          </div>
-                        </li>
-                        <!-- Страна  -->
-                        <li class="filter-form__item">
-                          <span class="filter-form__label">Страна</span>
-                          <!-- селект -->
-                          <div class="custom-select" data-default="Любое">
-                            <div class="custom-select__selected"><span>Страна</span></div>
-                            <div class="custom-select__options">
-                              <div class="custom-select__option" data-value="Любое">Любое</div>
-                              <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
-                              <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
-                              <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
-                              <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
-                            </div>
-                            <input class="visually-hidden" type="hidden" value="" required>
-                          </div>
-                        </li>
-                        <!-- Кол-во комнат  -->
-                        <li class="filter-form__item">
-                          <span class="filter-form__label">Кол-во комнат</span>
-                          <!-- селект -->
-                          <div class="custom-select" data-default="Любое">
-                            <div class="custom-select__selected"><span>Кол-во комнат</span></div>
-                            <div class="custom-select__options">
-                              <div class="custom-select__option" data-value="Любое">Любое</div>
-                              <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
-                              <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
-                              <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
-                              <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
-                            </div>
-                            <input class="visually-hidden" type="hidden" value="" required>
-                          </div>
-                        </li>
-                        <!-- Стоимость  -->
-                        <li class="filter-form__item">
-                          <span class="filter-form__label">Стоимость</span>
-                          <div class="number-inputs">
-                            <input type="number" id="from" placeholder="От">
-                            <input type="number" id="to" placeholder="До">
-                          </div>
-                        </li>
-                        <li class="filter-form__submit-button">
-                          <button class="button" type="submit"><span>Показать!</span></button>
-                        </li>
-
-                      </ul>
-
-                  </form>
-                  <button class="filter-form__show-more show-more js-show-more" type="button">
-                    <span>Расширенный поиск</span>
-                  </button>
-                </div>
               </div>
 
+
+
             </div>
-
-
-
           </div>
-        </div>
 
-      </div>
+        </div>
 
       </div>
     </section>
@@ -3637,7 +3570,6 @@
         </div>
         <!-- Кнопки навигации  -->
         <div class="great-deals__buttons buttons-group">
-          <a href="#" class="button button--red"><span>Смотреть на карте</span></a>
           <a href="#" class="button"><span>Смотреть все</span></a>
         </div>
       </div>
@@ -4022,6 +3954,7 @@
   <script src="./js/parts/modals.js"></script>
   <script src="./js/parts/show-more.js"></script>
   <script src="./js/parts/mobile-accordion-filter.js"></script>
+  <script src="./js/parts/mobile-nav-item-active.js"></script>
 
   <script src="./js/parts/hero-filter-tabs.js"></script>
 

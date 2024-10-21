@@ -110,7 +110,7 @@
       <div class="mobile-nav__body">
         <nav>
           <ul class="mobile-nav__list list-reset">
-            <li class="mobile-nav__item">
+            <li class="mobile-nav__item js-mobile-accordion isActive">
               <a href="#" class="mobile-nav__link">
                 <span>Недвижимость</span>
                 <span class="mobile-nav__icon">
@@ -121,6 +121,41 @@
                   </svg>
                 </span>
               </a>
+
+              <ul class="mobile-nav__sub-list list-reset">
+
+                <li class="mobile-nav__sub-item">
+                  <a class="mobile-nav__sub-link" href="#">
+                    <span>Квартиры</span>
+                  </a>
+                </li>
+                <li class="mobile-nav__sub-item">
+                  <a class="mobile-nav__sub-link" href="#">
+                    <span>Дома</span>
+                  </a>
+                </li>
+                <li class="mobile-nav__sub-item">
+                  <a class="mobile-nav__sub-link" href="#">
+                    <span>Земельные участки</span>
+                  </a>
+                </li>
+                <li class="mobile-nav__sub-item">
+                  <a class="mobile-nav__sub-link" href="#">
+                    <span>Коммерческая недвижимость</span>
+                  </a>
+                </li>
+                <li class="mobile-nav__sub-item">
+                  <a class="mobile-nav__sub-link" href="#">
+                    <span>Гаражи</span>
+                  </a>
+                </li>
+                <li class="mobile-nav__sub-item">
+                  <a class="mobile-nav__sub-link" href="#">
+                    <span>Зарубежная недвижимость</span>
+                  </a>
+                </li>
+              </ul>
+
             </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
@@ -533,24 +568,36 @@
                 <span class="filter-tabs__icon">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_362_859)">
-                    <path d="M2.18262 13.7374C7.55315 12.1257 21.7549 13.1255 29.8423 17.4721" stroke="white" stroke-width="2" stroke-miterlimit="2"/>
-                    <path d="M13.2612 13.2004C8.31058 14.258 4.526 17.348 1.74512 21.0553" stroke="white" stroke-width="2" stroke-miterlimit="2"/>
-                    <path d="M17.1154 13.6492C12.7376 15.1711 7.83148 18.9221 4.4668 27.2312" stroke="white" stroke-width="2" stroke-miterlimit="2"/>
-                    <path d="M20.7443 14.3157C16.8153 15.6886 12.251 20.6696 10.6768 29.7584" stroke="white" stroke-width="2" stroke-miterlimit="2"/>
-                    <path d="M24.1448 15.1899C20.4609 16.5472 17.8658 21.1599 17.4092 28.5191" stroke="white" stroke-width="2" stroke-miterlimit="2"/>
-                    <path d="M27.5775 16.4028C23.4683 17.8499 23.2372 21.8858 23.9131 27.2329" stroke="white" stroke-width="2" stroke-miterlimit="2"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.9963 8.54239C24.9963 10.2345 23.6125 11.6316 21.9064 11.6316C20.2002 11.6316 18.8164 10.2345 18.8164 8.54239C18.8164 6.85029 21.9064 1.74512 21.9064 1.74512C21.9064 1.74512 24.9963 6.85029 24.9963 8.54239Z" stroke="white" stroke-width="2" stroke-miterlimit="2"/>
-                    <path d="M21.9062 11.6316V14.5834" stroke="white" stroke-width="2" stroke-miterlimit="2"/>
-                    <path d="M25.9076 6.11597C26.4134 5.04826 26.8497 4.21704 26.8497 4.21704C26.8497 4.21704 29.3215 8.92963 29.3215 10.3236C29.3215 11.7175 28.2148 12.868 26.8497 12.868C26.1863 12.868 25.5837 12.5964 25.1396 12.1569" stroke="white" stroke-width="2" stroke-miterlimit="2"/>
-                    <path d="M26.8496 12.8679V16.1108" stroke="white" stroke-width="2" stroke-miterlimit="2"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6369 4.83507C12.6369 6.54122 11.2531 7.92424 9.54698 7.92424C7.84084 7.92424 6.45703 6.54122 6.45703 4.83507C6.45703 3.12814 7.84084 1.74512 9.54698 1.74512C11.2531 1.74512 12.6369 3.12814 12.6369 4.83507Z" stroke="white" stroke-width="2" stroke-miterlimit="2" stroke-linejoin="round"/>
+                      <path d="M2.18262 13.7374C7.55315 12.1257 21.7549 13.1255 29.8423 17.4721" stroke="white"
+                        stroke-width="2" stroke-miterlimit="2" />
+                      <path d="M13.2612 13.2004C8.31058 14.258 4.526 17.348 1.74512 21.0553" stroke="white"
+                        stroke-width="2" stroke-miterlimit="2" />
+                      <path d="M17.1154 13.6492C12.7376 15.1711 7.83148 18.9221 4.4668 27.2312" stroke="white"
+                        stroke-width="2" stroke-miterlimit="2" />
+                      <path d="M20.7443 14.3157C16.8153 15.6886 12.251 20.6696 10.6768 29.7584" stroke="white"
+                        stroke-width="2" stroke-miterlimit="2" />
+                      <path d="M24.1448 15.1899C20.4609 16.5472 17.8658 21.1599 17.4092 28.5191" stroke="white"
+                        stroke-width="2" stroke-miterlimit="2" />
+                      <path d="M27.5775 16.4028C23.4683 17.8499 23.2372 21.8858 23.9131 27.2329" stroke="white"
+                        stroke-width="2" stroke-miterlimit="2" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M24.9963 8.54239C24.9963 10.2345 23.6125 11.6316 21.9064 11.6316C20.2002 11.6316 18.8164 10.2345 18.8164 8.54239C18.8164 6.85029 21.9064 1.74512 21.9064 1.74512C21.9064 1.74512 24.9963 6.85029 24.9963 8.54239Z"
+                        stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                      <path d="M21.9062 11.6316V14.5834" stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                      <path
+                        d="M25.9076 6.11597C26.4134 5.04826 26.8497 4.21704 26.8497 4.21704C26.8497 4.21704 29.3215 8.92963 29.3215 10.3236C29.3215 11.7175 28.2148 12.868 26.8497 12.868C26.1863 12.868 25.5837 12.5964 25.1396 12.1569"
+                        stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                      <path d="M26.8496 12.8679V16.1108" stroke="white" stroke-width="2" stroke-miterlimit="2" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.6369 4.83507C12.6369 6.54122 11.2531 7.92424 9.54698 7.92424C7.84084 7.92424 6.45703 6.54122 6.45703 4.83507C6.45703 3.12814 7.84084 1.74512 9.54698 1.74512C11.2531 1.74512 12.6369 3.12814 12.6369 4.83507Z"
+                        stroke="white" stroke-width="2" stroke-miterlimit="2" stroke-linejoin="round" />
                     </g>
                     <defs>
-                    <clipPath id="clip0_362_859">
-                    <rect width="32" height="32" fill="white"/>
-                    </clipPath>
+                      <clipPath id="clip0_362_859">
+                        <rect width="32" height="32" fill="white" />
+                      </clipPath>
                     </defs>
-                    </svg>
+                  </svg>
 
                 </span>
                 <span class="filter-tabs__label">Земельные участки</span>
@@ -845,8 +892,7 @@
     </section>
 
     <!-- карта с объектами  -->
-    <section class="section objects-map"
-      style="background-image: url(./img/objects-map/1.jpg);">
+    <section class="section objects-map" style="background-image: url(./img/objects-map/1.jpg);">
     </section>
 
     <!-- Ознакомьтесь с предложениями по выгодным ценам  -->
@@ -1050,7 +1096,7 @@
                   </div>
 
                   <!-- прочие элементы тут  -->
-                   <!-- лейбл  -->
+                  <!-- лейбл  -->
                   <button class="favorite-btn announce-card__favorite-btn" type="button">
                     <span class="favorite-btn__icon">
                       <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1144,7 +1190,7 @@
                   </div>
 
                   <!-- прочие элементы тут  -->
-                   <!-- лейбл  -->
+                  <!-- лейбл  -->
                   <button class="favorite-btn announce-card__favorite-btn" type="button">
                     <span class="favorite-btn__icon">
                       <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1238,7 +1284,7 @@
                   </div>
 
                   <!-- прочие элементы тут  -->
-                   <!-- лейбл  -->
+                  <!-- лейбл  -->
                   <button class="favorite-btn announce-card__favorite-btn" type="button">
                     <span class="favorite-btn__icon">
                       <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1332,7 +1378,7 @@
                   </div>
 
                   <!-- прочие элементы тут  -->
-                   <!-- лейбл  -->
+                  <!-- лейбл  -->
                   <button class="favorite-btn announce-card__favorite-btn" type="button">
                     <span class="favorite-btn__icon">
                       <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1426,7 +1472,7 @@
                   </div>
 
                   <!-- прочие элементы тут  -->
-                   <!-- лейбл  -->
+                  <!-- лейбл  -->
                   <button class="favorite-btn announce-card__favorite-btn" type="button">
                     <span class="favorite-btn__icon">
                       <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1520,7 +1566,7 @@
                   </div>
 
                   <!-- прочие элементы тут  -->
-                   <!-- лейбл  -->
+                  <!-- лейбл  -->
                   <button class="favorite-btn announce-card__favorite-btn" type="button">
                     <span class="favorite-btn__icon">
                       <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1614,7 +1660,7 @@
                   </div>
 
                   <!-- прочие элементы тут  -->
-                   <!-- лейбл  -->
+                  <!-- лейбл  -->
                   <button class="favorite-btn announce-card__favorite-btn" type="button">
                     <span class="favorite-btn__icon">
                       <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1708,7 +1754,7 @@
                   </div>
 
                   <!-- прочие элементы тут  -->
-                   <!-- лейбл  -->
+                  <!-- лейбл  -->
                   <button class="favorite-btn announce-card__favorite-btn" type="button">
                     <span class="favorite-btn__icon">
                       <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1802,7 +1848,7 @@
                   </div>
 
                   <!-- прочие элементы тут  -->
-                   <!-- лейбл  -->
+                  <!-- лейбл  -->
                   <button class="favorite-btn announce-card__favorite-btn" type="button">
                     <span class="favorite-btn__icon">
                       <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2001,7 +2047,8 @@
                 <div class="form__col">
                   <label for="user-name-1">Ваше имя</label>
                   <div class="form__element">
-                    <input type="text" name="user-name" placeholder="Представьтесь, пожалуйста" id="user-name-1" required>
+                    <input type="text" name="user-name" placeholder="Представьтесь, пожалуйста" id="user-name-1"
+                      required>
                   </div>
 
                 </div>
@@ -2061,6 +2108,7 @@
   <script src="./js/parts/just-main-margin.js"></script>
   <script src="./js/parts/custom-select.js"></script>
   <script src="./js/parts/modals.js"></script>
+  <script src="./js/parts/mobile-nav-item-active.js"></script>
 
   <script src="./js/swiper-sliders.js"></script>
 

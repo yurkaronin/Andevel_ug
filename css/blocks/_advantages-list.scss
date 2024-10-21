@@ -1,7 +1,6 @@
 .advantages-list {
-  display: grid;
-  gap: 32px;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  max-width: calc(1050px + 32px);
   margin-bottom: 32px;
 
   &__item {
@@ -9,6 +8,8 @@
     gap: 13px;
     grid-template-columns: 40px 1fr;
     align-items: flex-start;
+    max-width: calc((100% / 3) - 32px);
+    margin-right: 32px;
   }
   &__icon {
     display: flex;
@@ -30,12 +31,21 @@
   }
 
   @media (max-width: 1023px) {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px 32px;
+    max-width: 100%;
+    margin-bottom: 32px;
+
+    &__item {
+      max-width: 100%;
+      margin-right: 0;
+    }
   }
 
   @media (max-width: 767px) {
     grid-template-columns: repeat(1, 1fr);
-    gap: 44px;
+    gap: 40px;
     margin-bottom: 25px;
   }
 }
