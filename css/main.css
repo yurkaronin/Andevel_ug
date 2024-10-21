@@ -24,6 +24,8 @@
   --swiper-pagination-bullet-inactive-color: #ffffff;
   --swiper-pagination-bullet-horizontal-gap: 10px;
   --swiper-pagination-bullet-vertical-gap: 10px;
+  --favorite-color: #c4161c;
+  --favorite-color-hover: #72110d;
 }
 @media (max-width: 1279px) {
   :root {
@@ -519,7 +521,7 @@ input[type=radio].visually-hidden {
 }
 
 .favorite-link {
-  color: #505151;
+  color: var(--favorite-color);
   position: relative;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -544,7 +546,7 @@ input[type=radio].visually-hidden {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 2px solid #505151;
+  border: 2px solid var(--favorite-color);
   color: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,23 +560,27 @@ input[type=radio].visually-hidden {
   text-align: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  line-height: 1;
+  line-height: 0.9;
   font-size: 9px;
   font-weight: 400;
+  vertical-align: middle;
 }
 .favorite-link:hover {
-  color: #c4161c;
+  color: var(--favorite-color-hover);
 }
 .favorite-link:hover .favorite-link__status {
-  border: 2px solid #c4161c;
+  border: 2px solid var(--favorite-color-hover);
 }
 .favorite-link.active {
-  color: #c4161c;
+  color: var(--favorite-color);
+}
+.favorite-link.active:hover {
+  color: var(--favorite-color-hover);
 }
 .favorite-link.active .favorite-link__status {
   background-color: var(--dark-red);
   color: var(--white);
-  border: 2px solid var(--dark-red);
+  border: 2px solid var(--favorite-color-hover);
 }
 .favorite-link.active .favorite-link__status svg {
   display: none;
@@ -607,8 +613,24 @@ input[type=radio].visually-hidden {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  background-color: var(--white);
+  background-color: transparent;
   position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.favorite-btn::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-color: var(--white);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  pointer-events: none;
 }
 .favorite-btn__icon {
   display: -webkit-box;
@@ -623,9 +645,27 @@ input[type=radio].visually-hidden {
   color: #c4161c;
   position: absolute;
 }
+.favorite-btn__icon svg {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
 .favorite-btn__icon path {
   stroke: currentColor;
 }
+.favorite-btn.active::before, .favorite-btn:hover::before {
+  background-color: var(--favorite-color);
+}
+.favorite-btn.active .favorite-btn__icon, .favorite-btn:hover .favorite-btn__icon {
+  color: var(--white);
+}
+.favorite-btn:hover::before {
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+}
+
 .phone {
   font-weight: 600;
   font-size: 18px;

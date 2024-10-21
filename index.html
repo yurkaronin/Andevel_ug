@@ -70,6 +70,7 @@
                       stroke-width="2" stroke-miterlimit="2" stroke-linecap="round" />
                   </svg>
                 </span>
+
                 <span class="favorite-link__status">
                   <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.16895 3.68506H5.83094" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="1.5"
@@ -249,23 +250,100 @@
           <li><a href="error-404.html">404</a></li>
         </ol>
 
-        <h2>Что сейчас в работе</h2>
-        <ol>
-          <li>Форма в боковой части страницы отдельной услуги <a href="work-with-us.html">"Работа у нас"</a></li>
-          <li>Вёрстка страницы "список офисов"</li>
-          <li>Вёрстка отдельной страницы "офис"</li>
-          <li>Интерактивные карты на страницах каталога ОН</li>
-          <li>Реализация диалоговых окон (модальные окна с формами)</li>
+        <h2>Ссылка избранное в шапке</h2>
+        <a class="favorite-link" href="#">
+          <span class="favorite-link__icon">
+            <svg width="37" viewBox="0 0 37 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M28.053 1.83092C24.254 1.41492 20.155 3.53092 18.72 6.69992C17.283 3.53092 13.184 1.41492 9.38604 1.83092C4.37804 2.37892 1.15504 7.47792 2.17404 12.3959C3.55704 19.0799 11.138 22.0809 18.72 29.6379C26.301 22.0809 33.882 19.0799 35.265 12.3959C36.283 7.47792 33.06 2.37892 28.053 1.83092Z"
+                stroke="currentColor" stroke-width="2" stroke-miterlimit="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M6.34497 10.703C6.34497 8.23897 8.34297 6.24097 10.807 6.24097" stroke="currentColor"
+                stroke-width="2" stroke-miterlimit="2" stroke-linecap="round" />
+            </svg>
+          </span>
 
-        </ol>
+          <span class="favorite-link__status">
+            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.16895 3.68506H5.83094" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M3.5 6.016V1.354" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
 
-        <h2>Что еще заметил</h2>
-        <ol>
-          <li>Добавить активность для карточки анонса, добавленной в избранное - красная заливка на сердце</li>
-          <li>Добавить функционал изменения значения в поле для опций расчёта ипотеки - сейчас поле редактируется только
-            бегунком, а ввести ручками нельзя</li>
-          <li>Заменить картинки карт с балунами на реальные (живые карты)</li>
-        </ol>
+        <br>
+        <a class="favorite-link active" href="#">
+          <span class="favorite-link__icon">
+            <svg width="37" viewBox="0 0 37 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M28.053 1.83092C24.254 1.41492 20.155 3.53092 18.72 6.69992C17.283 3.53092 13.184 1.41492 9.38604 1.83092C4.37804 2.37892 1.15504 7.47792 2.17404 12.3959C3.55704 19.0799 11.138 22.0809 18.72 29.6379C26.301 22.0809 33.882 19.0799 35.265 12.3959C36.283 7.47792 33.06 2.37892 28.053 1.83092Z"
+                stroke="currentColor" stroke-width="2" stroke-miterlimit="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M6.34497 10.703C6.34497 8.23897 8.34297 6.24097 10.807 6.24097" stroke="currentColor"
+                stroke-width="2" stroke-miterlimit="2" stroke-linecap="round" />
+            </svg>
+          </span>
+
+          <span class="favorite-link__status">11
+            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.16895 3.68506H5.83094" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M3.5 6.016V1.354" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+
+        <h2 class="title">Теперь второй вариант икноки избранное в карточках</h2>
+
+        <button class="favorite-btn" type="button">
+          <span class="favorite-btn__icon">
+            <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M21.1122 1.42595C18.2172 1.10895 15.0942 2.72095 14.0002 5.13595C12.9052 2.72095 9.78316 1.10895 6.88816 1.42595C3.07316 1.84295 0.61716 5.72895 1.39316 9.47595C2.44716 14.5689 8.22416 16.8559 14.0002 22.6139C19.7772 16.8559 25.5532 14.5689 26.6072 9.47595C27.3822 5.72895 24.9272 1.84295 21.1122 1.42595Z"
+                stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M4.57129 8.18589C4.57129 6.30789 6.09429 4.78589 7.97129 4.78589" stroke="#C4161C"
+                stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round" />
+              <path
+                d="M14.0004 16.536C16.5055 16.536 18.5364 14.5052 18.5364 12C18.5364 9.49483 16.5055 7.46399 14.0004 7.46399C11.4952 7.46399 9.46436 9.49483 9.46436 12C9.46436 14.5052 11.4952 16.536 14.0004 16.536Z"
+                stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M12.2241 12H15.7761" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.0005 13.776V10.224" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+          </span>
+
+        </button>
+        <br>
+
+        <button class="favorite-btn active" type="button" style="position: relative;">
+          <span class="favorite-btn__icon">
+            <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M21.1122 1.42595C18.2172 1.10895 15.0942 2.72095 14.0002 5.13595C12.9052 2.72095 9.78316 1.10895 6.88816 1.42595C3.07316 1.84295 0.61716 5.72895 1.39316 9.47595C2.44716 14.5689 8.22416 16.8559 14.0002 22.6139C19.7772 16.8559 25.5532 14.5689 26.6072 9.47595C27.3822 5.72895 24.9272 1.84295 21.1122 1.42595Z"
+                stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M4.57129 8.18589C4.57129 6.30789 6.09429 4.78589 7.97129 4.78589" stroke="#C4161C"
+                stroke-width="1.5" stroke-miterlimit="2" stroke-linecap="round" />
+              <path
+                d="M14.0004 16.536C16.5055 16.536 18.5364 14.5052 18.5364 12C18.5364 9.49483 16.5055 7.46399 14.0004 7.46399C11.4952 7.46399 9.46436 9.49483 9.46436 12C9.46436 14.5052 11.4952 16.536 14.0004 16.536Z"
+                stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M12.2241 12H15.7761" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.0005 13.776V10.224" stroke="#C4161C" stroke-width="1.5" stroke-miterlimit="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+          </span>
+
+        </button>
 
       </div>
     </section>

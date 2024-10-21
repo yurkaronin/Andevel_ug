@@ -1,5 +1,5 @@
 .favorite-link {
-  color: #505151;
+  color: var(--favorite-color);
   position: relative;
   transition: all 0.3s;
   display: flex;
@@ -21,34 +21,39 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    border: 2px solid #505151;
+    border: 2px solid var(--favorite-color);
     color: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     transition: all 0.3s;
-    line-height: 1;
+    line-height: 0.9;
     font-size: 9px;
     font-weight: 400;
+    vertical-align: middle;
   }
 
   &:hover {
-    color: #c4161c;
+    color: var(--favorite-color-hover);
   }
   &:hover &__status {
-    border: 2px solid #c4161c;
+    border: 2px solid var(--favorite-color-hover);
   }
   // Активное состояние
   &.active {
-    color: #c4161c;
+    color: var(--favorite-color);
+
+    &:hover {
+      color: var(--favorite-color-hover);
+    }
   }
 
   &.active &__status {
     background-color: var(--dark-red);
     color: var(--white);
 
-    border: 2px solid var(--dark-red);
+    border: 2px solid var(--favorite-color-hover);
 
     svg {
       display: none;
@@ -77,8 +82,25 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background-color: var(--white);
+  background-color: transparent;
   position: relative;
+  transition: all 0.3s;
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: var(--white);
+    transition: all 0.3s;
+    pointer-events: none;
+    // width: 100%;
+    // height: 100%;
+  }
+
   &__icon {
     display: flex;
     align-items: center;
@@ -86,12 +108,36 @@
     color: #c4161c;
     position: absolute;
 
+    svg {
+      position: relative;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+
     path {
       stroke: currentColor;
     }
   }
 
-  &.active {
+  &.active,
+  &:hover {
+    &::before {
+      background-color: var(--favorite-color);
+    }
+    .favorite-btn__icon {
+      color: var(--white);
 
+    }
+  }
+  &:hover {
+    // width: 44px;
+    // height: 44px;
+    &::before {
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: -4px;
+    }
   }
 }
