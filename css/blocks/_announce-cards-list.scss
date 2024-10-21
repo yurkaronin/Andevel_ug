@@ -57,6 +57,7 @@
   }
 
   @media (max-width: 767px) {
+    margin-bottom: 15px;
     &__list {
       max-width: calc(100% + 16px);
       margin-right: -16px;

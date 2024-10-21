@@ -749,6 +749,7 @@ input[type=radio].visually-hidden {
 @media (max-width: 767px) {
   .title {
     font-size: 30px;
+    color: var(--black);
   }
   .title br {
     display: none;
@@ -1497,6 +1498,9 @@ input[type=radio].visually-hidden {
   }
 }
 @media (max-width: 767px) {
+  .announce-cards-list {
+    margin-bottom: 15px;
+  }
   .announce-cards-list__list {
     max-width: calc(100% + 16px);
     margin-right: -16px;
@@ -4229,6 +4233,9 @@ input[type=radio].visually-hidden {
   padding: 10px 26px;
 }
 @media (max-width: 767px) {
+  .form__title {
+    color: var(--black);
+  }
   .form__grid {
     gap: 20px;
     grid-template-columns: 1fr;

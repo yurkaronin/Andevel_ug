@@ -143,6 +143,9 @@
   }
 
   @media (max-width: 767px) {
+    &__title {
+      color: var(--black);
+    }
     &__grid {
       gap: 20px;
       grid-template-columns: 1fr;
