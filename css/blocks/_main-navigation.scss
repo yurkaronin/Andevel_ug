@@ -62,6 +62,14 @@
         width: 100%;
       }
     }
+    &.currentPage,
+    a:not([href]) {
+      color: var(--dark-red);
+      pointer-events: none;
+      &::before {
+        background: var(--red);
+      }
+    }
   }
   &__sub-list {
     margin: 0;
