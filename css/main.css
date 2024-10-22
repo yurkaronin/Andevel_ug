@@ -1366,6 +1366,22 @@ input[type=radio].visually-hidden {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
+  position: relative;
+}
+.main-navigation__item::before {
+  content: "";
+  display: block;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  position: absolute;
+}
+.main-navigation__item:hover .main-navigation__sub-list {
+  top: 35px;
+  opacity: 1;
+  pointer-events: initial;
+  visibility: initial;
 }
 .main-navigation__item:last-of-type {
   margin-right: 0;
@@ -1389,6 +1405,74 @@ input[type=radio].visually-hidden {
   width: 32px;
   height: 2px;
   background: var(--dark-red);
+}
+.main-navigation__sub-list {
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 350px;
+  background-color: var(--white);
+  color: var(--grey-text);
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.2);
+  padding: 16px 24px;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.main-navigation__sub-list:has(*:hover), .main-navigation__sub-list:has(*:active), .main-navigation__sub-list:has(*:focus) {
+  top: 35px;
+  opacity: 1;
+  pointer-events: initial;
+  visibility: initial;
+}
+.main-navigation__sub-link {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text);
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  padding: 8px 10px;
+  padding-left: 32px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.main-navigation__sub-link::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 2px;
+  background-color: #9f231f;
+  top: 20px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.main-navigation__sub-link:hover {
+  background-color: var(--red);
+  color: var(--white);
+  padding-left: 48px;
+}
+.main-navigation__sub-link:hover::before {
+  left: 16px;
+  background-color: var(--white);
 }
 @media (max-width: 1410px) {
   .main-navigation {
