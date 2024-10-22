@@ -10,8 +10,8 @@
 
   <style>
     .tech-section a {
-      text-decoration: underline;
-      color: var(--red);
+      /* text-decoration: underline; */
+      /* color: var(--red); */
     }
   </style>
 </head>
@@ -250,27 +250,45 @@
         <h2 class="title">Список готовых страниц</h2>
 
         <ol>
-          <li><a href="home.html">Главная</a></li>
-          <li>
-            <span>Категории объектов</span>
-            <ul>
-              <li><a href="object-category-apartment.html">Квартиры</a></li>
-              <li><a href="object-category-commercial.html">Коммерческая недвижимость</a></li>
-              <li><a href="object-category-house.html">Дома</a></li>
-              <li><a href="object-category-land-plots.html">Земельные участки </a></li>
-              <li><a href="object-category-garages.html">Гаражи</a></li>
-              <li><a href="object-category-foreign-real-estate.html">Зарубежная недвижимость</a></li>
-            </ul>
+          <li><a href="./home.html">Главная</a></li>
 
+          <li><a href="./object-page.html">Страница объекта</a></li>
+          <li><a href="./object-category-apartment.html">Категория объектов_Квартиры</a></li>
+          <li><a href="./favorites.html">Избранное</a></li>
+
+          <li><a href="./office-list.html">Офисы</a></li>
+          <li><a href="./office.html">Офис</a></li>
+
+          <li><a href="./service-list.html">Список услуг</a></li>
+          <li><a href="./service-page.html">Услуга</a></li>
+
+          <li><a href="./work-with-us.html">Работа у нас</a></li>
+
+          <li><a href="./error-404.html">404</a></li>
+        </ol>
+
+        <h2>Доработанные кнопки с эффектами наведения</h2>
+        <ol>
+          <li>
+            <a href="#" class="button"><span>Стандартная кнопка</span></a>
+            <br>
+            <br>
           </li>
-          <li><a href="object-page.html">Страница объекта</a></li>
-          <li><a href="favorites.html">Избранное</a></li>
-          <li><a href="office-list.html">Офисы</a></li>
-          <li><a href="office.html">Офис</a></li>
-          <li><a href="service-list.html">Список услуг</a></li>
-          <li><a href="service-page.html">Услуга</a></li>
-          <li><a href="work-with-us.html">Работа у нас</a></li>
-          <li><a href="error-404.html">404</a></li>
+          <li style="background-color: gray; padding: 10px;">
+            <a href="#" class="button button--transparent"><span>Прозрачная кнопка</span></a>
+            <br>
+            <br>
+          </li>
+          <li style="background-color: gray; padding: 10px;">
+            <a href="#" class="button button--red"><span>Красная кнопка</span></a>
+            <br>
+            <br>
+          </li>
+          <li style="background-color: gray; padding: 10px;">
+            <a href="#" class="button button--small"><span>Маленькая кнопка</span></a>
+            <br>
+            <br>
+          </li>
         </ol>
 
         <h2>Ссылка избранное в шапке</h2>
@@ -485,7 +503,7 @@
         <div class="modal__bottom">
           <div class="modal__bottom-left">
             <div class="form__agree">
-              <input type="checkbox" name="user-agree" id="user-agree-1" required checked>
+              <input class="visually-hidden" type="checkbox" name="user-agree" id="user-agree-1" required checked>
               <label for="user-agree-1">Нажимая “Отправить” я даю согласие на обработку <a href="#">персональных
                   данных</a></label>
             </div>

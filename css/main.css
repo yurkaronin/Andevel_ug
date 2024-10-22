@@ -9,6 +9,7 @@
   --text: #323232;
   --grey: #707070;
   --line: #ccc;
+  --line-02: rgba(204, 204, 204, 0.2);
   --bg: #f1f1f1;
   --modal-bg: rgba(0, 0, 0, 0.3);
   --modal-icon: #c4161c;
@@ -543,8 +544,8 @@ input[type=radio].visually-hidden {
   position: absolute;
   bottom: 6px;
   right: 6px;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   border: 2px solid var(--favorite-color);
   color: inherit;
@@ -557,13 +558,13 @@ input[type=radio].visually-hidden {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  line-height: 0.9;
   font-size: 9px;
   font-weight: 400;
   vertical-align: middle;
+  text-align: center;
+  line-height: 0.7;
 }
 .favorite-link:hover {
   color: var(--favorite-color-hover);
@@ -715,7 +716,6 @@ input[type=radio].visually-hidden {
   max-width: max-content;
   font-family: var(--font-family);
   text-align: center;
-  border: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-box-shadow: none;
@@ -730,28 +730,55 @@ input[type=radio].visually-hidden {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: var(--red);
+  background-color: transparent;
   height: 56px;
   border-radius: 4px;
   padding: 0px 16px;
+  border: none;
   line-height: 1;
   font-weight: 600;
   font-size: 16px;
   color: var(--white);
 }
-.button--transparent {
-  background-color: transparent;
+.button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--red);
+  border-radius: 4px;
   border: 2px solid var(--red);
-  color: var(--red);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
-.button--red {
-  background-color: var(--dark-red);
-  border: none;
+.button span {
+  position: relative;
+  color: inherit;
+  z-index: 2;
 }
-.button--white {
+.button:hover::before, .button:active::before, .button:focus::before {
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+}
+.button--transparent {
+  color: var(--white);
+}
+.button--transparent::before {
   background-color: transparent;
   border: 2px solid var(--white);
-  color: var(--white);
+}
+.button--transparent:hover::before, .button--transparent:active::before, .button--transparent:focus::before {
+  background-color: var(--red);
+  border: 2px solid var(--red);
+}
+.button--red::before {
+  background-color: var(--dark-red);
+  border: 2px solid var(--dark-red);
 }
 .button--small {
   height: 32px;
@@ -3200,16 +3227,21 @@ input[type=radio].visually-hidden {
   font-weight: 400;
   color: var(--red);
 }
-.team-group__photo {
-  border-radius: 5px;
-  overflow: hidden;
-}
 .team-group__photo img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.team-group__item:hover .team-group__photo img {
+  scale: 1.15;
+}
+.team-group__item:hover .team-group__email {
+  text-decoration: underline;
 }
 @media (max-width: 1379px) {
   .team-group__list {
@@ -4797,9 +4829,10 @@ input[type=radio].visually-hidden {
   width: 1075px !important;
   margin: 0 auto;
   padding: 35px 50px 50px;
+  padding-right: 98px;
   background: var(--white);
   border-radius: 5px;
-  border: 1px solid var(--line);
+  border: 1px solid #d9d9d9;
 }
 .modal__top {
   margin-bottom: 50px;
@@ -4845,25 +4878,44 @@ input[type=radio].visually-hidden {
 }
 .modal__close {
   position: absolute;
-  top: 6px;
-  right: 10px;
-  display: block;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  padding: 10px;
   color: var(--modal-icon);
   border: none;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
   cursor: pointer;
-  background-color: transparent;
+  height: calc(100% + 2px);
+  padding: 15px 12px;
+  background-color: var(--line-02);
+  border-left: 1px solid #d9d9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 0 5px 5px 0;
+}
+.modal__close:hover, .modal__close:active, .modal__close:focus {
+  border-left: 1px solid var(--red);
+  background-color: var(--red);
 }
 .modal__close svg {
   display: block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 .modal__close:hover, .modal__close:active, .modal__close:focus {
   color: var(--modal-hover);
+}
+.modal__close:hover svg path, .modal__close:active svg path, .modal__close:focus svg path {
+  stroke: #ffffff;
 }
 .modal__text {
   margin-top: 12px;
@@ -4888,12 +4940,21 @@ input[type=radio].visually-hidden {
   .modal__body {
     width: 100% !important;
     padding: 34px 30px 30px;
+    padding-right: 70px;
   }
   .modal__bottom {
     gap: 32px;
   }
+  .modal .modal__close svg {
+    scale: 0.9;
+  }
 }
 @media (max-width: 767px) {
+  .modal__body {
+    width: 100% !important;
+    padding: 16px 20px 20px;
+    padding-right: 60px;
+  }
   .modal .form__grid {
     grid-template-columns: repeat(1, 1fr);
     gap: 16px;
