@@ -15,6 +15,7 @@
 @import "./blocks/call-link";
 @import "./blocks/button";
 @import "./blocks/title";
+@import "./blocks/subtitle";
 @import "./blocks/swiper";
 @import "./blocks/tabs-list";
 @import "./blocks/filter-tabs";
@@ -55,6 +56,8 @@
 @import "./blocks/map";
 @import "./blocks/carpet";
 @import "./blocks/form";
+@import "./blocks/custom-form";
+@import "./blocks/personal-cards-list";
 
 // большие смысловые секции
 @import "./sections/header";
@@ -73,6 +76,9 @@
 @import "./sections/error-404";
 @import "./sections/recommendations";
 @import "./sections/great-deals";
+@import "./sections/our-staff";
+@import "./sections/hero-staff";
+@import "./sections/personal-card";
 
 @import "./sections/footer";
 @import "./sections/modal";
