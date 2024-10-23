@@ -11,6 +11,7 @@
   grid-template-columns: repeat(2, 1fr);
   position: relative;
   align-items: center;
+  transition: all 0.3s;
   &::after {
     content: "";
     width: 1px;
@@ -19,6 +20,13 @@
     position: absolute;
     left: 50%;
   }
+  &:hover {
+    border: 1px solid var(--red);
+  }
+  &:active {
+    border: 1px solid var(--dark-red);
+  }
+
 
   input {
     width: 100%;

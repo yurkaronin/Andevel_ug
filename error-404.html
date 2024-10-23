@@ -496,11 +496,11 @@
                     <div class="filter-form__options">
                       <div class="custom-radio-btn">
                         <input type="radio" id="purchase" name="option" class="visually-hidden" checked>
-                        <label for="purchase" class="custom-radio-btn__label">Покупка</label>
+                        <label for="purchase" class="custom-radio-btn__label"><span>Покупка</span></label>
                       </div>
                       <div class="custom-radio-btn">
                         <input type="radio" id="rent" name="option" class="visually-hidden">
-                        <label for="rent" class="custom-radio-btn__label">Аренда</label>
+                        <label for="rent" class="custom-radio-btn__label"><span>Аренда</span></label>
                       </div>
                     </div>
                   </li>
@@ -511,11 +511,11 @@
                     <div class="custom-select" data-default="Любое">
                       <div class="custom-select__selected"><span>Кол-во комнат</span></div>
                       <div class="custom-select__options">
-                        <div class="custom-select__option" data-value="Любое">Любое</div>
-                        <div class="custom-select__option" data-value="Вариант 1">Вариант 1</div>
-                        <div class="custom-select__option" data-value="Вариант 2">Вариант 2</div>
-                        <div class="custom-select__option" data-value="Вариант 3">Вариант 3</div>
-                        <div class="custom-select__option" data-value="Вариант 4">Вариант 4</div>
+                        <div class="custom-select__option" data-value="Любое"><span>Любое</span></div>
+                        <div class="custom-select__option" data-value="Вариант 1"><span>Вариант 1</span></div>
+                        <div class="custom-select__option" data-value="Вариант 2"><span>Вариант 2</span></div>
+                        <div class="custom-select__option" data-value="Вариант 3"><span>Вариант 3</span></div>
+                        <div class="custom-select__option" data-value="Вариант 4"><span>Вариант 4</span></div>
                       </div>
                       <input class="visually-hidden" type="hidden" value="" required>
                     </div>
@@ -540,7 +540,6 @@
                   </li>
 
                   <li class="filter-form__item filter-form__buttons">
-                    <button class="button button--red" type="button"><span>Показать накарте</span></button>
                     <button class="button" type="submit"><span>Показать!</span></button>
                   </li>
 
@@ -570,8 +569,10 @@
           <div class="footer__group">
             <div class="footer__group-left"><img src="./svg/logotype-short.svg" alt="Logo" class="footer__logo"></div>
             <div class="footer__group-right">
-              <p class="footer__phone phone">+7 (861) 279-22-22</p>
-              <a href="tel:+78612792222" class="footer__call call-link">Позвонить мне!</a>
+
+              <a class="footer__phone phone" href="tel:+78612792222">+7 (861) 279-22-22</a>
+              <a class="footer__call call-link" data-target="modal-call-back">Позвонить мне!</a>
+
             </div>
           </div>
 
@@ -617,8 +618,14 @@
             <li class="footer__item">
               <h3 class="footer__title">О компании</h3>
               <ul class="footer__sublist list-reset">
-                <li class="footer__subitem footer__title"><a href="#">Партнерская программа</a></li>
-                <li class="footer__subitem footer__title"><a href="#">Офис</a></li>
+                <li class="footer__subitem footer__title">
+                  <a class="footer__cust-link" href="#">Партнерская программа</a>
+                </li>
+
+                <li class="footer__subitem footer__title">
+                  <a class="footer__cust-link" href="#">Офис</a>
+                </li>
+
               </ul>
             </li>
           </ul>

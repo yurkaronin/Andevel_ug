@@ -1,3 +1,61 @@
 .form {
+  &__agree {
+    label {
+      padding-left: calc(16px + 24px);
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -1px;
+        left: 0;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        background: var(--white);
+        border: 1px solid var(--red);
+        border-radius: 5px;
+        width: 24px;
+        height: 24px;
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 4px;
+        width: 16px;
+        height: 16px;
+        opacity: 0;
+        -webkit-transition: opacity 0.3s;
+        transition: opacity 0.3s;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 7L6.75758 13L15 1' stroke='white' stroke-width='2' stroke-linecap='round'/%3e%3c/svg%3e ");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    input:checked + label::before {
+      background: var(--red);
+      // border: 1px solid var(--green);
+    }
+    input:checked + label::after {
+      opacity: 1;
+    }
+  }
 
+  @media (max-width: 767px) {
+    &__agree {
+      label {
+        padding-left: calc(10px + 24px);
+        position: relative;
+        display: inline-block;
+        &::before {
+          top: -4px;
+        }
+        &::after {
+          top: 1px;
+          scale: 0.9;
+        }
+      }
+    }
+  }
 }

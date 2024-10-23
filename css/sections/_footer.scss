@@ -58,7 +58,27 @@
 
     a {
       text-decoration: underline;
+      transition: all 0.3s;
     }
+  }
+  .footer__info {
+    a {
+      &:hover {
+        color: var(--red);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footer__cust-link {
+    transition: all 0.3s;
+    &:hover {
+      color: var(--red);
+    }
+  }
+
+  .call-link:hover {
+    text-decoration: underline;
   }
 
   @media (max-width: 1279px) {

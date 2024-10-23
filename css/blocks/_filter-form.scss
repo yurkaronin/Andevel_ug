@@ -59,11 +59,18 @@
   &__options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    border-radius: 5px;
-    border: 2px solid var(--white);
+    // border: 2px solid var(--white);
     height: 56px;
-    overflow: hidden;
     width: 328px;
+    .custom-radio-btn:nth-child:nth-child(1n) {
+      margin-right: -6px;
+    }
+    .custom-radio-btn:nth-child(2n) {
+      margin-left: -6px;
+      margin-right: 0;
+    }
+
+
   }
   &__button {
     width: 120px;
@@ -77,6 +84,9 @@
   }
 
   .show-more {
+    &:hover {
+      text-decoration: underline;
+    }
     &.hide {
       display: none;
     }

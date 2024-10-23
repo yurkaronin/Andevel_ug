@@ -14,7 +14,20 @@
       rgba(242, 242, 242, 0.1) 0%,
       rgba(140, 140, 140, 0.01) 100%
     );
-    scale: 1.05;
+    scale: 1.04;
+
+    .office-announce-card__label {
+      scale: 1.07;
+      background-color: var(--red);
+      color: var(--white);
+    }
+    .office-announce-card__title {
+      color: var(--red);
+    }
+
+  }
+  &__list a[href^="mailto"]:hover {
+    text-decoration: underline;
   }
 
   &__grid {
@@ -51,6 +64,7 @@
     color: var(--text);
     margin-right: 12px;
     max-width: max-content;
+    transition: all 0.3s;
   }
   &__label {
     display: flex;
@@ -68,6 +82,7 @@
     border: 1px solid var(--red);
     border-radius: 5px;
     height: 32px;
+    transition: all 0.3s;
   }
   &__list {
     li {

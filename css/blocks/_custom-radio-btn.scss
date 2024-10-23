@@ -9,13 +9,40 @@
     align-items: center;
     justify-content: center;
     padding: 14px 20px;
-
     cursor: pointer;
-    transition: background-color 0.3s; /* Плавная анимация фона */
+    position: relative;
+    border-radius: 4px;
+    border: 2px solid var(--white);
+    transition: all 0.2s;
+    span {
+      position: relative;
+    }
+    &::before {
+      content: "";
+      display: block;
+      background-color: transparent;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      transition: all 0.2s;
+      border-radius: 4px;
+    }
     &:hover,
     &:focus {
-      // background-color: var(--bg);
-
+      z-index: 2;
+      border: 2px solid var(--red);
+      span {
+        color: var(--white);
+      }
+      &::before {
+        background-color: var(--red);
+        top: -1px;
+        left: -1px;
+        bottom: -1px;
+        right: -1px;
+      }
     }
   }
   input[type="radio"]:checked + .custom-radio-btn__label {

@@ -10,17 +10,32 @@
     align-items: flex-start;
     max-width: calc((100% / 3) - 32px);
     margin-right: 32px;
+    transition: all 0.3s;
+    &:hover {
+      .advantages-list__icon path {
+        stroke: var(--dark-red);
+      }
+      .advantages-list__text span {
+        color: var(--dark-red);
+      }
+    }
   }
   &__icon {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s;
+
+    svg path {
+      transition: all 0.3s;
+    }
   }
   &__text {
     margin: 0;
     font-weight: 400;
     font-size: 16px;
     color: var(--text);
+    transition: all 0.3s;
     span {
       display: block;
       font-weight: 100;

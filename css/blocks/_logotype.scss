@@ -4,6 +4,9 @@
   width: 100%;
   max-width: 272px;
   transition: all 0.3s;
+  &:hover {
+    scale: 1.03;
+  }
 
   @media (max-width: 767px) {
     max-width: 201px;
