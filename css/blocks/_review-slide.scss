@@ -1,0 +1,44 @@
+.review-slide {
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 928px;
+  margin: 0 auto;
+
+  font-weight: 300;
+  color: var(--grey);
+  &__header {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: auto 1fr;
+    max-width: max-content;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+  &__name {
+    display: block;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--text);
+  }
+  blockquote {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  @media (max-width: 1279px) {
+    padding-inline: calc(64px + 40px);
+  }
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+    padding-inline: calc(50px + 10px);
+
+    &__header {
+      margin-bottom: 20px;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 12px;
+    }
+  }
+}

@@ -59,7 +59,9 @@
 @import "./blocks/custom-form";
 @import "./blocks/personal-cards-list";
 @import "./blocks/rating";
-
+@import "./blocks/rating-static";
+@import "./blocks/review-slide";
+@import "./blocks/personal-card";
 // большие смысловые секции
 @import "./sections/header";
 @import "./sections/section";
@@ -79,7 +81,8 @@
 @import "./sections/great-deals";
 @import "./sections/our-staff";
 @import "./sections/hero-staff";
-@import "./sections/personal-card";
+
+@import "./sections/personal-reviews";
 
 @import "./sections/footer";
 @import "./sections/modal";

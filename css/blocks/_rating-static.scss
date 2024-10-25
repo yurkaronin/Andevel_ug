@@ -1,0 +1,41 @@
+.rating-static {
+  pointer-events: none;
+  &__list {
+    display: grid;
+    gap: 4px;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: max-content;
+  }
+
+  &__icon {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    color: var(--line);
+
+    // svg path {
+    //   fill: var(--line);
+    // }
+
+  }
+
+  &__item {
+    transition: all 0.3s;
+    &:hover {
+      scale: 1.2;
+      .rating-static__icon {
+        color: var(--red);
+      }
+
+    }
+
+
+  }
+
+  &__item.isActive {
+    .rating-static__icon {
+      color: var(--red);
+    }
+  }
+
+}
