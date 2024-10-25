@@ -5,7 +5,9 @@
   display: flex;
   width: 100%;
   height: 100%;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
   inset: 0;
   align-items: center;
   justify-content: center;
@@ -24,6 +26,10 @@
     background: var(--white);
     border-radius: 5px;
     border: 1px solid #d9d9d9;
+  }
+
+  &--mod &__body {
+    max-width: 832px;
   }
 
   &__top {
@@ -136,6 +142,37 @@
     width: 100%;
     max-width: 100%;
   }
+  .form__grid--mod {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .form__col {
+    &--mod {
+      grid-column: span 2;
+    }
+  }
+
+  .form textarea {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--grey);
+    width: 100%;
+    min-height: 120px;
+    padding: 16px;
+    border: none;
+    margin: 0;
+    display: block;
+  }
+
+  &__rating-text {
+    display: block;
+    max-width: max-content;
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text);
+  }
 
   @media (max-width: 1379px) {
     &__body {
@@ -147,7 +184,7 @@
       gap: 32px;
     }
     .modal__close svg {
-      scale: 0.9 ;
+      scale: 0.9;
     }
   }
 
@@ -186,6 +223,11 @@
     .form__agree {
       font-size: 13px;
       color: var(--text);
-  }
+    }
+    .form__col {
+      &--mod {
+        grid-column: initial;
+      }
+    }
   }
 }
