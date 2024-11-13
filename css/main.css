@@ -5089,6 +5089,12 @@ input[type=radio].visually-hidden {
 .promo--mod .promo__text {
   margin-bottom: 30px;
 }
+@media (max-width: 767px) {
+  .promo {
+    padding-top: 0;
+    padding-bottom: 32px;
+  }
+}
 
 .form__grid {
   display: grid;
