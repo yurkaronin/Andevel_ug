@@ -73,6 +73,19 @@
       }
     }
   }
+
+  &--mod {
+    padding-top: 90px;
+    padding-bottom: 112px;
+
+    .promo__title {
+      margin-bottom: 12px;
+    }
+
+    .promo__text {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .form {

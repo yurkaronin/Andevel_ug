@@ -127,6 +127,20 @@
     display: none;
   }
 
+  &__content {
+    font-weight: 300;
+    ol:not(class) {
+      padding-left: 20px;
+    }
+    ::marker {
+      color: var(--red);
+      font-weight: 600;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 400;
+    }
+  }
+
 
   // ПЕРЕОПРЕДЕЛЕНИЯ
 

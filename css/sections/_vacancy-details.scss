@@ -1,0 +1,88 @@
+.vacancy-details {
+  padding-top: 33px;
+  padding-bottom: 60px;
+
+  &__grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  &__left {
+    grid-column: 1/9;
+  }
+
+  &__right {
+    grid-column: 10/13;
+  }
+
+  &__content {
+    font-weight: 300;
+    ol:not(class) {
+      padding-left: 20px;
+      ::marker {
+        color: var(--red);
+        font-weight: 600;
+      }
+    }
+
+    ul:not(class) {
+      list-style: none;
+      padding: 0;
+      // margin: 0;
+
+      li {
+        position: relative;
+        transition: all 0.3s;
+        padding-left: calc(16px + 16px);
+        margin-bottom: 1em;
+        &::before {
+          content: "";
+          display: block;
+          width: 16px;
+          height: 2px;
+          background-color: var(--red);
+          position: absolute;
+          top: 11px;
+          left: 0;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+        }
+        &:hover::before {
+          width: 24px;
+          background-color: var(--dark-red);
+        }
+      }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 400;
+      line-height: 117%;
+    }
+  }
+
+  // ПЕРЕОПРЕДЕЛЕНИЯ
+
+  .breadcrumbs {
+    color: inherit;
+  }
+
+  @media (max-width: 1379px) {
+    &__grid {
+      display: block;
+    }
+    &__left {
+      grid-column: initial;
+      margin-bottom: 32px;
+    }
+
+    &__right {
+      grid-column: initial;
+    }
+  }
+  @media (max-width: 767px) {
+  }
+}

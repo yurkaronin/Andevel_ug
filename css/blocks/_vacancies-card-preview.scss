@@ -1,0 +1,96 @@
+.vacancies-card-preview {
+  padding: 22px 32px 32px;
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--grey);
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  &:hover::before {
+    top: -16px;
+    left: -16px;
+    right: -16px;
+    bottom: -16px;
+    box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  &__head {
+    position: relative;
+    padding-bottom: 18px;
+    &::after {
+      content: "";
+      width: 100%;
+      display: block;
+      height: 1px;
+      background-color: #d9d9d9;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &__name {
+    display: block;
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 133%;
+    color: var(--text);
+  }
+  &__body {
+    padding-top: 10px;
+    padding-bottom: 18px;
+  }
+  &__list {
+  }
+  &__item {
+    margin-bottom: 1em;
+    position: relative;
+    transition: all 0.3s;
+    padding-left: calc(16px + 16px);
+    &::before {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 2px;
+      background-color: #9f231f;
+      position: absolute;
+      top: 9px;
+      left: 0;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    &:hover::before {
+      width: 24px;
+    }
+  }
+  &__footer {
+  }
+  &__button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    padding: 11px 20px 20px;
+    &__head {
+      padding-bottom: 14px;
+    }
+    &__body {
+      padding-bottom: 12px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.vacancies {
+  padding: 5px 0;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__list {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 15px;
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

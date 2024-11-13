@@ -4,16 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Список страниц проекта</title>
+  <title>Вакансия</title>
+
+  <link rel="stylesheet" href="./libs/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./libs/simplebar.css">
+
+  <!-- Подключение стилей и скрипта noUiSlider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css">
 
   <link rel="stylesheet" href="./css/main.css">
-
-  <style>
-    .tech-section a {
-      /* text-decoration: underline; */
-      /* color: var(--red); */
-    }
-  </style>
 </head>
 
 <body>
@@ -82,7 +81,7 @@
 
           <div class="header__right-grid">
             <div class="header__right-grid-column">
-              <a class="favorite-link" href="#">
+              <a class="favorite-link active" href="#">
                 <span class="favorite-link__icon">
                   <svg width="37" viewBox="0 0 37 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -93,8 +92,7 @@
                       stroke-width="2" stroke-miterlimit="2" stroke-linecap="round" />
                   </svg>
                 </span>
-
-                <span class="favorite-link__status">
+                <span class="favorite-link__status">1
                   <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.16895 3.68506H5.83094" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="1.5"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -243,48 +241,138 @@
   </section>
 
   <!-- ОСНОВНОЙ КОНТЕНТ  -->
-  <main class="main">
+  <main class="main js-main">
 
-    <section class="section tech-section">
+    <article class="vacancy-details">
       <div class="wrapper">
-        <h2 class="title">Список готовых страниц</h2>
 
-        <ol>
-          <li><a href="./home.html">Главная</a></li>
+        <div class="vacancy-details__grid">
 
-          <li><a href="./object-page.html">Страница объекта</a></li>
-          <li><a href="./object-category-apartment.html">Категория объектов_Квартиры</a></li>
-          <li><a href="./favorites.html">Избранное</a></li>
+          <div class="vacancy-details__col vacancy-details__left">
+            <!-- крошки  -->
+            <ul class="breadcrumbs list-reset">
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">Вакансии</a>
+              </li>
+              <li>
+                <a href="#">Эксперт по коммерческой недвижимости</a>
+              </li>
 
-          <li><a href="./office-list.html">Офисы</a></li>
-          <li><a href="./office.html">Офис</a></li>
+            </ul>
 
-          <li><a href="./service-list.html">Список услуг</a></li>
-          <li><a href="./service-page.html">Услуга</a></li>
+            <div class="vacancy-details__content">
 
-          <li><a href="./work-with-us.html">Работа у нас</a></li>
+              <h1>Эксперт по коммерческой недвижимости</h1>
 
-          <li><a href="./error-404.html">404</a></li>
+              <h2>Обязанности</h2>
+              <ul>
+                <li>Мониторинг рынка объектов коммерческой недвижимости.</li>
+                <li>Подготовка презентации продукта для ЦА и разработка концепции реализации.</li>
+                <li>Экспертное консультирование клиентов на всех этапах сделки.</li>
+                <li>Заключение договоров, подготовка и сопровождение сделок.</li>
+                <li>Формировать свой имидж надёжного и профессионального агента недвижимости «Девелопмент-Юг».</li>
+              </ul>
 
-          <li><a href="./team.html">Сотрудники</a></li>
-          <li><a href="./team-personal.html">Сотрудник</a></li>
+              <h2>Наши ожидания от Вас</h2>
+              <ul>
+                <li>Готовность постоянно учиться, развиваться и обрабатывать большой объем информации.</li>
+                <li>Опыт работы B2B будет преимуществом.</li>
+                <li>Готовность к ненормированному графику работы.</li>
+                <li>Опыт ведения сделок и операций с недвижимым имуществом будет Вашим преимуществом.</li>
+              </ul>
 
-          <li><a href="./job-openings.html">Вакансии</a></li>
-          <li><a href="./vacancy-details.html">Вакансия</a></li>
-        </ol>
+              <h2>Наши преимущества</h2>
+              <ul>
+                <li>Интересные объекты, проекты и задачи;</li>
+                <li>Современная CRM система, где все рутинные процессы максимально автоматизированы;</li>
+                <li>Возможности личностного, профессионального, карьерного роста;</li>
+                <li>Прогрессивные условия вознаграждения (без ограничений по доходу).</li>
+                <li>Прозрачная система персональной мотивации</li>
+                <li>Юридическая и маркетинговая поддержка;</li>
+                <li>Предоставление корпоративной мобильной связи.</li>
+                <li>Агент МОЖЕТ миксовать работу в разных сегментах: новостройки, вторичный рынок, загородные дома, дома
+                  премиум класса, коммерческая недвижимость.</li>
+                <li>Для новичков в профессии обучение за счёт компании. После Учебного центра сопровождение наставника с
+                  успешным опытом работы.</li>
+              </ul>
+              <br>
+
+              <a href="#" class="button button--red button--long"><span>Назад к списку</span></a>
+            </div>
+          </div>
+
+          <div class="vacancy-details__col vacancy-details__right">
+
+            <div class="aside-form sticky">
+              <form action="">
+
+                <h3 class="aside-form__title title">Откликнуться на вакансию</h3>
+
+                <div class="aside-form__body" style="padding-top: 0;">
+                  <div class="aside-form__grid">
+                    <div class="aside-form__col">
+                      <div class="form-element">
+                        <input type="text" name="user-name" placeholder="Представьтесь, пожалуйста" id="user-name-2"
+                          required>
+                      </div>
+                    </div>
+                    <div class="aside-form__col">
+                      <div class="form-element">
+                        <input type="tel" name="user-phone" placeholder="Телефон" id="user-phone-2" required>
+                      </div>
+                    </div>
+                    <div class="aside-form__col">
+                      <div class="form-element">
+                        <input type="text" name="user-profile" placeholder="Должность" id="user-profile-2" required>
+                      </div>
+                    </div>
+                    <div class="aside-form__col">
+                      <div class="aside-form__file">
+                        <input class="visually-hidden" type="file" id="user-file">
+                        <label for="user-file"><span>Прикрепить резюме</span></label>
+                      </div>
+                    </div>
+                    <div class="aside-form__col aside-form__col--agree">
+                      <div class="aside-form__agree form__agree">
+                        <input class="visually-hidden" type="checkbox" name="user-agree" id="user-agree-2" required
+                          checked>
+                        <label for="user-agree-2">Нажимая “Отправить” я даю согласие на обработку <a
+                            href="#">персональных
+                            данных</a></label>
+                      </div>
+                    </div>
+                    <div class="aside-form__col aside-form__col--btn">
+                      <button class="aside-form__button button" type="submit"><span>Отправить</span></button>
+                    </div>
+                  </div>
+                </div>
 
 
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
 
-        <h2>Модалки</h2>
-        <a href="#" class="button" data-target="modal-leave--review"><span>Оставить отзыв</span></a>
-        <br>
-        <br>
-        <br>
-        <a href="#" class="button" data-target="modal-write-employee"><span>Написать сотруднику</span></a>
+    <!-- Хотите продать свою недвижимость, но не знаете с чего начать? -->
+    <section class="section promo promo--mod" style="background-image: url(./img/job-openings/1.jpg)">
+      <div class="promo__photo-mobile">
+        <img src="./img/job-openings/1.jpg" alt="#" loading="lazy">
+      </div>
+      <div class="wrapper promo__content">
+        <h2 class="title promo__title">Ознакомьтесь со списком вакансий</h2>
+
+        <p class="promo__text">Стань частью команды креативных и преданных профессионалов, способных превратить мечты клиентов в реальность.</p>
+        <a href="#" class="button button--long"><span>Смотреть вакансии</span></a>
+
+
 
       </div>
     </section>
-
 
   </main>
 
@@ -360,7 +448,6 @@
   </footer>
 
   <!-- Модальные окна  -->
-
   <!-- Заказать звонок  -->
   <section class="modal" id="modal-call-back">
     <div class="wrapper">
@@ -431,130 +518,15 @@
     </div>
   </section>
 
-  <!-- Оставить отзыв  -->
-  <section class="modal modal--mod" id="modal-leave--review">
+  <!-- Связаться по поводу ОН  -->
+  <section class="modal" id="modal-сall-me-back-about-this">
     <div class="wrapper">
 
       <!-- основной блок контента -->
       <div class="modal__body">
 
         <div class="modal__top">
-          <h2 class="modal__title title">Оставить отзыв</h2>
-          <p class="modal__text text">Заполните форму и поставьте оценку</p>
-        </div>
-
-        <div class="modal__middle">
-          <div class="modal__form">
-
-            <form class="form" action="#">
-              <div class="form__grid form__grid--mod">
-                <div class="form__col">
-                  <label for="user-name-1">Ваше имя</label>
-                  <div class="form__element">
-                    <input type="text" name="user-name" placeholder="Представьтесь, пожалуйста" id="user-name-1"
-                      required>
-                  </div>
-
-                </div>
-
-                <div class="form__col">
-                  <label for="user-phone-1">Телефон</label>
-                  <div class="form__element">
-                    <input type="tel" name="user-phone" placeholder="Введите телефон" id="user-phone-1" required>
-                  </div>
-
-                </div>
-
-
-              </div>
-
-            </form>
-
-          </div>
-        </div>
-        <div class="modal__bottom">
-          <div class="modal__bottom-left">
-            <div class="modal__rating">
-              <span class="modal__rating-text">Поставьте оценку:</span>
-              <div class="rating">
-                <form action="#">
-                  <ul class="rating__list list-reset">
-                    <li class="rating__item" title="1 звезда!">
-                      <input type="radio" id="srat-1" name="option" class="visually-hidden">
-                      <label for="srat-1" class="rating__icon">
-                        <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M16 0L19.5922 11.0557H31.2169L21.8123 17.8885L25.4046 28.9443L16 22.1115L6.59544 28.9443L10.1877 17.8885L0.783095 11.0557H12.4078L16 0Z" fill="currentColor"/>
-                          </svg>
-                      </label>
-                    </li>
-                    <li class="rating__item" title="2 звезды!">
-                      <input type="radio" id="srat-2" name="option" class="visually-hidden">
-                      <label for="srat-2" class="rating__icon">
-                        <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M16 0L19.5922 11.0557H31.2169L21.8123 17.8885L25.4046 28.9443L16 22.1115L6.59544 28.9443L10.1877 17.8885L0.783095 11.0557H12.4078L16 0Z" fill="currentColor"/>
-                          </svg>
-                      </label>
-                    </li>
-                    <li class="rating__item" title="3 звезды!">
-                      <input type="radio" id="srat-3" name="option" class="visually-hidden">
-                      <label for="srat-3" class="rating__icon">
-                        <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M16 0L19.5922 11.0557H31.2169L21.8123 17.8885L25.4046 28.9443L16 22.1115L6.59544 28.9443L10.1877 17.8885L0.783095 11.0557H12.4078L16 0Z" fill="currentColor"/>
-                          </svg>
-                      </label>
-                    </li>
-                    <li class="rating__item" title="4 звезды!">
-                      <input type="radio" id="srat-4" name="option" class="visually-hidden">
-                      <label for="srat-4" class="rating__icon">
-                        <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M16 0L19.5922 11.0557H31.2169L21.8123 17.8885L25.4046 28.9443L16 22.1115L6.59544 28.9443L10.1877 17.8885L0.783095 11.0557H12.4078L16 0Z" fill="currentColor"/>
-                          </svg>
-                      </label>
-                    </li>
-                    <li class="rating__item" title="5 звёзд!">
-                      <input type="radio" id="srat-5" name="option" class="visually-hidden">
-                      <label for="srat-5" class="rating__icon">
-                        <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M16 0L19.5922 11.0557H31.2169L21.8123 17.8885L25.4046 28.9443L16 22.1115L6.59544 28.9443L10.1877 17.8885L0.783095 11.0557H12.4078L16 0Z" fill="currentColor"/>
-                          </svg>
-                      </label>
-                    </li>
-                  </ul>
-                </form>
-              </div>
-            </div>
-
-
-          </div>
-          <div class="modal__bottom-right">
-            <button class="form__button button" type="submit"><span>Отправить</span></button>
-          </div>
-        </div>
-
-
-
-        <!-- Кнопка закрытия окна  -->
-        <button class="modal__close js-close-modal" type="button" title="Закрыть окно">
-          <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1.5L17 17.5" stroke="#C4161C" stroke-width="2" />
-            <path d="M17 1.5L1 17.5" stroke="#C4161C" stroke-width="2" />
-          </svg>
-        </button>
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- Написать сотруднику  -->
-  <section class="modal" id="modal-write-employee">
-    <div class="wrapper">
-
-      <!-- основной блок контента -->
-      <div class="modal__body">
-
-        <div class="modal__top">
-          <h2 class="modal__title title">Написать сотруднику</h2>
+          <h2 class="modal__title title">Заголовок</h2>
           <p class="modal__text text">Заполните простую форму и наши менеджеры перезвонят Вам в течении 10 минут</p>
         </div>
 
@@ -564,34 +536,18 @@
             <form class="form" action="#">
               <div class="form__grid">
                 <div class="form__col">
-                  <label for="user-name-1">Ваше имя</label>
+                  <label for="user-name-2">Ваше имя</label>
                   <div class="form__element">
-                    <input type="text" name="user-name" placeholder="Представьтесь, пожалуйста" id="user-name-1"
+                    <input type="text" name="user-name" placeholder="Представьтесь, пожалуйста" id="user-name-2"
                       required>
                   </div>
 
                 </div>
 
                 <div class="form__col">
-                  <label for="user-phone-1">Телефон</label>
+                  <label for="user-phone-2">Телефон</label>
                   <div class="form__element">
-                    <input type="tel" name="user-phone" placeholder="Введите телефон" id="user-phone-1" required>
-                  </div>
-
-                </div>
-
-                <div class="form__col">
-                  <label for="user-name-1">E-mail</label>
-                  <div class="form__element">
-                    <input type="email" name="user-email" placeholder="Введите e-mail" id="user-email-1">
-                  </div>
-
-                </div>
-
-                <div class="form__col form__col--mod">
-                  <label for="user-name-1">Ваше сообщение:</label>
-                  <div class="form__element">
-                    <textarea name="user-message" id="user-message-1" placeholder="Введите сообщение"></textarea>
+                    <input type="tel" name="user-phone" placeholder="Введите телефон" id="user-phone-2" required>
                   </div>
 
                 </div>
@@ -606,8 +562,8 @@
         <div class="modal__bottom">
           <div class="modal__bottom-left">
             <div class="form__agree">
-              <input class="visually-hidden" type="checkbox" name="user-agree" id="user-agree-1" required checked>
-              <label for="user-agree-1">Нажимая “Отправить” я даю согласие на обработку <a href="#">персональных
+              <input class="visually-hidden" type="checkbox" name="user-agree" id="user-agree-2" required checked>
+              <label for="user-agree-2">Нажимая “Отправить” я даю согласие на обработку <a href="#">персональных
                   данных</a></label>
             </div>
 
@@ -634,21 +590,30 @@
 
 
 
-  <script src="./libs/swiper-bundle.min.js"></script>
-  <script src="./libs/SmoothScroll.min.js"></script>
 
+  <script src="./libs/swiper-bundle.min.js"></script>
+  <script src="./libs/simplebar.min.js"></script>
+  <script src="./libs/SmoothScroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
 
   <script src="./js/parts/header-sticky.js"></script>
   <script src="./js/parts/menu-open.js"></script>
-  <script src="./js/parts/mobile-nav-item-active.js"></script>
   <script src="./js/parts/just-main-margin.js"></script>
+  <script src="./js/parts/custom-select.js"></script>
+  <script src="./js/parts/noUiSlider.js"></script>
   <script src="./js/parts/modals.js"></script>
-  <script src="./js/parts/rating.js"></script>
-  <script src="./js/parts/form-validation.js"></script>
+  <script src="./js/parts/mobile-nav-item-active.js"></script>
 
   <script src="./js/swiper-sliders.js"></script>
 
+  <!-- Карты  -->
+  <!-- ЯКарта  -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=1dba075a-a65a-4b22-84a2-ebb26f26fe43&lang=ru_RU"
+    type="text/javascript"></script>
+  <script src="./js/maps/map.js"></script>
+
   <script src="./js/main.js"></script>
+
 </body>
 
 </html>
