@@ -178,5 +178,13 @@
     &__col {
       grid-column: initial !important;
     }
+    &__file {
+      label {
+        height: 45px;
+      }
+    }
+    &__title {
+      font-size: 20px;
+    }
   }
 }

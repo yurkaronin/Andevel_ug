@@ -4,6 +4,8 @@
   font-size: 16px;
   color: var(--grey);
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   &::before {
     content: "";
@@ -61,6 +63,9 @@
     position: relative;
     transition: all 0.3s;
     padding-left: calc(16px + 16px);
+    &:last-of-type {
+      margin-bottom: 0;
+    }
     &::before {
       content: "";
       display: block;
@@ -78,10 +83,16 @@
     }
   }
   &__footer {
+    flex-grow: 2;
+    margin-top: auto;
+    display: flex;
+    align-items: flex-end;
   }
   &__button {
     width: 100%;
     max-width: 100%;
+    font-weight: 500;
+
   }
 
   @media (max-width: 767px) {
@@ -91,6 +102,9 @@
     }
     &__body {
       padding-bottom: 12px;
+    }
+    &__button {
+      height: 45px;
     }
   }
 }

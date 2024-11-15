@@ -9,11 +9,31 @@
     gap: 32px;
     grid-template-columns: repeat(2, 1fr);
   }
+  &__item {
+    height: 100%;
+  }
+
+  .vacancies-card-preview {
+    min-height: 100%;
+  }
 
   @media (max-width: 1023px) {
     font-size: 15px;
     &__list {
       grid-template-columns: repeat(1, 1fr);
+    }
+    &__title {
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .vacancies-card-preview {
+      min-height: initial;
+    }
+    &__title {
+      font-size: 20px;
+      margin-bottom: 25px;
     }
   }
 }

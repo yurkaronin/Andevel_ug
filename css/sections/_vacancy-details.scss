@@ -1,6 +1,6 @@
 .vacancy-details {
   padding-top: 33px;
-  padding-bottom: 60px;
+  padding-bottom: 64px;
 
   &__grid {
     display: grid;
@@ -76,7 +76,7 @@
     }
     &__left {
       grid-column: initial;
-      margin-bottom: 32px;
+      margin-bottom: 64px;
     }
 
     &__right {
@@ -84,5 +84,15 @@
     }
   }
   @media (max-width: 767px) {
+    padding-bottom: 50px;
+    &__left {
+      margin-bottom: 50px;
+    }
+    &__content {
+      .button {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
   }
 }

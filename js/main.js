@@ -31,6 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+window.onload = function() {
+  var breadcrumbsContainer = document.querySelector('.breadcrumbs');
+  breadcrumbsContainer.scrollLeft = breadcrumbsContainer.scrollWidth;
+};
+
 
 // техническая часть - УДАЛИТЬ НА ПРОДАКШЕНЕ!
 // получить в консоли элемент, по которому кликнули

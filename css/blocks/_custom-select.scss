@@ -4,6 +4,19 @@
   width: 100%;
   max-width: 100%;
 
+  &--mod {
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    .custom-select__selected {
+    }
+    .custom-select__options {
+      border: 1px solid var(--line);
+      left: -1px;
+      right: -1px;
+      box-shadow: none;
+    }
+  }
+
   &__selected {
     background-color: var(--white);
     padding: 14px 16px;
@@ -39,7 +52,6 @@
     }
   }
   &:hover {
-
     .custom-select__selected {
       border: 1px solid var(--red);
     }
@@ -62,7 +74,11 @@
     display: none;
     box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.2);
     background: var(--white);
+    overflow: hidden;
+    // max-height: 300px;
+    // overflow-y: auto;
   }
+
   &__option {
     padding: 14px 16px;
     cursor: pointer;
@@ -100,8 +116,6 @@
         top: -2px;
         bottom: -2px;
       }
-
-
     }
   }
   // активности
